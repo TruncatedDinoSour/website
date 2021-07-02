@@ -1,0 +1,159 @@
+/*
+    * https://colorhunt.co/palette/4a3933f0a500e45826e6d5b8
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #382e2b;
+}
+
+body, html {
+  background-color: #E6D5B8;
+}
+
+:root {
+  color-scheme: dark;
+  scrollbar-color: #e9b648 #4A3933;
+}
+
+::selection {
+  background-color: rgba(56, 46, 43, 0.55);
+}
+
+::-moz-selection {
+  background-color: rgba(56, 46, 43, 0.55);
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #4A3933;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #e9b648;
+  border-radius: 6px;
+  border: 3px solid #4A3933;
+}
+
+.nav-main {
+  display: block;
+  position: sticky;
+  top: 0;
+  background-color: #4A3933;
+}
+
+.nav-list {
+  display: block;
+  list-style: none;
+  padding: 0.7em;
+}
+
+.nav-item {
+  display: inline;
+  margin-right: 0.6em;
+  font-family: Hack, monospace;
+  font-size: 1.05em;
+  color: #F0A500;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav-item:hover a,
+.nav-item:focus {
+  color: #e9b648;
+}
+
+.nav-logo {
+  margin: 0;
+  float: right;
+  font-weight: 700;
+  font-size: 1.1em;
+  letter-spacing: 0.195ch;
+  text-decoration: none;
+  color: #e9b648;
+  transition: color 0.5s;
+}
+
+.nav-logo:hover,
+.nav-logo:focus {
+  color: #e5a724;
+}
+
+.nav-item:focus,
+.nav-logo:focus {
+  outline: none;
+  border-bottom: 2px solid #F0A500;
+}
+
+@media (min-width: 700px) {
+  .bigHide {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .nav-item {
+    margin: 0;
+  }
+}
+.smallHide {
+  display: none;
+}
+
+.error {
+  padding: 0.4em;
+}
+.error *, .error {
+  background-color: #E45826;
+  color: #E6D5B8;
+  font-weight: 700;
+  font-family: Hack, monospace;
+}
+
+.mobile-menu {
+  display: block;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  padding: 0.7em;
+  width: 100%;
+  height: 46%;
+}
+.mobile-menu *, .mobile-menu {
+  list-style: none;
+  color: #e7dbc5;
+  background-color: #4A3933;
+  font-family: Hack, monospace;
+}
+
+.hiddenMobile {
+  display: none;
+}
+
+.keep-whitespace {
+  white-space: pre;
+}
+
+.cmd-output {
+  overflow: scroll;
+  padding: 0.8em;
+}
+
+.cmd {
+  display: inline;
+  border: none;
+  outline: none;
+  padding: 0.2em;
+  padding-left: 0.4em;
+  margin: 0.5em;
+  margin-top: 0.8em;
+  font-family: Hack, monospace;
+  border-left: 2px solid #E6D5B8;
+}
+
+.cmd:focus {
+  border-left: 2px solid #e9b648;
+}
