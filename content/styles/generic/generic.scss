@@ -14,6 +14,9 @@ $white: #E6D5B8;
 $lwhite: #e7dbc5;
 
 
+$menuHeight: 45%;
+
+
 * {
     padding: 0;
     margin: 0;
@@ -22,6 +25,7 @@ $lwhite: #e7dbc5;
 }
 body, html {
     background-color: $white;
+    padding-bottom: 1em;
 }
 
 
@@ -39,13 +43,13 @@ body, html {
 
 
 // Chrome's, Edge's, and Safari's scrollbars
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 12px;
 }
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: $brown;
 }
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: $lyellow;
     border-radius: 6px;
     border: 3px solid $brown;
@@ -78,7 +82,7 @@ body::-webkit-scrollbar-thumb {
 
     transition: color 0.5s;
 }
-.nav-item:hover a,
+.nav-item:hover a:not(.nav-logo),
 .nav-item:focus {
     color: $lyellow;
 }
@@ -100,14 +104,14 @@ body::-webkit-scrollbar-thumb {
 }
 .nav-logo:hover,
 .nav-logo:focus {
-    color: darken($lyellow, 8%);
+    color: darken($lyellow, 10%);
 }
 
 
 .nav-item:focus,
 .nav-logo:focus {
     outline: none;
-    border-bottom: 2px solid $yellow;
+    // border-bottom: 1px solid $lyellow;
 }
 
 
@@ -140,6 +144,31 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+@keyframes slideup {
+    0% {
+        height: 0%;
+    }
+
+    100% {
+        height: $menuHeight;
+    }
+}
+@keyframes slidedown {
+    0% {
+        height: $menuHeight;
+    }
+
+    99.999% {
+        height: 0%;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
+
 .mobile-menu {
     display: block;
     margin: 0;
@@ -149,7 +178,7 @@ body::-webkit-scrollbar-thumb {
     padding: 0.7em;
 
     width: 100%;
-    height: 46%;
+    height: $menuHeight;
 
     & *, & {
         list-style: none;
@@ -159,10 +188,20 @@ body::-webkit-scrollbar-thumb {
 
         font-family: Hack, monospace;
     }
+
+    animation: slideup;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+
+    overflow-y: scroll;
 }
 
 
 .hiddenMobile {
+    animation: slidedown 0.6s;
+    animation-fill-mode: forwards; 
+}
+.hiddenMobile-noanim {
     display: none;
 }
 
@@ -172,7 +211,7 @@ body::-webkit-scrollbar-thumb {
 
 
 .cmd-output {
-    overflow: scroll;
+    overflow-x: scroll;
     padding: 0.8em;
 }
 
@@ -181,13 +220,17 @@ body::-webkit-scrollbar-thumb {
     border: none;
     outline: none;
 
-    padding: 0.2em;
-    padding-left: 0.4em;
+    padding: 0.3em;
+    padding-left: 0.6em;
+
     margin: 0.5em;
     margin-top: 0.8em;
 
     font-family: Hack, monospace;
+    font-size: 0.95em;
+
     border-left: 2px solid $white;
+    width: 99%;
 }
 .cmd:focus {
     border-left: 2px solid $lyellow;

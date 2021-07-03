@@ -14,14 +14,15 @@ function goto(cmd) {
 
     if (loc) {
         document.location.assign(loc);
-        return `redirecting to ${loc}`;
+        return `GOTO: redirecting to ${loc}`;
     } else {
         return `GOTO: ${cmd[1]} does not exist`;
     }
 }
 
-function exit() {
+function exit(cmd) {
     let textbox = document.getElementById("mobileCmd");
+    textbox.blur();
     textbox.value = '';
     mobileMenu.classList.add("hiddenMobile");
 }
@@ -37,7 +38,8 @@ function help(cmd) {
 const pages = {
     "random_things": "/page/random",
     "javascript_apps": "/page/js",
-    "source_code": "/page/redirect?url=//github.com/TruncatedDinosour/website",
+    "source_code": "/page/redirect?url=https://github.com/TruncatedDinosour/website",
+    "help": "/help",
     "home": "/"
 }
 

@@ -1,0 +1,78 @@
+.box {
+  margin-top: 1em;
+}
+.box .heading {
+  text-align: center;
+  font-family: Hack, monospace;
+  font-size: 1.65em;
+  margin-bottom: 0.3em;
+}
+.box .contents {
+  display: none;
+}
+.box .content {
+  display: inline-block;
+  margin-left: 2em;
+  font-family: Hack, monospace;
+  font-size: 0.7em;
+  padding: 0;
+}
+.box p {
+  font-size: 1.2em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  width: 82%;
+  min-width: 100px;
+  max-width: 100%;
+}
+.box h1 {
+  font-size: 1.75em;
+}
+@media screen and (min-width: 1200px) {
+  .box .heading {
+    display: block;
+    text-align: left;
+    font-size: 2em;
+    margin-left: 1em;
+    margin-bottom: 0.8em;
+  }
+  .box .contents {
+    display: block;
+    float: left;
+    padding-left: 1.5em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: #e7d0ab;
+    border: 1px solid transparent;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    list-style: " * ";
+    box-shadow: #4a393334 1px 0px 3px 1px;
+    font-family: Hack, monospace;
+    width: 38%;
+    height: 100%;
+  }
+  .box .contents a {
+    text-decoration: none;
+    color: #4A3933;
+    transition: color 0.6s;
+  }
+  .box .contents a:hover {
+    color: #F0A500;
+  }
+  .box .contents::before {
+    content: "Contents:";
+    font-family: Hack, monospace;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  .box .content {
+    display: inline-block;
+    margin-left: 2em;
+    width: 60%;
+    font-family: Hack, monospace;
+    font-size: 0.86em;
+    padding: 0;
+  }
+}

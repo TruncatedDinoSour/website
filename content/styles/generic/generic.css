@@ -10,6 +10,7 @@
 
 body, html {
   background-color: #E6D5B8;
+  padding-bottom: 1em;
 }
 
 :root {
@@ -25,15 +26,15 @@ body, html {
   background-color: rgba(56, 46, 43, 0.55);
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 12px;
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: #4A3933;
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: #e9b648;
   border-radius: 6px;
   border: 3px solid #4A3933;
@@ -62,7 +63,7 @@ body::-webkit-scrollbar-thumb {
   transition: color 0.5s;
 }
 
-.nav-item:hover a,
+.nav-item:hover a:not(.nav-logo),
 .nav-item:focus {
   color: #e9b648;
 }
@@ -80,13 +81,12 @@ body::-webkit-scrollbar-thumb {
 
 .nav-logo:hover,
 .nav-logo:focus {
-  color: #e5a724;
+  color: #e3a41b;
 }
 
 .nav-item:focus,
 .nav-logo:focus {
   outline: none;
-  border-bottom: 2px solid #F0A500;
 }
 
 @media (min-width: 700px) {
@@ -113,6 +113,27 @@ body::-webkit-scrollbar-thumb {
   font-family: Hack, monospace;
 }
 
+@keyframes slideup {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 45%;
+  }
+}
+@keyframes slidedown {
+  0% {
+    height: 45%;
+  }
+  99.999% {
+    height: 0%;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
 .mobile-menu {
   display: block;
   margin: 0;
@@ -120,7 +141,11 @@ body::-webkit-scrollbar-thumb {
   bottom: 0;
   padding: 0.7em;
   width: 100%;
-  height: 46%;
+  height: 45%;
+  animation: slideup;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  overflow-y: scroll;
 }
 .mobile-menu *, .mobile-menu {
   list-style: none;
@@ -130,6 +155,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hiddenMobile {
+  animation: slidedown 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.hiddenMobile-noanim {
   display: none;
 }
 
@@ -138,7 +168,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cmd-output {
-  overflow: scroll;
+  overflow-x: scroll;
   padding: 0.8em;
 }
 
@@ -146,12 +176,14 @@ body::-webkit-scrollbar-thumb {
   display: inline;
   border: none;
   outline: none;
-  padding: 0.2em;
-  padding-left: 0.4em;
+  padding: 0.3em;
+  padding-left: 0.6em;
   margin: 0.5em;
   margin-top: 0.8em;
   font-family: Hack, monospace;
+  font-size: 0.95em;
   border-left: 2px solid #E6D5B8;
+  width: 99%;
 }
 
 .cmd:focus {

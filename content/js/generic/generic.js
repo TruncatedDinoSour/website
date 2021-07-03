@@ -61,7 +61,8 @@ function mobileCmd(e) {
     if (keyCode == 'Enter'){
         if (textbox.value) {
             try {
-                var out = commands[textbox.value.replace(/^\$ /, '').split(' ')[0]](textbox.value);
+                var out = commands[textbox.value.split(' ')[0]](textbox.value);
+                textbox.blur();
             } catch (e) {
                 var out = e;
             }
@@ -72,6 +73,10 @@ function mobileCmd(e) {
             textbox.value = '';
         }
     }
+}
+
+function autorun() {
+    // code that will run evety 100ms
 }
 
 function addNewMobileMenuItem(innerElement, content, attrs) {
@@ -101,7 +106,6 @@ function openMobileMenu() {
         return;
     }
 
-
     let list = document.getElementById("mobileList");
     if (!list) {
         alert("No menu found :)");
@@ -112,54 +116,74 @@ function openMobileMenu() {
     let output = document.getElementById("mobileCmdOutput");
     output.innerHTML = '';
 
-    if (mobileMenu.classList.contains("hiddenMobile")) {
+    let textbox = document.getElementById("mobileCmd");
+    if (mobileMenu.classList.contains("hiddenMobile") || mobileMenu.classList.contains("hiddenMobile-noanim")) {
         mobileMenu.classList.remove("hiddenMobile");
+        mobileMenu.classList.remove("hiddenMobile-noanim");
+
+        textbox.focus();
     } else {
         mobileMenu.classList.add("hiddenMobile");
+        textbox.blur();
+        // mobileMenu.classList.add("hiddenMobile-noanim");
     }
-
-    let textbox = document.getElementById("mobileCmd");
-    textbox.focus();
 }
 
+addNewBarElement(
+    'a', 'Help',
+    {
+        "href": "/help",
+        "class": "nav-item doHide",
+    }
+);
 
 addNewBarElement(
-    'a', 'Random_things', {
+    'a', 'Random_things',
+    {
         "href": "/page/random",
         "class": "nav-item doHide",
     }
 );
 
 addNewBarElement(
-    'a', 'JavaScript_apps', {
+    'a', 'JavaScript_apps',
+    {
         "href": "/page/js",
         "class": "nav-item doHide",
     }
 );
 
 addNewBarElement(
-    'a', 'Source_code', {
+    'a', 'Source_code',
+    {
         "href": "//github.com/TruncatedDinosour/website",
         "class": "nav-item doHide",
     }
 );
 
 addNewBarElement(
-    'a', 'Ari\'s_Web', {
+    'a', 'Ari\'s_Web',
+    {
         "href": "/",
         "class": "nav-logo"
     }
 );
 
-addNewMobileMenuItem('b', 'Pages:', {});
-addNewMobileMenuItem('p', ' * Random_things', { "class": "keep-whitespace" });
-addNewMobileMenuItem('p', ' * JavaScript_apps', { "class": "keep-whitespace" });
-addNewMobileMenuItem('p', ' * Source_code', { "class": "keep-whitespace" });
-addNewMobileMenuItem('p', ' * Home', { "class": "keep-whitespace" });
 
+addNewMobileMenuItem('b', 'Pages:', {});
+for (const page in pages) {
+    addNewMobileMenuItem(
+        'p', ` * ${page}`,
+        {
+            "class": "keep-whitespace caps",
+            "style": "text-transform: capitalize;"
+        }
+    );
+}
 
 addNewMobileMenuItem('br', '', {});
 addNewMobileMenuItem('b', 'type "help" for help', {});
+
 
 addNewMobileMenuItem(
     'input', '', 
@@ -167,7 +191,10 @@ addNewMobileMenuItem(
         "type": "text",
         "class": "cmd",
         "onkeypress": "mobileCmd();",
-        "id": "mobileCmd"
+        "id": "mobileCmd",
+        "autocomplete": "off",
+        "autocapitalize":"off",
+        "spellcheck": "false"
     }
 );
 
@@ -176,3 +203,8 @@ addNewMobileMenuItem('div', '', { "id": "mobileCmdOutput", "class": "cmd-output"
 
 detectSmallScreen();
 setInterval(detectSmallScreen, 100);
+
+if (!window.localStorage.getItem("fistTime")) {
+    window.location.assign("/help");
+}
+// setInterval(autorun, 100);

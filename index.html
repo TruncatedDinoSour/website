@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Aris_Web::Home</title>
 
     <link rel="stylesheet" href="/content/styles/generic/generic.css">
+    <link rel="stylesheet" href="/content/styles/box/box.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
 
-    <script src="/content/js/commands/index.dev.js" defer></script>
-    <script src="/content/js/generic/generic.dev.js" defer></script>
+    <script src="/content/js/commands/index.js" defer></script>
+    <script src="/content/js/generic/generic.js" defer></script>
+    <script src="/help/index.js" defer></script>
 </head>
 <body>
     <nav class="nav-main" id="bar">
@@ -33,116 +35,53 @@
     </nav>
 
     <div id="menus">
-        <div class="mobile-menu hiddenMobile" id="mobile-menu">
+        <div class="mobile-menu hiddenMobile-noanim" id="mobile-menu">
         </div>
     </div>
 
     <div class="content" id="content" name="content">
-        <ul>
-            <li>
-                <a href="#!">h</a>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-                <h1>[lorem]</h1>
-            </li>
-        </ul>
+        <div class="box">
+            <h1 class="heading" id="welcome">Welcome to <i>the home page</i>!</h1>
+            
+            <ul class="contents">
+                <li><a href="#welcome">Welcome</a></li>
+                <li><a href="#who">Who even am I?</a></li>
+                <li><a href="#what">What is this?</a></li>
+                <li><a href="#before-fork">Before forking</a></li>
+            </ul>
+
+            <div class="content">
+                <h1 id="who">#1 Who Am I?</h1>
+                <p>
+                    Good question, I am ari, I live in Lithuania and I like programming.<br/>
+                    I'm currently learning the C++ programming language. I can do python and I think i'm okay at it.<br/>
+                    I can do some lua, but not as much as python.<br/>
+                    I can also do some fronyt-end web deveopment using CSS, SCSS and HTML, but I'm pretty garbage at it<br/>
+                    I know some JavaScript, but i hate it, but I love it. We have a love-hate relationship.<br/>
+                    I also enjoy linux, I have tried LOADS of distros, but now I stick with Arch Linux.<br/>
+                    Though I have to thank the people in the <a href="//endeavouros.com/">
+                    EndeavourOS team</a> and pals @ the <a href="//t.me/endeavouros">EndeavourOS telegram</a> group.
+                </p>
+
+                <br/>
+                
+                <h1 id="what">#2 What is this?</h1>
+                <p>
+                    This is my webbpage. I created this page for fun.<br/>
+                    I wrote this webbpage mainly in JavaScript, but there's loads of HTML too.<br/>
+                    Here I will be sharing things I do and maybe introducing cool features over time.<br/>
+                    This page uses SCSS as its main styling language, the SCSS is transpiled into CSS.<br/>
+                </p>
+
+                <br>
+
+                <h1 id="before-fork">#3 What should I know if I want to fork this?</h1>
+                <p>
+                    You should only edit the *.scss files and transpile them using something like <a href="//github.com/Wscats/compile-hero">compile-hero VScode(-ium)</a> extension.<br/>
+                    The transpiled (*.css) files are here because the app is hosted on <a href="//netlify.app">NetLify</a> directly from GitHub.<br/>
+                </p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
