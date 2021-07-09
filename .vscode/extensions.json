@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "wscats.eno"
+        "wscats.eno",
+        "formulahendry.auto-rename-tag",
+        "yandeu.five-server"
     ]
 }
