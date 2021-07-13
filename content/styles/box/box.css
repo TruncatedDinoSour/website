@@ -26,6 +26,7 @@
   max-width: 100%;
 }
 .box h1 {
+  width: 94%;
   font-size: 1.75em;
 }
 @media screen and (min-width: 1200px) {
