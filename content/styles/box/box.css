@@ -29,7 +29,7 @@
   width: 94%;
   font-size: 1.75em;
 }
-@media screen and (min-width: 1360px) {
+@media screen and (min-width: 1500px) {
   .box .heading {
     display: block;
     text-align: left;
