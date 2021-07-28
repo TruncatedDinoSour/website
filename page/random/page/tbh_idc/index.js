@@ -4,7 +4,7 @@ function create_img_elements(html_element, count, dir) {
     for (let i = 1; i < count + 1; ++i) {
         let img = document.createElement("img");
         img.setAttribute("src", `${dir}/${i}.jpg`);
-        img.setAttribute("width", "100px")
+        img.setAttribute("width", "200px")
         html_element.appendChild(img);
     }
 }

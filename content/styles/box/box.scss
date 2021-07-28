@@ -45,6 +45,13 @@ $lyellow: #e9b648;
         max-width: 100%;
     }
 
+    .imageArea * {
+        display: block;
+        margin: 0.2em;
+        padding-left: 2.5em;
+        width: 40%;
+    }
+
     h1 {
         width: 94%;
         font-size: 1.75em;
