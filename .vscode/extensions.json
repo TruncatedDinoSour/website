@@ -2,6 +2,7 @@
     "recommendations": [
         "wscats.eno",
         "formulahendry.auto-rename-tag",
-        "yandeu.five-server"
+        "yandeu.five-server",
+        "bungcip.better-toml"
     ]
 }
