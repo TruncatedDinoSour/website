@@ -38,7 +38,7 @@ function help(cmd) {
 const pages = {
     "random_things": "/page/random",
     "javascript_apps": "/page/js",
-    "source_code": "/page/redirect?url=https://github.com/TruncatedDinosour/website",
+    "source_code": "//github.com/TruncatedDinosour/website",
     "help": "/help",
     "home": "/"
 }
