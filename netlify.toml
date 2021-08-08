@@ -1,11 +1,11 @@
 [[redirects]]
+    from = "/page/ari"
+    to = "//youtube.com/watch?v=dQw4w9WgXcQ"
+    force = true
+
+[[redirects]]
     from = "/*"
     to = "/index.html"
     status = 404
     force = false
 
-[[redirects]]
-    from = "/page/ari"
-    to = "//www.youtube.com/watch?v=dQw4w9WgXcQ"
-    status = 200
-    force = true
