@@ -44,4 +44,26 @@ well have a nice day and listen to what the little cow says:
                     ||     ||
  - Ari
 
+---------------------------------------------------------------------------------
+
+                        2021.08.10, 17:00 EEST [YYYY/MM/DD]
+Hey, my site is now on wiby! wiby is a search engine for minimal sites and one of them
+is mine :) you can find my pages by looking up "ari-web" on wiby: https://wiby.me/?q=ari%2Dweb .
+It's quite a cool thing and you can discover nice and intresting things there hah.
+
+The web was supposed to be minimal and now as we have more resources developers
+don't care as much to make it minimal, wiby tries to accomplish this and it's doing a good job at it.
+
+I also have discoved few minimal protocols: gopher and gemini.
+Gopher is a text-only minimal protocol and is faily old, even older than http and https,
+it's really light, but it really lacks some stuff like pictures for example, but
+that's where gemini comes in, it has more support for "fancy" stuff when still staying pretty light 
+and it's also faily new, it came out in 2019 and it's still being developed, I'd suggest you to try it.
+A good browser I found for gopher, http, https and gemini is kristall, it's pretty cool.
+
+anyway, Try to keep the web minimal and use as little as you can until you make it look the way you want,
+have a nice day.
+
+ - Ari
+
 -**********************************-_________-**********************************-
