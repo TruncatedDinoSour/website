@@ -1,0 +1,32 @@
+@import '../config/main';
+
+
+.shell {
+    margin: 2em;
+
+    .prompt {
+        color: $shell_colour;
+        background-color: $bg_colour;
+        border: none;
+
+        font-size: $shell_font_size;
+        width: 90%;
+        padding: 0 0 1.2em 0;
+    }
+
+    .output {
+        font-size: $shell_font_size / 1.2;
+    }
+}
+
+.shell::before {
+    content: '$ ';
+    font-size: $shell_font_size;
+    color: $default_content_colour;
+}
+
+.shell[prompt=root]::before {
+    content: '# ';
+    font-size: $shell_font_size;
+    color: $default_content_colour;
+}

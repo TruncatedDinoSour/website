@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ari::web -> Reset</title>
+
+    <meta name="description" content="My personal website">
+    <meta name="keywords" content="website webdev linux programming ari terminal dark">
+
+    <link rel="stylesheet" href="/content/styles/generic/main.css">
+</head>
+
+<body>
+    <style>
+        .title {
+            text-align: center;
+            margin: 1em;
+        }
+
+        .buttons * {
+            color: black;
+        }
+        .buttons {
+            text-align: center;
+        }
+    </style>
+
+
+    <script>
+        function reset() {
+            if (confirm('Are you sure that you want to reset your account?')) {
+                window.localStorage.clear();
+                alert("Your accout has been reset");
+                window.location = '/';
+            }
+        }
+    </script>
+
+    <h1 class="title">Do you want to reset your account?</h1>
+    <div class="buttons">
+        <button onclick="reset();">Yes</button>  <button onclick="window.location = '/';">No</button>
+    </div>
+</body>
+</html>

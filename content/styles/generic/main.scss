@@ -1,0 +1,23 @@
+@import '../config/main';
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: $font_default;
+    color: $default_content_colour;
+}
+
+html, body {
+    background-color: $bg_colour;
+    margin-bottom: 2em;
+}
+
+
+.iframe {
+    width: 50%;
+    min-width: 300px;
+    max-width: 1000px;
+}

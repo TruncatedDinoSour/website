@@ -1,0 +1,61 @@
+@import '../config/main';
+
+.boot {
+    margin: 1em 0em 1em 1em;
+    font-size: 1.5em;
+
+    #bootver {
+        color: $boot_header_colour;
+        margin-left: 1.12em; /* makes it that it aligns with 'boot' messages */
+    }
+    
+    #bootver::before {
+        content: 'WEBrc version ' $boot_ver;
+    }
+
+    .bmsg[bmsg_type=ok] {
+        &::after {
+            content: '[OK]';
+            float: right;
+            color: $ok_colour;
+        }
+    
+        &::before {
+            content: ' * ';
+            color: $ok_colour;
+        }
+    }
+
+
+    .bmsg[bmsg_type=warn] {
+        &::after {
+            content: '[WARNING]';
+            float: right;
+            color: $warn_colour;
+        }
+    
+        &::before {
+            content: ' * ';
+            color: $warn_colour;
+        }
+    }
+
+    .bmsg[bmsg_type=error] {
+        &::after {
+            content: '[ERROR]';
+            float: right;
+            color: $error_colour;
+        }
+    
+        &::before {
+            content: ' * ';
+            color: $error_colour;
+        }
+    }
+
+    .bmsg {
+        text-transform: capitalize;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}

@@ -1,0 +1,26 @@
+.shell {
+  margin: 2em;
+}
+.shell .prompt {
+  color: #0fd30f;
+  background-color: #070707;
+  border: none;
+  font-size: 1.7em;
+  width: 90%;
+  padding: 0 0 1.2em 0;
+}
+.shell .output {
+  font-size: 1.4166666667em;
+}
+
+.shell::before {
+  content: "$ ";
+  font-size: 1.7em;
+  color: #ffffff;
+}
+
+.shell[prompt=root]::before {
+  content: "# ";
+  font-size: 1.7em;
+  color: #ffffff;
+}
