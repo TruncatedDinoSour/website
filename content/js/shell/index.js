@@ -1,7 +1,7 @@
-const cmd_prompt = document.getElementById('prompt');
-const cmd_output = document.getElementById('command_output');
-const cmd_history = document.getElementById('cmd_hist');
-const shell = document.getElementById('shell');
+let cmd_prompt = document.getElementById('prompt');
+let cmd_output = document.getElementById('command_output');
+let cmd_history = document.getElementById('cmd_hist');
+let shell = document.getElementById('shell');
 var is_root = false;
 
 function main() {
