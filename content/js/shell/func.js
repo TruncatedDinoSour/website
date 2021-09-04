@@ -106,7 +106,7 @@ function su(cmd) {
         password_hash = hash(prompt('Enter your password'));
     }
 
-    if (!password_hash) {
+    if (!password_hash && !root) {
         return 'Not authenticated. (empty password)'
     }
 
