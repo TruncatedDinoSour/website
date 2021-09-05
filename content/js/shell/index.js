@@ -16,13 +16,13 @@ function main() {
 
 
             if (commands[command]) {
-                if (commands[command.toLowerCase()]['root_only'] && !root) {
-                    cmd_output.innerHTML = `'${command.toLowerCase()}' can <i>only</i> be ran as <b>root</b>. see <b>help su</b>`
+                if (commands[command]['root_only'] && !root) {
+                    cmd_output.innerHTML = `'${command}' can <i>only</i> be ran as <b>root</b>. see <b>help su</b>`
                 } else {
-                    cmd_output.innerHTML = commands[command.toLowerCase()]['func'](argv);
+                    cmd_output.innerHTML = commands[command]['func'](argv);
                 } 
             } else {
-                cmd_output.innerHTML = `${command.toLowerCase()}: command not found`
+                cmd_output.innerHTML = `${command}: command not found`
             }
 
 
