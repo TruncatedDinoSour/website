@@ -43,8 +43,8 @@ var commands = {
             "desc": "A command to show pages",
             "short_desc": "Show page",
             "examples": [
-                "show",
-                "show src"
+                "show src",
+                "show"
             ]
         }
     },
@@ -56,8 +56,8 @@ var commands = {
             "desc": "A command to go to pages",
             "short_desc": "Goto a page",
             "examples": [
-                "goto",
-                "goto src"
+                "goto src",
+                "goto"
             ]
         }
     },
@@ -69,8 +69,7 @@ var commands = {
             "desc": "A command to list available pages",
             "short_desc": "List pages",
             "examples": [
-                "ls",
-                "ls src"
+                "ls"
             ]
         }
     },
