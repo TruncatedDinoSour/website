@@ -1,0 +1,30 @@
+body,
+html {
+  padding: 2.5em;
+  height: 100%;
+}
+
+.title404 {
+  text-align: center;
+  font-size: 3em;
+}
+
+.content404 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.c404img {
+  display: flex;
+  justify-content: center;
+}
+
+.c404img img {
+  filter: opacity(25%) blur(10px);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin: 2.5em;
+}
