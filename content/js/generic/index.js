@@ -32,7 +32,7 @@ async function main() {
         },
         6: {
             "type": 'ok',
-            "text": `'${site_name}' has been booted! enjoy`
+            "text": `'${site_name}' has been booted! Type <b>help</b> for help.`
         }
     }
 
