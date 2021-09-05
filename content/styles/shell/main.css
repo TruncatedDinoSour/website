@@ -9,6 +9,10 @@
   width: 90%;
   padding: 0 0 1.2em 0;
 }
+.shell .prompt:focus {
+  border: none;
+  outline: none;
+}
 .shell .output {
   font-size: 1.4166666667em;
 }
