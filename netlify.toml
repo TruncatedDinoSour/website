@@ -7,5 +7,5 @@
 [[redirects]]
     from = "/404.html"
     to = "/page/404"
-    status = 404
-    force = false
+    status = 200
+    force = true
