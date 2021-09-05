@@ -16,7 +16,7 @@ function main() {
 
 
             if (commands[command]) {
-                if (commands[command]['root_only'] && !root) {
+                if (commands[command.toLowerCase()]['root_only'] && !root) {
                     cmd_output.innerHTML = `'${command.toLowerCase()}' can <i>only</i> be ran as <b>root</b>. see <b>help su</b>`
                 } else {
                     cmd_output.innerHTML = commands[command.toLowerCase()]['func'](argv);
