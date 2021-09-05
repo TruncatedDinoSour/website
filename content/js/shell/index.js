@@ -35,6 +35,7 @@ function main() {
                 cmd.setAttribute('class', 'prompt');
                 cmd.setAttribute('value', cmd_prompt.value);
                 cmd.setAttribute('readonly', '');
+                cmd.setAttribute('disabled', 'disabled')
 
                 let output = document.createElement('div');
                 output.setAttribute('class', 'output')
