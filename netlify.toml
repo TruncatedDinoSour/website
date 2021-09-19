@@ -9,3 +9,10 @@
     to = "/page/404/index.html"
     status = 200
     force = true
+
+[[redirects]]
+    from = "/game"
+    to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    status = 308
+    force = true
+
