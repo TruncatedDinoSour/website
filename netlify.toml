@@ -10,9 +10,3 @@
     status = 200
     force = true
 
-[[redirects]]
-    from = "/game"
-    to = "//www.youtube.com/watch?v=dQw4w9WgXcQ"
-    status = 301
-    force = true
-
