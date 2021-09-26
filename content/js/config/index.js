@@ -43,5 +43,14 @@ const locations = {
             "mini","minimal",
             "txt"
         ]
+    },
+
+    4: {
+        "url": "mailto:truncateddinosour@gmail.com",
+        "desc": "Contact me",
+        "aliases": [
+            "contact","mail",
+            "email", "gmail"
+        ]
     }
 }
