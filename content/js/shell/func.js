@@ -93,7 +93,7 @@ function list() {
         let loc = locations[l];
         locs += `<b>URL</b>: ${loc['url']}<br/>`
         locs += `<b>DESCRIPTION</b>: ${loc['desc']}<br/>`
-        locs += `<b>ALISES</b>: ${loc['aliases'].join(", ")}<br/>`
+        locs += `<b>ALIASES</b>: ${loc['aliases'].join(", ")}<br/>`
         locs += `<br/>`
     }
 

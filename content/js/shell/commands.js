@@ -54,7 +54,7 @@ var commands = {
         "root_only": false,
         "help": {
             "desc": "A command to go to pages",
-            "short_desc": "Goto a page",
+            "short_desc": "Goto a page via an alias",
             "examples": [
                 "goto src",
                 "goto"
