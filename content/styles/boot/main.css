@@ -37,8 +37,10 @@
   content: " * ";
   color: #ff0000;
 }
+.boot .bmsg::first-letter {
+  text-transform: uppercase;
+}
 .boot .bmsg {
-  text-transform: capitalize;
   word-wrap: break-word;
   word-break: break-all;
 }

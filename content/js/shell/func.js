@@ -68,7 +68,7 @@ function show(dest) {
     }
 }
 
-function goto(dest) {
+function cd(dest) {
     let dst = dest[0];
 
     if (!dst) {

@@ -53,8 +53,11 @@
         }
     }
 
+    .bmsg::first-letter {
+        text-transform: uppercase;
+    }
+
     .bmsg {
-        text-transform: capitalize;
         word-wrap: break-word;
         word-break: break-all;
     }

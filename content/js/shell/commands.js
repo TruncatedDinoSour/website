@@ -49,15 +49,15 @@ var commands = {
         }
     },
 
-    "goto": {
-        "func": goto,
+    "cd": {
+        "func": cd,
         "root_only": false,
         "help": {
             "desc": "A command to go to pages",
-            "short_desc": "Goto a page via an alias",
+            "short_desc": "Go to a page via an alias",
             "examples": [
-                "goto src",
-                "goto"
+                "cd src",
+                "cd"
             ]
         }
     },
