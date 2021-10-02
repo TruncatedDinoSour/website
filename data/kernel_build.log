@@ -1,0 +1,166 @@
+  DESCEND objtool
+  CALL    scripts/atomic/check-atomics.sh
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+Kernel: arch/x86/boot/bzImage is ready  (#1)
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/arch/x86/kvm/kvm-intel.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/arch/x86/platform/intel/iosf_mbi.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/acpi/video.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/gpu/drm/gma500/gma500_gfx.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/gpu/drm/i915/i915.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/gpu/drm/ttm/ttm.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/hid/hid-lg-g15.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/hid/hid-logitech.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/hid/hid-sony.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/input/input-leds.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/input/mousedev.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/input/sparse-keymap.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/misc/eeprom/eeprom_93cx6.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8192c/rtl8192c-common.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/net/wireless/realtek/rtlwifi/rtl8192ce/rtl8192ce.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/net/wireless/realtek/rtlwifi/rtl_pci.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/net/wireless/realtek/rtlwifi/rtlwifi.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/net/wireless/realtek/rtw88/rtw88_8821c.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/net/wireless/realtek/rtw88/rtw88_8821ce.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/net/wireless/realtek/rtw88/rtw88_8822c.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/net/wireless/realtek/rtw88/rtw88_8822ce.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/net/wireless/realtek/rtw88/rtw88_core.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/net/wireless/realtek/rtw88/rtw88_pci.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/nvme/host/nvme-core.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/nvme/host/nvme.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/thermal/intel/x86_pkg_temp_thermal.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/drivers/video/backlight/backlight.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/fs/efivarfs/efivarfs.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/lib/crypto/libarc4.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/net/ipv4/netfilter/iptable_nat.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/net/mac80211/mac80211.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/net/netfilter/nf_log_syslog.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/net/netfilter/xt_LOG.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/net/netfilter/xt_MASQUERADE.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/net/netfilter/xt_addrtype.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/net/netfilter/xt_mark.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/net/netfilter/xt_nat.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/net/rfkill/rfkill.ko
+  INSTALL /lib/modules/5.14.8-gentoo/kernel/net/wireless/cfg80211.ko
+  DEPMOD  /lib/modules/5.14.8-gentoo
+sh ./arch/x86/boot/install.sh \
+	5.14.8-gentoo arch/x86/boot/bzImage \
+	System.map "/boot"
+ [0m[1m[33m*[0m Python or Portage seems to be broken, attempting to locate CHOST ourselves ...
+ [0m[1m[31m*[0m gcc-config: Could not get portage CHOST!
+ [0m[1m[31m*[0m gcc-config: You should verify that CHOST is set in one of these places:
+ [0m[1m[31m*[0m gcc-config:  - //etc/portage/make.conf
+ [0m[1m[31m*[0m gcc-config:  - active environment
+dracut: Executing: /usr/bin/dracut --force
+dracut: dracut module 'dash' will not be installed, because command '/bin/dash' could not be found!
+dracut: dracut module 'mksh' will not be installed, because command '/bin/mksh' could not be found!
+dracut: dracut module 'systemd' will not be installed, because command '/systemd' could not be found!
+dracut: dracut module 'systemd-ask-password' will not be installed, because command 'systemd-ask-password' could not be found!
+dracut: dracut module 'systemd-coredump' will not be installed, because command 'coredumpctl' could not be found!
+dracut: dracut module 'systemd' will not be installed, because command '/systemd' could not be found!
+dracut: dracut module 'systemd-initrd' depends on 'systemd', which can't be installed
+dracut: dracut module 'systemd-modules-load' will not be installed, because command '/systemd-modules-load' could not be found!
+dracut: dracut module 'systemd-repart' will not be installed, because command 'systemd-repart' could not be found!
+dracut: dracut module 'systemd-sysctl' will not be installed, because command '/systemd-sysctl' could not be found!
+dracut: dracut module 'systemd-sysusers' will not be installed, because command 'systemd-sysusers' could not be found!
+dracut: dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut: dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut: dracut module 'dbus-broker' will not be installed, because command 'dbus-broker' could not be found!
+dracut: dracut module 'rngd' will not be installed, because command 'rngd' could not be found!
+dracut: dracut module 'network-legacy' will not be installed, because command 'dhclient' could not be found!
+dracut: dracut module 'network-wicked' will not be installed, because command 'wicked' could not be found!
+dracut: dracut module 'btrfs' will not be installed, because command 'btrfs' could not be found!
+dracut: dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut: dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut: dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut: dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut: dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut: dracut module 'fcoe' will not be installed, because command 'dcbtool' could not be found!
+dracut: dracut module 'fcoe' will not be installed, because command 'fipvlan' could not be found!
+dracut: dracut module 'fcoe' will not be installed, because command 'lldpad' could not be found!
+dracut: dracut module 'fcoe' will not be installed, because command 'fcoemon' could not be found!
+dracut: dracut module 'fcoe' will not be installed, because command 'fcoeadm' could not be found!
+dracut: dracut module 'fcoe-uefi' will not be installed, because command 'dcbtool' could not be found!
+dracut: dracut module 'fcoe-uefi' will not be installed, because command 'fipvlan' could not be found!
+dracut: dracut module 'fcoe-uefi' will not be installed, because command 'lldpad' could not be found!
+dracut: dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+dracut: dracut module 'iscsi' will not be installed, because command 'iscsiadm' could not be found!
+dracut: dracut module 'iscsi' will not be installed, because command 'iscsid' could not be found!
+dracut: dracut module 'nbd' will not be installed, because command 'nbd-client' could not be found!
+dracut: 95nfs: Could not find any command of 'rpcbind portmap'!
+dracut: dracut module 'nvmf' will not be installed, because command 'nvme' could not be found!
+dracut: dracut module 'biosdevname' will not be installed, because command 'biosdevname' could not be found!
+dracut: dracut module 'systemd-initrd' depends on 'systemd', which can't be installed
+dracut: dracut module 'dracut-systemd' depends on 'systemd-initrd', which can't be installed
+dracut: memstrack is not available
+dracut: If you need to use rd.memdebug>=4, please install memstrack
+dracut: dracut module 'squash' will not be installed, because command 'mksquashfs' could not be found!
+dracut: dracut module 'squash' will not be installed, because command 'unsquashfs' could not be found!
+dracut: *** Including module: bash ***
+dracut: *** Including module: i18n ***
+dracut: *** Including module: crypt ***
+dracut: *** Including module: dm ***
+dracut: Skipping udev rule: 64-device-mapper.rules
+dracut: Skipping udev rule: 60-persistent-storage-dm.rules
+dracut: Skipping udev rule: 55-dm.rules
+dracut: *** Including module: kernel-modules ***
+dracut: *** Including module: kernel-modules-extra ***
+dracut: *** Including module: lvm ***
+dracut: Skipping program /bin/systemd-run using in udev rule 69-dm-lvm-metad.rules as it cannot be found
+dracut: Skipping udev rule: 64-device-mapper.rules
+dracut: Skipping udev rule: 56-lvm.rules
+dracut: Skipping udev rule: 60-persistent-storage-lvm.rules
+dracut: *** Including module: nvdimm ***
+dracut: *** Including module: qemu ***
+dracut: *** Including module: qemu-net ***
+dracut: *** Including module: lunmask ***
+dracut: *** Including module: resume ***
+dracut: *** Including module: rootfs-block ***
+dracut: *** Including module: terminfo ***
+dracut: *** Including module: udev-rules ***
+dracut: Skipping udev rule: 40-redhat.rules
+dracut: Skipping udev rule: 50-firmware.rules
+dracut: Skipping udev rule: 50-udev.rules
+dracut: Skipping udev rule: 91-permissions.rules
+dracut: Skipping udev rule: 80-drivers-modprobe.rules
+dracut: *** Including module: usrmount ***
+dracut: *** Including module: base ***
+dracut: *** Including module: fs-lib ***
+dracut: *** Including module: shutdown ***
+dracut: *** Including modules done ***
+dracut: *** Installing kernel module dependencies ***
+dracut: *** Installing kernel module dependencies done ***
+dracut: *** Resolving executable dependencies ***
+dracut: *** Resolving executable dependencies done ***
+dracut: *** Hardlinking files ***
+Mode:           real
+Files:          855
+Linked:         3 files
+Compared:       0 xattrs
+Compared:       387 files
+Saved:          6.22 KiB
+Duration:       0.005965 seconds
+dracut: *** Hardlinking files done ***
+ [0m[1m[33m*[0m Python or Portage seems to be broken, attempting to locate CHOST ourselves ...
+ [0m[1m[31m*[0m gcc-config: Could not get portage CHOST!
+ [0m[1m[31m*[0m gcc-config: You should verify that CHOST is set in one of these places:
+ [0m[1m[31m*[0m gcc-config:  - //etc/portage/make.conf
+ [0m[1m[31m*[0m gcc-config:  - active environment
+dracut: *** Generating early-microcode cpio image ***
+dracut: *** Constructing AuthenticAMD.bin ***
+dracut: *** Constructing GenuineIntel.bin ***
+dracut: *** Store current command line parameters ***
+dracut: *** Stripping files ***
+dracut: *** Stripping files done ***
+dracut: *** Creating image file '/boot/initramfs-5.14.8-gentoo.img' ***
+dracut: *** Creating initramfs image file '/boot/initramfs-5.14.8-gentoo.img' done ***
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-5.14.8-gentoo
+Found initrd image: /boot/intel-uc.img /boot/amd-uc.img /boot/initramfs-5.14.8-gentoo.img
+Found linux image: /boot/vmlinuz-5.14.8-gentoo.old
+Found initrd image: /boot/intel-uc.img /boot/amd-uc.img /boot/initramfs-5.14.8-gentoo.img
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
