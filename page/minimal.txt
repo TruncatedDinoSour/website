@@ -14,7 +14,7 @@
  +=================================================================================+
 
 
--**********************************-  [BLOGS] -**********************************-
+-********************************************- [BLOGS] -***********************************************-
 
                         2021.08.07, 17:35 EEST [YYYY/MM/DD]
 Hey, sorry for not updating y'all, today was a very calm day. It's cold here.
@@ -44,7 +44,7 @@ well have a nice day and listen to what the little cow says:
                     ||     ||
  - Ari
 
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
 
                         2021.08.10, 17:00 EEST [YYYY/MM/DD]
 Hey, my site is now on wiby! wiby is a search engine for minimal sites and one of them
@@ -57,7 +57,7 @@ don't care as much to make it minimal, wiby tries to accomplish this and it's do
 I also have discoved few minimal protocols: gopher and gemini.
 Gopher is a text-only minimal protocol and is faily old, even older than http and https,
 it's really light, but it really lacks some stuff like pictures for example, but
-that's where gemini comes in, it has more support for "fancy" stuff when still staying pretty light 
+that's where gemini comes in, it has more support for "fancy" stuff when still staying pretty light
 and it's also faily new, it came out in 2019 and it's still being developed, I'd suggest you to try it.
 A good browser I found for gopher, http, https and gemini is kristall, it's pretty cool.
 
@@ -66,4 +66,27 @@ have a nice day.
 
  - Ari
 
--**********************************-_________-**********************************-
+--------------------------------------------------------------------------------------------------------
+
+                      2021.10.04, 22:55 EEST [YYYY/MM/DD]
+Lol, today is a crazy day... python 3.10 has been released, android 12A has
+been released and facebook + all its services have gone down. I'm kinda happy
+that facebook and all of its services gone down lol - less spyware on the
+internet heh.
+
+Though it also has affected me negatively, all spyware consuming normies
+started signing up for telegram lol and it got pretty slow so it's annoying
+me. It takes like 8 seconds to send one message heh, so yeah, annoying. I
+might even switch to another messenger if this doesn't stop or gets worse.
+
+Also one exciting thing - python 3.10 released! it seems pretty cool. The
+`match` statement seems nice and I can see it reducing my code size, might do
+some refactoring when it gets put on gentoo repos, but eh, idrk.
+
+Anyway, thanks for listening to my rant :) See you in the next blog post in
+like 2 months xD
+
+  - Ari
+
+-********************************************-_________-***********************************************-
+
