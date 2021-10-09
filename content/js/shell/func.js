@@ -117,7 +117,7 @@ function su(cmd) {
     if (cmd[0]) {
         if (cmd[0] == '.') {
             root = !root
-            return `Switched to the <b>${root ? '<b>root</b>' : localStorage.getItem('username')}</b> user.`
+            return `Switched to the <b>${root ? 'root' : localStorage.getItem('username')}</b> user.`
         } else {
             root = true;
             let ret = 'Command not found';
