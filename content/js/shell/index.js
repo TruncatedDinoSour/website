@@ -21,7 +21,7 @@ function main() {
                     cmd_output.innerHTML = `'${command}' can <i>only</i> be ran as <b>root</b>. see <b>help su</b>`
                 } else {
                     cmd_output.innerHTML = commands[command]['func'](argv);
-                } 
+                }
             } else {
                 cmd_output.innerText = `${command}: command not found`
             }
