@@ -4,7 +4,7 @@ const boot_message = {
     0: {
         "type": 'ok',
         "text": `Booting '${site_name}'...`,
-        "sleep_time": 0 
+        "sleep_time": 0
     }
 }
 const do_sleep = true;
@@ -13,7 +13,7 @@ const locations = {
         "url": "https://github.com/TruncatedDinosour/website",
         "desc": "The source code of this website",
         "aliases": [
-            "src","source",
+            "src", "source",
             "git", "github"
         ]
     },
@@ -22,7 +22,7 @@ const locations = {
         "url": "/",
         "desc": "The home page",
         "aliases": [
-            "home","root",
+            "home", "root",
             "index"
         ]
     },
@@ -31,7 +31,7 @@ const locations = {
         "url": "/page/reset",
         "desc": "Reset your account",
         "aliases": [
-            "reset","erase",
+            "reset", "erase",
             "del", "delete"
         ]
     },
@@ -40,7 +40,7 @@ const locations = {
         "url": "/page/minimal.txt",
         "desc": "The minimal page",
         "aliases": [
-            "mini","minimal",
+            "mini", "minimal",
             "txt", "min"
         ]
     },
@@ -49,9 +49,20 @@ const locations = {
         "url": "mailto:truncateddinosour@gmail.com",
         "desc": "Contact me",
         "aliases": [
-            "contact","mail",
+            "contact", "mail",
             "email", "gmail"
         ]
     }
 }
-
+const escape_HTML = str =>
+    str.replace(
+        /[&<>'"]/g,
+        tag =>
+        ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            "'": '&#39;',
+            '"': '&quot;'
+        }[tag] || tag)
+    );

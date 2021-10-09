@@ -168,5 +168,5 @@ function whoami() {
 
 
 function echo(argv) {
-    return argv.join(" ");
+    return escape_HTML(argv.join(" "));
 }
