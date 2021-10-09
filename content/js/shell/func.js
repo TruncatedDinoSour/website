@@ -120,7 +120,7 @@ function su(cmd) {
             return `Switched to the <b>${root ? '<b>root</b>' : localStorage.getItem('username')}</b> user.`
         } else {
             root = true;
-            let ret = '';
+            let ret = 'Command not found';
 
             try {
                 ret = commands[cmd[0]]['func'](cmd.slice(1));
