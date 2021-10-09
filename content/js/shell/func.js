@@ -143,3 +143,8 @@ function passwd() {
         return 'Wrong password'
     }
 }
+
+
+function whoami() {
+    return root ? "root" : window.localStorage.getItem("username");
+}

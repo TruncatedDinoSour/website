@@ -41,7 +41,7 @@ const locations = {
         "desc": "The minimal page",
         "aliases": [
             "mini","minimal",
-            "txt"
+            "txt", "min"
         ]
     },
 

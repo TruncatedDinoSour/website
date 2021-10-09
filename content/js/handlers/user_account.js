@@ -20,14 +20,13 @@ async function user_account_create() {
     )
 
     if (!valid) {
-        if (confirm('The credentials you entered are not valid, try again?')) {
+        if (confirm('The credentials you entered are not valid (password/username too short or the password don\'t match), try again?')) {
             user_account_create();
             return 1;
         }
 
         add_boot_entry({0: tmp_boot_entries[0]});
         await sleep(2500);
-        window.location.reload();
     } else {
         alert('The next popup will show your credentials, press OK to proceed')
         let confirm_credentials = confirm(`Are these credentials correct?:
@@ -37,9 +36,8 @@ async function user_account_create() {
         if (confirm_credentials) {
             localStorage.setItem('username', username)
             localStorage.setItem('password', hash(password))
-            
+
             alert('Credentials saved!')
-            window.location.reload();
         }
     }
 }

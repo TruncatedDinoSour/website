@@ -1,4 +1,5 @@
 var root = false;
+var not_return = false;
 
 add_boot_entry(boot_message)
 
@@ -33,15 +34,31 @@ async function main() {
         6: {
             "type": 'ok',
             "text": `'${site_name}' has been booted! Type <b>help</b> for help.`
+        },
+        7: {
+            "type": 'error',
+            "text": 'A fatal error has occured, report it <a href="https://github.com/TruncatedDinosour/website">here</a>',
+            "sleep_time": 0
         }
     }
 
     if (!is_logged_in) {
-        await add_boot_entry({0: tmp_boot_entries[0], 1: tmp_boot_entries[1]});
+        await add_boot_entry({ 0: tmp_boot_entries[0], 1: tmp_boot_entries[1] });
         await sleep(500);
-        user_account_create();
+        await user_account_create()
+            .catch(async (e) => {
+                window.localStorage.clear();
+                let boot_error = {
+                    "type": 'error',
+                    "text": e,
+                    "sleep_time": 0
+                };
 
-        return 1;
+                await add_boot_entry({ 0: boot_error, 1: tmp_boot_entries[7] });
+                not_return = true;
+            });
+
+        if (!not_return) window.location.reload();
     } else {
         await add_boot_entry({
             0: tmp_boot_entries[3]

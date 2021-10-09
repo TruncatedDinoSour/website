@@ -98,4 +98,16 @@ var commands = {
             ]
         }
     },
+
+    "whoami": {
+        "func": whoami,
+        "root_only": false,
+        "help": {
+            "desc": "A command to show your current user",
+            "short_desc": "Show user",
+            "examples": [
+                "whoami"
+            ]
+        }
+    },
 }
