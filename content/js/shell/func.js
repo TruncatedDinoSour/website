@@ -165,3 +165,8 @@ function passwd() {
 function whoami() {
     return root ? "root" : window.localStorage.getItem("username");
 }
+
+
+function echo(argv) {
+    return argv.join(" ");
+}

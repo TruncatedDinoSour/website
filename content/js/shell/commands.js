@@ -110,4 +110,16 @@ var commands = {
             ]
         }
     },
+
+    "echo": {
+        "func": echo,
+        "root_only": false,
+        "help": {
+            "desc": "Output a string",
+            "short_desc": "Output a string",
+            "examples": [
+                "echo hello world"
+            ]
+        }
+    },
 }
