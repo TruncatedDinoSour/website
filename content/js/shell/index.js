@@ -4,6 +4,16 @@ let cmd_history = document.getElementById('cmd_hist');
 let shell = document.getElementById('shell');
 var is_root = false;
 
+const html_bad_tags = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;'
+};
+
+function replaceTag(tag) {
+    return html_bad_tags[tag] || tag;
+}
+
 function main() {
     cmd_prompt.onkeypress = (e) => {
         if (!cmd_prompt.value) return;
@@ -17,12 +27,12 @@ function main() {
 
             if (commands[command]) {
                 if (commands[command]['root_only'] && !root) {
-                    cmd_output.innerHTML = `'${command}' can <i>only</i> be ran as <b>root</b>. see <b>help su</b>`
+                    cmd_output.innerHTML = `'${command.replace(/[&<>]/g, replaceTag)}' can <i>only</i> be ran as <b>root</b>. see <b>help su</b>`
                 } else {
                     cmd_output.innerHTML = commands[command]['func'](argv);
                 } 
             } else {
-                cmd_output.innerHTML = `${command}: command not found`
+                cmd_output.innerText = `${command}: command not found`
             }
 
 

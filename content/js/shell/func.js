@@ -121,12 +121,20 @@ function su(cmd) {
         } else {
             root = true;
             let ret = 'Command not found';
+            let err = false;
 
             try {
                 ret = commands[cmd[0]]['func'](cmd.slice(1));
-            } catch {}
+            } catch (e) {
+                if (e.constructor !== TypeError) err = e;
+            }
 
             root = false;
+
+            if (err) {
+                alert(`ERROR (report it to 'cd src'): ${err}`);
+                throw err;
+            }
 
             return ret;
         }
