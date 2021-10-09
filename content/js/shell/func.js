@@ -151,8 +151,8 @@ function passwd() {
 
     if (current_password == localStorage.getItem('password')) {
         if (password1 === password2) {
-            localStorage.setItem("password", bash(password1))
-            alert(`password set to '${password1}'`);
+            localStorage.setItem("password", hash(password1))
+            alert(`password set`);
         } else {
             return "Passwords don't match"
         }
