@@ -117,7 +117,7 @@ function su(cmd) {
     if (cmd[0]) {
         if (cmd[0] == '.') {
             root = !root
-            return `Switched to the <b>${root ? 'root' : localStorage.getItem('username')}</b> user.`
+            return `Switched to the <b>${root ? 'root' : escape_HTML(localStorage.getItem('username'))}</b> user.`
         } else {
             root = true;
             let ret = 'Command not found';
@@ -163,7 +163,7 @@ function passwd() {
 
 
 function whoami() {
-    return root ? "root" : window.localStorage.getItem("username");
+    return root ? "root" : escape_HTML(window.localStorage.getItem("username"));
 }
 
 

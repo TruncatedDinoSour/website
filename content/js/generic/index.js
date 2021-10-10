@@ -21,7 +21,7 @@ async function main() {
         },
         3: {
             "type": 'ok',
-            "text": `Found user account: <b>${localStorage.getItem('username')}</b>`
+            "text": `Found user account: <b>${localStorage.getItem('username') ? escape_HTML(localStorage.getItem('username')) : ''}</b>`
         },
         4: {
             "type": 'ok',
