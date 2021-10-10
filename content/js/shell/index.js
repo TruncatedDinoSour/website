@@ -18,7 +18,7 @@ function main() {
 
             if (commands[command]) {
                 if (commands[command]['root_only'] && !root) {
-                    cmd_output.innerHTML = `'${command}' can <i>only</i> be ran as <b>root</b>. see <b>help su</b>`
+                    cmd_output.innerHTML = `'${escape_HTML(command)}' can <i>only</i> be ran as <b>root</b>. see <b>help su</b>`
                 } else {
                     cmd_output.innerHTML = commands[command]['func'](argv);
                 }
