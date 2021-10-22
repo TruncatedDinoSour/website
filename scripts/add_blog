@@ -23,7 +23,7 @@ async def main() -> int:
     with open("/tmp/blog.md", "r") as f:
         blog_content = f.read()
 
-    date = subprocess.check_output(['date', '+%D %T %Z']).decode().rstrip("\n")
+    date = subprocess.check_output(['date', '+%F %T %Z']).decode().rstrip("\n")
     content = f"""# %s
 
 {date} | [back](..) | [home](/) | [git](//github.com/TruncatedDinosour/website)
