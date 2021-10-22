@@ -1,3 +1,6 @@
+[build]
+    command = "make clean"
+
 [[redirects]]
     from = "/*"
     to = "/page/404/index.html"
@@ -9,4 +12,3 @@
     to = "/page/404/index.html"
     status = 200
     force = true
-
