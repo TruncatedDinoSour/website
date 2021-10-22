@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
 import asyncio
-import os
+import os, subprocess
 import markdown
+
 
 
 async def main() -> int:
@@ -22,9 +23,10 @@ async def main() -> int:
     with open("/tmp/blog.md", "r") as f:
         blog_content = f.read()
 
-    content = """# %s
+    date = subprocess.check_output(['date', '+%D %T %Z']).decode().rstrip("\n")
+    content = f"""# %s
 
-[back](..) | [home](/) | [git](//github.com/TruncatedDinosour/website)
+{date} | [back](..) | [home](/) | [git](//github.com/TruncatedDinosour/website)
 
 <hr/>
 
