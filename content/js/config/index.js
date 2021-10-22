@@ -58,7 +58,8 @@ const locations = {
         "url": "/page/blog",
         "desc": "Blog page",
         "aliases": [
-            "blog", "news"
+            "blog", "news",
+            "blogs", "articles"
         ]
     }
 }
