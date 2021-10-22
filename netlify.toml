@@ -2,12 +2,6 @@
     command = "make clean"
 
 [[redirects]]
-    from = "/*"
-    to = "/page/404/index.html"
-    status = 404
-    force = false
-
-[[redirects]]
     from = "/404.html"
     to = "/page/404/index.html"
     status = 200
@@ -18,3 +12,9 @@
     to = "/page/blog/index.html"
     status = 200
     force = true
+
+[[redirects]]
+    from = "/*"
+    to = "/page/404/index.html"
+    status = 404
+    force = false
