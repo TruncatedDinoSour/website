@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /data/*
+Allow: /index.html
+Allow: /page/blog/*
+Allow: /page/minimal.txt
