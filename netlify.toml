@@ -12,3 +12,9 @@
     to = "/page/404/index.html"
     status = 200
     force = true
+
+[[redirects]]
+    from = "/blog"
+    to = "/page/blog/index.html"
+    status = 200
+    force = true
