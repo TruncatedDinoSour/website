@@ -10,7 +10,7 @@
 [[redirects]]
     from = "/blog"
     to = "/page/blog/index.html"
-    status = 200
+    status = 301
     force = true
 
 [[redirects]]
