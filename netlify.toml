@@ -12,3 +12,9 @@
     to = "/page/404/index.html"
     status = 200
     force = true
+
+[[redirects]]
+    from = "/Makefile"
+    to = "/page/404/index.html"
+    status = 404
+    force = true
