@@ -52,6 +52,14 @@ const locations = {
             "contact", "mail",
             "email", "gmail"
         ]
+    },
+
+    5: {
+        "url": "/page/blog",
+        "desc": "Blog page",
+        "aliases": [
+            "blog", "news"
+        ]
     }
 }
 const escape_HTML = str =>
