@@ -2,7 +2,7 @@
 ### [My website's](https://ari-web.netlify.app) source code.
 
 # Customising when self-hosting
-1. Clone the repository: `https://github.com/TruncatedDinosour/website`
+1. Clone the repository: `git clone https://github.com/TruncatedDinosour/website`
 2. Enter the directory: `cd website`
 3. Install python dependencies: `python3 -m pip install -r requirements.txt`
 4. See the `/content/styles/config` and `/content/js/config` directories.
