@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /data/*
 Disallow: /content/*
 Allow: *
+Sitemap: https://ari-web.netlify.app/sitemap.xml
+
