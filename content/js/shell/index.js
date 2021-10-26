@@ -12,7 +12,7 @@ function main() {
         let code = (e.keyCode ? e.keyCode : e.which);
         if (code == 13) {
             let command_list = cmd_prompt.value.split(' ');
-            let command = command_list[0];
+            let command = command_list[0].toLocaleLowerCase();
             let argv = command_list.slice(1);
 
 
