@@ -34,6 +34,7 @@
 [[redirects]]
     from = "/:page"
     to = "/page/:page"
+    status = 301
     force = false
 
 [[redirects]]
