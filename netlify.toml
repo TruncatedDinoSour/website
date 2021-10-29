@@ -14,6 +14,30 @@
     force = true
 
 [[redirects]]
+    from = "/gentoo_stage3_nmor"
+    to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-nomultilib-openrc/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/gentoo_stage3_nmorh"
+    to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-hardened-nomultilib-openrc/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/git"
+    to = "https://github.com/TruncatedDinosour/website"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/mail"
+    to = "mailto:truncateddinosour@gmail.com"
+    status = 301
+    force = true
+
+[[redirects]]
     from = "/*"
     to = "/page/404/index.html"
     status = 404
