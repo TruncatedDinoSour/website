@@ -6,3 +6,4 @@
 * [Why is open source software better than closed source software](/page/blog/blogs/Why-is-open-source-software-better-than-closed-source-software.html)
 * [Why I prefer source-based distros](/page/blog/blogs/Why-I-prefer-source-based-distros.html)
 * [A very important post](/page/blog/blogs/A-very-important-post.html)
+* [I am in love with scheme/racket](/page/blog/blogs/I-am-in-love-with-scheme_racket.html)

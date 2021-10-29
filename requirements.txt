@@ -1,1 +1,4 @@
 markdown
+bs4
+lxml
+
