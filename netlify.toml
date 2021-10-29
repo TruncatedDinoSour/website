@@ -32,6 +32,12 @@
     force = true
 
 [[redirects]]
+    from = "/dotfiles"
+    to = "https://github.com/TruncatedDinosour/dotfiles-cleaned"
+    status = 301
+    force = true
+
+[[redirects]]
     from = "/:page"
     to = "/page/:page"
     status = 301
