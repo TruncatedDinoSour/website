@@ -9,7 +9,8 @@
 
 [[redirects]]
     from = "/:page"
-    to = "/page/:page/index.html"
+    to = "/page/:page"
+    force = false
 
 [[redirects]]
     from = "/gentoo_stage3_nmor"
