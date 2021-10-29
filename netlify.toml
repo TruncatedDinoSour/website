@@ -4,7 +4,7 @@
 [[redirects]]
     from = "/404.html"
     to = "/page/404/index.html"
-    status = 200
+    status = 301
     force = true
 
 [[redirects]]
