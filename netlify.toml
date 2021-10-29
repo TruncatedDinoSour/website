@@ -8,10 +8,8 @@
     force = true
 
 [[redirects]]
-    from = "/blog"
-    to = "/page/blog/index.html"
-    status = 301
-    force = true
+    from = "/:page"
+    to = "/page/:page/index.html"
 
 [[redirects]]
     from = "/gentoo_stage3_nmor"
