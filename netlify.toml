@@ -8,11 +8,6 @@
     force = true
 
 [[redirects]]
-    from = "/:page"
-    to = "/page/:page"
-    force = false
-
-[[redirects]]
     from = "/gentoo_stage3_nmor"
     to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-nomultilib-openrc/"
     status = 301
@@ -35,6 +30,11 @@
     to = "mailto:truncateddinosour@gmail.com"
     status = 301
     force = true
+
+[[redirects]]
+    from = "/:page"
+    to = "/page/:page"
+    force = false
 
 [[redirects]]
     from = "/*"
