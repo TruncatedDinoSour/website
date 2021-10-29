@@ -10,7 +10,7 @@ const boot_message = {
 const do_sleep = true;
 const locations = {
     0: {
-        "url": "https://github.com/TruncatedDinosour/website",
+        "url": "/git",
         "desc": "The source code of this website",
         "aliases": [
             "src", "source",
@@ -46,7 +46,7 @@ const locations = {
     },
 
     4: {
-        "url": "mailto:truncateddinosour@gmail.com",
+        "url": "/mail",
         "desc": "Contact me",
         "aliases": [
             "contact", "mail",
@@ -55,7 +55,7 @@ const locations = {
     },
 
     5: {
-        "url": "/page/blog",
+        "url": "/blog",
         "desc": "Blog page",
         "aliases": [
             "blog", "news",
