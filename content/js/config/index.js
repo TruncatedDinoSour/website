@@ -61,6 +61,16 @@ const locations = {
             "blog", "news",
             "blogs", "articles"
         ]
+    },
+
+
+    6: {
+        "url": "/dotfiles",
+        "desc": "My dotfiles-cleaned github repository",
+        "aliases": [
+            "rice", "dotfiles",
+            "dots", "dwm"
+        ]
     }
 }
 const escape_HTML = str =>
