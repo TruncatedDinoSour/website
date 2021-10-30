@@ -43,6 +43,19 @@
     status = 301
     force = true
 
+ [[redirects]]
+    from = "/overlay"
+    to = "https://github.com/TruncatedDinosour/dinolay"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/ovl/*"
+    to = "https://github.com/TruncatedDinosour/dinolay/tree/main/:splat"
+    status = 301
+    force = true
+
+
 [[redirects]]
     from = "/:page"
     to = "/page/:page"
