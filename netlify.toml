@@ -34,7 +34,7 @@
 [[redirects]]
     from = "/dotfiles"
     to = "https://github.com/TruncatedDinosour/dotfiles-cleaned.git"
-    status = 302
+    status = 308
     force = true
 
 [[redirects]]
