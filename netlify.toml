@@ -50,7 +50,7 @@
     force = true
 
 [[redirects]]
-    from = "/ovl/*"
+    from = "/gentooatom/*"
     to = "https://github.com/TruncatedDinosour/dinolay/tree/main/:splat"
     status = 301
     force = true
