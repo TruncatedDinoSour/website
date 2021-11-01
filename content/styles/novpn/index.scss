@@ -1,0 +1,48 @@
+@import '../config/_novpn';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: $default-font-colour;
+    font-family: $default-font;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#matrix {
+    position: fixed;
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-width: 1px;
+    border-style: solid;
+
+    border-color: $bg;
+    background-color: $bg;
+
+    z-index: -1;
+    overflow: hidden;
+}
+
+.content {
+    position: sticky;
+    display: block;
+    height: 100%;
+}
+
+.page-intro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
