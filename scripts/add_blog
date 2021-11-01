@@ -27,7 +27,7 @@ async def main() -> int:
     date = subprocess.check_output(["date", "+%F %T %Z"]).decode().rstrip("\n")
     content = f"""# %s
 
-{date} | [back](..) | [home](/) | [git](//github.com/TruncatedDinosour/website)
+{date} | [back](..) | [home](/) | [git](/git)
 
 <hr/>
 

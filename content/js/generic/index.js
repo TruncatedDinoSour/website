@@ -37,7 +37,7 @@ async function main() {
         },
         7: {
             "type": 'error',
-            "text": 'A fatal error has occured, report it <a href="https://github.com/TruncatedDinosour/website">here</a>',
+            "text": 'A fatal error has occured, report it <a href="/git">here</a>',
             "sleep_time": 0
         }
     }
