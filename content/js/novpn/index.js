@@ -9,6 +9,6 @@ function scrollDown() {
 }
 
 function scrollUp() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     scroll_element = 0;
 }
