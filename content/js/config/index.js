@@ -55,7 +55,7 @@ const locations = {
     },
 
     5: {
-        "url": "/blog",
+        "url": "/page/blog",
         "desc": "Blog page",
         "aliases": [
             "blog", "news",
@@ -72,11 +72,19 @@ const locations = {
         ]
     },
 
-     7: {
+    7: {
         "url": "/gpg",
         "desc": "My GPG key",
         "aliases": [
             "gpg", "sign"
+        ]
+    },
+
+    8: {
+        "url": "/page/novpn",
+        "desc": "A page about how you shouldn't use VPNs",
+        "aliases": [
+            "vpn", "novpn"
         ]
     }
 }
