@@ -7,3 +7,4 @@
 * [Why I prefer source-based distros](/page/blog/blogs/Why-I-prefer-source-based-distros.html)
 * [A very important post](/page/blog/blogs/A-very-important-post.html)
 * [I am in love with scheme/racket](/page/blog/blogs/I-am-in-love-with-scheme_racket.html)
+* [My GPG key](/page/blog/blogs/My-GPG-key.html)

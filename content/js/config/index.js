@@ -63,13 +63,20 @@ const locations = {
         ]
     },
 
-
     6: {
         "url": "/dotfiles",
         "desc": "My dotfiles-cleaned github repository",
         "aliases": [
             "rice", "dotfiles",
             "dots", "dwm"
+        ]
+    },
+
+     7: {
+        "url": "/gpg",
+        "desc": "My GPG key",
+        "aliases": [
+            "gpg", "sign"
         ]
     }
 }

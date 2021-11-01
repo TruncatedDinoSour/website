@@ -55,6 +55,11 @@
     status = 301
     force = true
 
+[[redirects]]
+    from = "/gpg"
+    to = "/page/blog/blogs/My-GPG-key.html"
+    status = 301
+    force = true
 
 [[redirects]]
     from = "/:page"
