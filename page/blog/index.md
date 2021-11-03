@@ -8,3 +8,4 @@
 * [A very important post](/page/blog/blogs/A-very-important-post.html)
 * [I am in love with scheme/racket](/page/blog/blogs/I-am-in-love-with-scheme_racket.html)
 * [My GPG key](/page/blog/blogs/My-GPG-key.html)
+* [Tech normies, companies and digital freedom](/page/blog/blogs/Tech-normies,-companies-and-digital-freedom.html)
