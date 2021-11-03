@@ -62,6 +62,12 @@
     force = true
 
 [[redirects]]
+    from = "/mp"
+    to = "https://www.youtube.com/playlist?list=PL7UuKajElTaChff3BkcJE6620lSuSUaDC"
+    status = 301
+    force = true
+
+[[redirects]]
     from = "/:page"
     to = "/page/:page"
     status = 301
@@ -72,3 +78,4 @@
     to = "/page/404/index.html"
     status = 404
     force = false
+

@@ -86,7 +86,15 @@ const locations = {
         "aliases": [
             "vpn", "novpn"
         ]
-    }
+    },
+
+    9: {
+        "url": "/mp",
+        "desc": "My music playlist",
+        "aliases": [
+            "music", "playlist"
+        ]
+    },
 }
 const escape_HTML = str =>
     str.replace(
