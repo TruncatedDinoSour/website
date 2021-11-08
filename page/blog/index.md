@@ -10,4 +10,4 @@
 * [My GPG key](/page/blog/blogs/My-GPG-key.html)
 * [Tech normies, companies and digital freedom](/page/blog/blogs/Tech-normies,-companies-and-digital-freedom.html)
 * [Rust bad](/page/blog/blogs/Rust-bad.html)
-* [DuckDuckGo? more like DuckDuckNo](/page/blog/blogs/DuckDuckGo?-more-like-DuckDuckNo.html)
+* [DuckDuckGo? more like DuckDuckNo](/page/blog/blogs/DuckDuckGo_-more-like-DuckDuckNo.html)
