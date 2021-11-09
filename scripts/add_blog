@@ -95,7 +95,7 @@ in your blog there. press enter to continue"""
         blog_content = blog_markdown.read()
 
     date = subprocess.check_output(["date", "+%F %T %Z"]).decode().rstrip("\n")
-    content = BLOG_MARKDOWN_TEMPLATE % (date, blog_title, blog_content)
+    content = BLOG_MARKDOWN_TEMPLATE % (blog_title, date, blog_content)
 
     with open(
         f"./page/blog/blogs/{sanitised_blog_title}.html", "w", encoding="utf-8"
