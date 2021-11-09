@@ -5,6 +5,7 @@ import os
 import subprocess
 import sys
 import markdown
+import random
 
 from bs4 import BeautifulSoup as bs
 
@@ -69,7 +70,7 @@ def sanitise_title(title: str) -> str:
     for character, replacement in CHARACTER_MAP.items():
         final = final.replace(character, replacement)
 
-    return final[0:50]
+    return f"{final[0:64]}_{random.randint(10_000, 10_000_000_000)}"
 
 
 def main() -> int:
@@ -90,36 +91,48 @@ in your blog there. press enter to continue"""
     else:
         os.system(f"{input('What editor should I use?: ')} /tmp/blog.md")
 
-    with open("/tmp/blog.md", "r") as f:
-        blog_content = f.read()
+    with open("/tmp/blog.md", "r", encoding="utf-8") as blog_markdown:
+        blog_content = blog_markdown.read()
 
     date = subprocess.check_output(["date", "+%F %T %Z"]).decode().rstrip("\n")
     content = BLOG_MARKDOWN_TEMPLATE % (date, blog_title, blog_content)
 
-    with open(f"./page/blog/blogs/{sanitised_blog_title}.html", "w") as f:
-        f.write(BLOG_HTML_TEMPLATE % (date, blog_title, markdown.markdown(content)))
+    with open(
+        f"./page/blog/blogs/{sanitised_blog_title}.html", "w", encoding="utf-8"
+    ) as blog_html:
+        blog_html.write(
+            BLOG_HTML_TEMPLATE % (date, blog_title, markdown.markdown(content))
+        )
 
-    with open("./page/blog/index.md", "a") as f:
-        f.write(f"\n* [{blog_title}](/page/blog/blogs/{sanitised_blog_title}.html)")
+    with open("./page/blog/index.md", "a", encoding="utf-8") as home_page_markdown:
+        home_page_markdown.write(
+            f"\n* [{blog_title}](/page/blog/blogs/{sanitised_blog_title}.html)"
+        )
 
-    with open("./page/blog/index.html", "w") as f:
-        with open("./page/blog/index.md", "r") as md:
-            f.write(HOME_PAGE_HTML_TEMPLATE % markdown.markdown(md.read()))
+    with open("./page/blog/index.html", "w", encoding="utf-8") as home_page:
+        with open("./page/blog/index.md", "r", encoding="utf-8") as home_page_md:
+            home_page.write(
+                HOME_PAGE_HTML_TEMPLATE % markdown.markdown(home_page_md.read())
+            )
 
     # Pretify the blog and the index page
-    with open("./page/blog/index.html", "r") as f:
-        index_page = f.read()
+    with open("./page/blog/index.html", "r", encoding="utf-8") as home_page:
+        index_page = home_page.read()
 
-    with open("./page/blog/index.html", "w") as f:
+    with open("./page/blog/index.html", "w", encoding="utf-8") as home_page:
         soup = bs(index_page, features="lxml")
-        f.write(soup.prettify())
+        home_page.write(soup.prettify())
 
-    with open(f"./page/blog/blogs/{sanitised_blog_title}.html", "r") as f:
-        blog_page = f.read()
+    with open(
+        f"./page/blog/blogs/{sanitised_blog_title}.html", "r", encoding="utf-8"
+    ) as blog_html:
+        blog_page = blog_html.read()
 
-    with open(f"./page/blog/blogs/{sanitised_blog_title}.html", "w") as f:
+    with open(
+        f"./page/blog/blogs/{sanitised_blog_title}.html", "w", encoding="utf-8"
+    ) as blog_html:
         soup = bs(blog_page, features="lxml")
-        f.write(soup.prettify())
+        blog_html.write(soup.prettify())
 
     return 0
 

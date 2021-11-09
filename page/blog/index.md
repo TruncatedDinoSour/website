@@ -11,3 +11,4 @@
 * [Tech normies, companies and digital freedom](/page/blog/blogs/Tech-normies,-companies-and-digital-freedom.html)
 * [Rust bad](/page/blog/blogs/Rust-bad.html)
 * [DuckDuckGo? more like DuckDuckNo](/page/blog/blogs/DuckDuckGo_-more-like-DuckDuckNo.html)
+* [Chrome/Chromium or firefox? Why I prefer firefox over Chromium based browsers](/page/blog/blogs/Chrome_Chromium-or-firefox_-Why-I-prefer-firefox-over-Chromium-b_9105582045.html)
