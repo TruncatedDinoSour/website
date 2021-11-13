@@ -74,6 +74,12 @@
     force = false
 
 [[redirects]]
+    from = "/gh/:project"
+    to = "https://github.com/TruncatedDinosour/:project"
+    status = 301
+    force = false
+
+[[redirects]]
     from = "/*"
     to = "/page/404/index.html"
     status = 404
