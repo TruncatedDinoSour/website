@@ -56,12 +56,6 @@
     force = true
 
 [[redirects]]
-    from = "/gpg"
-    to = "/page/blog/blogs/My-GPG-key.html"
-    status = 301
-    force = true
-
-[[redirects]]
     from = "/mp"
     to = "https://www.youtube.com/playlist?list=PL7UuKajElTaChff3BkcJE6620lSuSUaDC"
     status = 301
