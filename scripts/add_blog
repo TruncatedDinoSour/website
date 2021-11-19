@@ -53,6 +53,7 @@ HOME_PAGE_HTML_TEMPLATE = """<!DOCTYPE html>
 </head>
 <body>
     <h1>My blogs</h1>
+    <code>Last updated on: %s</code>
     <div>
 %s
     </div>
@@ -106,13 +107,13 @@ in your blog there. press enter to continue"""
 
     with open("./page/blog/index.md", "a", encoding="utf-8") as home_page_markdown:
         home_page_markdown.write(
-            f"\n* [{blog_title}](/page/blog/blogs/{sanitised_blog_title}.html)"
+            f"* [{blog_title}](/page/blog/blogs/{sanitised_blog_title}.html)"
         )
 
     with open("./page/blog/index.html", "w", encoding="utf-8") as home_page:
         with open("./page/blog/index.md", "r", encoding="utf-8") as home_page_md:
             home_page.write(
-                HOME_PAGE_HTML_TEMPLATE % markdown.markdown(home_page_md.read())
+                HOME_PAGE_HTML_TEMPLATE % (date, markdown.markdown(home_page_md.read()))
             )
 
     # Pretify the blog and the index page
