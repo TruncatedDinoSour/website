@@ -13,3 +13,5 @@
 * [Chrome/Chromium or firefox? Why I prefer firefox over Chromium based browsers](/page/blog/blogs/Chrome_Chromium-or-firefox_-Why-I-prefer-firefox-over-Chromium-b_9105582045.html)
 * [Fixing xorg screen tearing on intel graphics](/page/blog/blogs/Fixing-xorg-screen-tearing-on-intel-graphics_4520111675.html)
 * [Thinking about switching to a fully minimalistic gentoo system](/page/blog/blogs/Thinking-about-switching-to-a-fully-minimalistic-gentoo-system_3546056102.html)
+
+* [Don't ask -- google it](/page/blog/blogs/Don't-ask----google-it_1253034870.html)
