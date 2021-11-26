@@ -14,3 +14,4 @@
 * [Fixing xorg screen tearing on intel graphics](/page/blog/blogs/Fixing-xorg-screen-tearing-on-intel-graphics_4520111675.html)
 * [Thinking about switching to a fully minimalistic gentoo system](/page/blog/blogs/Thinking-about-switching-to-a-fully-minimalistic-gentoo-system_3546056102.html)
 * [Don't ask -- google it](/page/blog/blogs/Don't-ask----google-it_1253034870.html)
+* [FOSS hardware -- the real low level creepyness of AMD and Intel](/page/blog/blogs/Foss-hardware----the-real-low-level-creepyness-of-amd-and-intel_9799156651.html)
