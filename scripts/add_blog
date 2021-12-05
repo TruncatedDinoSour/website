@@ -107,7 +107,7 @@ in your blog there. press enter to continue"""
 
     with open("./page/blog/index.md", "a", encoding="utf-8") as home_page_markdown:
         home_page_markdown.write(
-            f"* [{blog_title}](/page/blog/blogs/{sanitised_blog_title}.html)"
+            f"\n* [{blog_title}](/page/blog/blogs/{sanitised_blog_title}.html)"
         )
 
     with open("./page/blog/index.html", "w", encoding="utf-8") as home_page:
