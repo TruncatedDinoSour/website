@@ -14,6 +14,12 @@
     force = true
 
 [[redirects]]
+    from = "/tinycore"
+    to = "https://tinycore.netlify.app/"
+    status = 301
+    force = true
+
+[[redirects]]
     from = "/gentoo_stage3_nmorh"
     to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-hardened-nomultilib-openrc/"
     status = 301
