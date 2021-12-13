@@ -95,6 +95,14 @@ const locations = {
             "music", "playlist"
         ]
     },
+    
+    9: {
+        "url": "/tinycore",
+        "desc": "My tinycore mirrpr",
+        "aliases": [
+            "linux" "tinycore", "tcl", "tc"
+        ]
+    },
 }
 const escape_HTML = str =>
     str.replace(
