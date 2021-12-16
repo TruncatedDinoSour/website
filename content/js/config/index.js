@@ -95,12 +95,12 @@ const locations = {
             "music", "playlist"
         ]
     },
-    
+
     9: {
         "url": "/tinycore",
-        "desc": "My tinycore mirrpr",
+        "desc": "My tinycore mirror",
         "aliases": [
-            "linux" "tinycore", "tcl", "tc"
+            "linux", "tinycore", "tcl", "tc"
         ]
     },
 }
