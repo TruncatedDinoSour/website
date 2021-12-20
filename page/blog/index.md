@@ -17,3 +17,4 @@
 * [FOSS hardware -- the real low level creepyness of AMD and Intel](/page/blog/blogs/Foss-hardware----the-real-low-level-creepyness-of-amd-and-intel_9799156651.html)
 * [Providing LGBT education in school will not make your child LGBT](/page/blog/blogs/Providing-lgbt-education-in-school-will-not-make-your-child-lgbt_5214455203.html)
 * [Ideal software](/page/blog/blogs/Ideal-software_4494379800.html)
+* [GUIs are useless](/page/blog/blogs/Guis-are-useless_4816713057.html)
