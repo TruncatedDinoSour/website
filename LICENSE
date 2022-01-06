@@ -1,13 +1,34 @@
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                    Version 2, December 2004
+                                    ArAr General public license
+                                            version 2
 
- Copyright (C) 2021 Ari Archer <truncateddinosour@gmail.com>
+    This license is an open source license with restrictions for commercial use.
+    Any project under this license ...
+        CANNOT be used commercially
+        CANNOT be redistributed with any sort of fee
+        CANNOT be redistributed in any proprietary form (binary, obfuscated, etc.)
+        CANNOT be patented
+        CANNOT change to any more proprietary license
+        CANNOT depend on any proprietary code/code blobs/software
+        CANNOT be used by any coorparate individual, company or orginisation
 
- Everyone is permitted to copy and distribute verbatim or modified
- copies of this license document, and changing it is allowed as long
- as the name is changed.
+        DOESN'T have any warranty
 
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+        CAN be modified
+        CAN be redistributed in an open source form
+        CAN be used privately
 
-  0. You just DO WHAT THE FUCK YOU WANT TO.
+    This license is non-coorparate, individual use only.
+
+    The owner of this project holds NO LIABILITY if any unstable, redistributed or modified
+    versions of this project harms you in any way.
+
+
+    Redistributed or modified versions of this project...
+        MUST have the same license as the original project
+        MUST disclose the project's source
+
+
+    OWNER:          Ari Archer <truncateddinosour@gmail.com>
+    PROJECT NAME:   website_terminal
+    YEAR:           2022
+
