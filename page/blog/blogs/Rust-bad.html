@@ -1,132 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Ari::web -&gt; Blog
-  </title>
-  <meta content="website webdev linux programming ari terminal dark blog javascript opensource free" name="keywords"/>
-  <meta content="Blog on 2021-11-07 05:03:56 EET - Rust bad" name="description"/>
-  <meta content="follow" name="robots"/>
- </head>
- <body>
-  <div>
-   <h1>
-    Rust bad
-   </h1>
-   <p>
-    2021-11-07 05:03:56 EET |
-    <a href="..">
-     back
-    </a>
-    |
-    <a href="/">
-     home
-    </a>
-    |
-    <a href="/git">
-     git
-    </a>
-   </p>
-   <hr/>
-   <h2>
-    Rust is solving an issue nobody has
-   </h2>
-   <p>
-    Ah yes, memory safety, the only thing people use bruhst for, like it's so important to them,
-first up if you're allocating a lot of memory you shouldn't be programming either way, allocating memory
-is slow and heavy so you should not do it if you can get away of not doing it, like ofc it's necessary
-to allocate memory in
-    <strong>
-     some cases
-    </strong>
-    , but to unnecessarily allocate it and FORGET TO FREE IT is just on you...
-   </p>
-   <h2>
-    Rust is painful to compile
-   </h2>
-   <p>
-    Rust is horribly heavy and slow to compile so if people start writing software only in rust
-it will become a mess for users who compile their software and it's already happening for me for example,
-I'm on gentoo and every time I compile rust I just want to kill myself because of how painful and slow it is.
-Just bad...
-   </p>
-   <h2>
-    Less availability
-   </h2>
-   <p>
-    Rust binaries are slower and larger so making the availability to people bad.
-And for people who have lower spec computers and they still compile everything this will also
-make the compiling process painful so they might give up and not use your software, again
-making your software less available to less people. Even though it can make the development builds faster,
-at the end it's the end user who's experience is more important.
-   </p>
-   <h2>
-    Horrible ass syntax
-   </h2>
-   <p>
-    Rust's syntax is horrible and not a lot of developers know it and not a lot of jobs require it, so
-learning rust is just torturing with the weird ass, shit(tm)++ syntax:
-   </p>
-   <p>
-    <code>
-     fn~~~~~~~~~~~!@@!!!!! so(jauhg::sfduf!!!68768Jijuhe:;@@@@@@ ufuheuwifh) {
-    using s:s:e:frg::gger:fwuhf::jfewhe::fweuhwueih:::fiehu9wehf::fhuewhf:::fiuuwehf::fhuwehufhwe::ewiuhfwuie;
-    kfhuerh::fiufu::yufewy:fwgiwfuif::owiffhoiwefh::fehuhyew::wfiuguifg::3hw8w &lt;&lt; "r23rj4r" &lt;&lt; 'wfefwhuwfhefhwe9fwhdhuhfweidu';;;;;;
-    43twrugyj9ifj0fjfew(())))(()()()()()()()()()))()()()::g9hgergheeegu;
-}
-    </code>
-   </p>
-   <p>
-    I wanted to exaggerate, but this actually feels and looks a bit like rust code LOL...
-Even though this also resembles C++ a bit, C++ is not as horrible as this.
-   </p>
-   <h2>
-    Buggy
-   </h2>
-   <p>
-    Even though rust has come a good way since like two years back it's still buggy and for production
-you can kinda expect it to break in one way or another.
-   </p>
-   <h2>
-    In some ways, bad debugging experience
-   </h2>
-   <p>
-    Disassembling rust binaries is a pain, so you lose some privilege to debugging rust code, though
-that's just my experience, complete mess...
-   </p>
-   <h2>
-    Rust causes bloated software
-   </h2>
-   <p>
-    Rust projects usually require 3908948093 crates, even the simplest projects require a lot of them
-so rust executables become large and painful to compile quick.
-Rust dependencies also are a pain to manage and you just get a LARGEEEEEEEEEEEEEEEEEEEEEEEEEEE cargo.toml file
-so again making it a pain to download for people with worse hardware, shit internet and/or low storage.
-   </p>
-   <h2>
-    Rust has a bad community
-   </h2>
-   <p>
-    Rust's community consists of idiots calling C cringe, unsafe, slow and in general bad and people who complain
-about CMake causing C software to be bloated when it's nowhere near as bloated as cargo and in general
-rust. Sure they have good docs, but that's everything good about it...
-   </p>
-   <p>
-    Every project includes at least one rocket emoji and description is something like "XXX is a blazingly fast,
-configurable, lightweight #rustrewrite, it introduces 69 new features and it's very very fast trust me"
-   </p>
-   <h2>
-    More downsides than upsides
-   </h2>
-   <p>
-    People call rust good because it's modern and has useless memory safety when overlooking other
-flaws I mentioned before for example being bloated, less available and being slow to compile,
-making rust ultimately useless
-   </p>
-  </div>
- </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ari::web -&gt; Blog</title>
+    <meta
+      content="website webdev linux programming ari terminal dark blog javascript opensource free"
+      name="keywords"
+    />
+    <meta
+      content="Blog on 2021-11-07 05:03:56 EET - Rust bad"
+      name="description"
+    />
+    <meta content="follow" name="robots" />
+  </head>
+  <body>
+    <div>
+      <h1>Rust bad</h1>
+      <p>
+        2021-11-07 05:03:56 EET |
+        <a href=".."> back </a>
+        |
+        <a href="/"> home </a>
+        |
+        <a href="/git"> git </a>
+      </p>
+      <hr />
+      <h2>Rust is solving an issue nobody has</h2>
+      <p>
+        Ah yes, memory safety, the only thing people use bruhst for, like it's
+        so important to them, first up if you're allocating a lot of memory you
+        shouldn't be programming either way, allocating memory is slow and heavy
+        so you should not do it if you can get away of not doing it, like ofc
+        it's necessary to allocate memory in
+        <strong> some cases </strong>
+        , but to unnecessarily allocate it and FORGET TO FREE IT is just on
+        you...
+      </p>
+      <h2>Rust is painful to compile</h2>
+      <p>
+        Rust is horribly heavy and slow to compile so if people start writing
+        software only in rust it will become a mess for users who compile their
+        software and it's already happening for me for example, I'm on gentoo
+        and every time I compile rust I just want to kill myself because of how
+        painful and slow it is. Just bad...
+      </p>
+      <h2>Less availability</h2>
+      <p>
+        Rust binaries are slower and larger so making the availability to people
+        bad. And for people who have lower spec computers and they still compile
+        everything this will also make the compiling process painful so they
+        might give up and not use your software, again making your software less
+        available to less people. Even though it can make the development builds
+        faster, at the end it's the end user who's experience is more important.
+      </p>
+      <h2>Horrible ass syntax</h2>
+      <p>
+        Rust's syntax is horrible and not a lot of developers know it and not a
+        lot of jobs require it, so learning rust is just torturing with the
+        weird ass, shit(tm)++ syntax:
+      </p>
+      <p>
+        <code>
+          fn~~~~~~~~~~~!@@!!!!! so(jauhg::sfduf!!!68768Jijuhe:;@@@@@@
+          ufuheuwifh) { using
+          s:s:e:frg::gger:fwuhf::jfewhe::fweuhwueih:::fiehu9wehf::fhuewhf:::fiuuwehf::fhuwehufhwe::ewiuhfwuie;
+          kfhuerh::fiufu::yufewy:fwgiwfuif::owiffhoiwefh::fehuhyew::wfiuguifg::3hw8w
+          &lt;&lt; "r23rj4r" &lt;&lt; 'wfefwhuwfhefhwe9fwhdhuhfweidu';;;;;;
+          43twrugyj9ifj0fjfew(())))(()()()()()()()()()))()()()::g9hgergheeegu; }
+        </code>
+      </p>
+      <p>
+        I wanted to exaggerate, but this actually feels and looks a bit like
+        rust code LOL... Even though this also resembles C++ a bit, C++ is not
+        as horrible as this.
+      </p>
+      <h2>Buggy</h2>
+      <p>
+        Even though rust has come a good way since like two years back it's
+        still buggy and for production you can kinda expect it to break in one
+        way or another.
+      </p>
+      <h2>In some ways, bad debugging experience</h2>
+      <p>
+        Disassembling rust binaries is a pain, so you lose some privilege to
+        debugging rust code, though that's just my experience, complete mess...
+      </p>
+      <h2>Rust causes bloated software</h2>
+      <p>
+        Rust projects usually require 3908948093 crates, even the simplest
+        projects require a lot of them so rust executables become large and
+        painful to compile quick. Rust dependencies also are a pain to manage
+        and you just get a LARGEEEEEEEEEEEEEEEEEEEEEEEEEEE cargo.toml file so
+        again making it a pain to download for people with worse hardware, shit
+        internet and/or low storage.
+      </p>
+      <h2>Rust has a bad community</h2>
+      <p>
+        Rust's community consists of idiots calling C cringe, unsafe, slow and
+        in general bad and people who complain about CMake causing C software to
+        be bloated when it's nowhere near as bloated as cargo and in general
+        rust. Sure they have good docs, but that's everything good about it...
+      </p>
+      <p>
+        Every project includes at least one rocket emoji and description is
+        something like "XXX is a blazingly fast, configurable, lightweight
+        #rustrewrite, it introduces 69 new features and it's very very fast
+        trust me"
+      </p>
+      <h2>More downsides than upsides</h2>
+      <p>
+        People call rust good because it's modern and has useless memory safety
+        when overlooking other flaws I mentioned before for example being
+        bloated, less available and being slow to compile, making rust
+        ultimately useless
+      </p>
+      <hr />
+      <i>Updated points</i>
+      <hr />
+      <h2>Bad library support</h2>
+      <p>
+        Even though rust has a bunch of libraries, it's missing a lot of them
+        and doing everything from scratch is a pain. Its libraries suck a lot
+        and most that are out there are buggy.
+      </p>
+      <h2>Bad IDE support</h2>
+      <p>
+        Rust with its popularity is getting more editing support, but either way
+        on a bunch of editors rust is not supported as language.
+      </p>
+      <h2>Overly backed by companies</h2>
+      <p>
+        I don't like companies and they usually ruin everything,
+        I see rust's future as a pile of garbage...
+      </p>
+
+      <hr />
+      <p>
+        Now, rust community, I know y'all don't like me, but please, I know
+        you're reading this, explain to me why rust is so good, make an issue on
+        github or something. I keep asking y'all and y'all just keep ignoring me
+        which is kinda stupid when you are trying to prove a point.
+      </p>
+      <br/>
+
+      <p>And some points y'all pointed out:</p>
+      <ul>
+        <li>"Ah yes, memory safety, such useless thing" (sarcasticly)</li>
+        <li>"Bad syntax, lisp totally does it better"</li>
+        <li>
+          "Obviously we call rust good because of memory safety and modernism"
+        </li>
+      </ul>
+      <i>tbh nothing else? fr?</i>
+
+      <br/>
+      <br/>
+
+      <p>
+        To debunk stuff y'all said. Memeory safety being useless is true imo,
+        most projects are not some high scale enterprise apps which are stupidly
+        made by allocating memory left and right and it being not closely
+        monitored. and the ones which are lower-scale usually don't allocate a
+        bunch of memory always and not free it, but if they do, just to make
+        sure, memory safety is good. A lot of people seem to think that when
+        programming in C you have to code like mallocing memory for everything
+        all the time. And bad syntax, yes, its syntax is bad worse than C++, I
+        can't believe how badly designed it is. And again, yes, you call it good
+        because of those things while ignoring all the downsides of it, you just
+        want to be "a part of a trend" and overly focused on modernism.
+      </p>
+
+      <br/>
+
+      <p>
+        Also to that one guy who said I'm a moron because I use gentoo,
+        sure, at least I don't need 1662 crates for a hello world <3
+      </p>
+    </div>
+  </body>
 </html>
 <!-- this is automatically generated by scripts/add_blog -->
