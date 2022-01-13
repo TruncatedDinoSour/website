@@ -1,5 +1,5 @@
 # Website
-### [My website's](https://ari-web.netlify.app) source code.
+### [My website's](https://www.ari-web.xyz/) source code.
 
 # Customising when self-hosting
 1. Clone the repository: `git clone https://github.com/TruncatedDinosour/website`
