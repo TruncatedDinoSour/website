@@ -72,15 +72,8 @@ const locations = {
         ]
     },
 
-    7: {
-        "url": "/gpg",
-        "desc": "My GPG key",
-        "aliases": [
-            "gpg", "sign"
-        ]
-    },
 
-    8: {
+    7: {
         "url": "/page/novpn",
         "desc": "A page about how you shouldn't use VPNs",
         "aliases": [
@@ -88,7 +81,7 @@ const locations = {
         ]
     },
 
-    9: {
+    8: {
         "url": "/mp",
         "desc": "My music playlist",
         "aliases": [
