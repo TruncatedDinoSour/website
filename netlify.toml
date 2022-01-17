@@ -13,11 +13,15 @@
     status = 301
     force = true
 
+# ARI-WEB-SPECIFIC #
+
 [[redirects]]
     from = "/tinycore"
-    to = "https://tinycore.netlify.app/"
+    to = "https://tcl.ari-web.xyz/"
     status = 301
     force = true
+
+####################
 
 [[redirects]]
     from = "/gentoo_stage3_nmorh"
