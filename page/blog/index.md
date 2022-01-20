@@ -21,3 +21,4 @@
 * [New domain! -- ari-web.xyz](/page/blog/blogs/New-domain!----ari-web.xyz_7375640347.html)
 * [Funny thing about my site](/page/blog/blogs/Funny-thing-about-my-site_6342443591.html)
 * [Fixing kernel freezing on realtek WiFi](/page/blog/blogs/Fixing-kernel-freezing-on-realtek-wifi_5342268108.html)
+* [Fast atoi in C(++)](/page/blog/blogs/Fast-atoi-in-c(++)_8279372928.html)

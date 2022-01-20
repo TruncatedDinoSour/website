@@ -2,11 +2,11 @@
 """ Adds a new blog """
 
 import os
+import random
 import subprocess
 import sys
-import markdown
-import random
 
+import markdown
 from bs4 import BeautifulSoup as bs
 
 CHARACTER_MAP = {"/": "_", " ": "-", "?": "_", "#": "_", "<": "_", ">": "_", "\\": "_"}
@@ -71,7 +71,9 @@ def sanitise_title(title: str) -> str:
     for character, replacement in CHARACTER_MAP.items():
         final = final.replace(character, replacement)
 
-    return f"{final[0:64]}_{random.randint(10_000, 10_000_000_000)}".capitalize()
+    return (
+        f"{final[0:64]}_{random.randint(-10_000_000_000, 10_000_000_000)}".capitalize()
+    )
 
 
 def main() -> int:
