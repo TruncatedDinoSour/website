@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 rm -fv content/styles/config/_main.css
+
 git add .
-git commit -S -m "update @ $(date)"
+git commit -sam "update @ $(date)"
 git push -u origin terminal

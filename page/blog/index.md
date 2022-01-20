@@ -20,3 +20,4 @@
 * [What happened to faker.js?](/page/blog/blogs/What-happened-to-faker.js__5729874372.html)
 * [New domain! -- ari-web.xyz](/page/blog/blogs/New-domain!----ari-web.xyz_7375640347.html)
 * [Funny thing about my site](/page/blog/blogs/Funny-thing-about-my-site_6342443591.html)
+* [Fixing kernel freezing on realtek WiFi](/page/blog/blogs/Fixing-kernel-freezing-on-realtek-wifi_5342268108.html)
