@@ -4,13 +4,13 @@
 [[redirects]]
     from = "/404.html"
     to = "/page/404/index.html"
-    status = 301
+    status = 308
     force = true
 
 [[redirects]]
     from = "/gentoo_stage3_nmor"
     to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-nomultilib-openrc/"
-    status = 301
+    status = 308
     force = true
 
 # ARI-WEB-SPECIFIC #
@@ -18,7 +18,13 @@
 [[redirects]]
     from = "/tinycore"
     to = "https://tcl.ari-web.xyz/"
-    status = 301
+    status = 308
+    force = true
+
+[[redirects]]
+    from = "/data/*"
+    to = "https://files.ari-web.xyz/data/:splat"
+    status = 308
     force = true
 
 ####################
@@ -26,62 +32,62 @@
 [[redirects]]
     from = "/gentoo_stage3_nmorh"
     to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-hardened-nomultilib-openrc/"
-    status = 301
+    status = 308
     force = true
 
 [[redirects]]
     from = "/git"
     to = "https://github.com/TruncatedDinosour/website"
-    status = 301
+    status = 308
     force = true
 
 [[redirects]]
     from = "/mail"
     to = "mailto:truncateddinosour@gmail.com"
-    status = 301
+    status = 308
     force = true
 
 [[redirects]]
     from = "/dotfiles"
     to = "https://github.com/TruncatedDinosour/dotfiles-cleaned"
-    status = 301
+    status = 308
     force = true
 
 [[redirects]]
     from = "/dotfile/:distro/*"
     to = "https://github.com/TruncatedDinosour/dotfiles-cleaned/tree/:distro/:splat"
-    status = 301
+    status = 308
     force = true
 
  [[redirects]]
     from = "/overlay"
     to = "https://github.com/TruncatedDinosour/dinolay"
-    status = 301
+    status = 308
     force = true
 
 [[redirects]]
     from = "/gentooatom/*"
     to = "https://github.com/TruncatedDinosour/dinolay/tree/main/:splat"
-    status = 301
+    status = 308
     force = true
 
 [[redirects]]
     from = "/mp"
     to = "https://www.youtube.com/playlist?list=PL7UuKajElTaChff3BkcJE6620lSuSUaDC"
-    status = 301
+    status = 308
     force = true
 
 [[redirects]]
     from = "/:page"
     to = "/page/:page"
-    status = 301
+    status = 308
     force = false
 
 [[redirects]]
     from = "/gh/:project"
     to = "https://github.com/TruncatedDinosour/:project"
-    status = 301
-    force = false
+    status = 308
+    force = true
 
 [[redirects]]
     from = "/*"
