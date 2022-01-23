@@ -10,7 +10,7 @@
 [[redirects]]
     from = "/gentoo_stage3_nmor"
     to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-nomultilib-openrc/"
-    status = 308
+    status = 301
     force = true
 
 # ARI-WEB-SPECIFIC #
@@ -18,13 +18,19 @@
 [[redirects]]
     from = "/tinycore"
     to = "https://tcl.ari-web.xyz/"
-    status = 308
+    status = 301
     force = true
 
 [[redirects]]
     from = "/data/*"
-    to = "https://files.ari-web.xyz/data/:splat"
-    status = 308
+    to = "https://files.ari-web.xyz/files/:splat"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/mail"
+    to = "mailto:ari@mail.ari-web.xyz"
+    status = 301
     force = true
 
 ####################
@@ -32,49 +38,43 @@
 [[redirects]]
     from = "/gentoo_stage3_nmorh"
     to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-hardened-nomultilib-openrc/"
-    status = 308
+    status = 301
     force = true
 
 [[redirects]]
     from = "/git"
     to = "https://github.com/TruncatedDinosour/website"
-    status = 308
-    force = true
-
-[[redirects]]
-    from = "/mail"
-    to = "mailto:truncateddinosour@gmail.com"
-    status = 308
+    status = 301
     force = true
 
 [[redirects]]
     from = "/dotfiles"
     to = "https://github.com/TruncatedDinosour/dotfiles-cleaned"
-    status = 308
+    status = 301
     force = true
 
 [[redirects]]
     from = "/dotfile/:distro/*"
     to = "https://github.com/TruncatedDinosour/dotfiles-cleaned/tree/:distro/:splat"
-    status = 308
+    status = 301
     force = true
 
  [[redirects]]
     from = "/overlay"
     to = "https://github.com/TruncatedDinosour/dinolay"
-    status = 308
+    status = 301
     force = true
 
 [[redirects]]
     from = "/gentooatom/*"
     to = "https://github.com/TruncatedDinosour/dinolay/tree/main/:splat"
-    status = 308
+    status = 301
     force = true
 
 [[redirects]]
     from = "/mp"
     to = "https://www.youtube.com/playlist?list=PL7UuKajElTaChff3BkcJE6620lSuSUaDC"
-    status = 308
+    status = 301
     force = true
 
 [[redirects]]
@@ -86,7 +86,7 @@
 [[redirects]]
     from = "/gh/:project"
     to = "https://github.com/TruncatedDinosour/:project"
-    status = 308
+    status = 301
     force = true
 
 [[redirects]]
