@@ -4,7 +4,7 @@
 [[redirects]]
     from = "/404.html"
     to = "/page/404/index.html"
-    status = 308
+    status = 302
     force = true
 
 [[redirects]]
@@ -80,7 +80,7 @@
 [[redirects]]
     from = "/:page"
     to = "/page/:page"
-    status = 308
+    status = 302
     force = false
 
 [[redirects]]
