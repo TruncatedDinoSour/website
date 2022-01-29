@@ -59,7 +59,7 @@
     status = 301
     force = true
 
- [[redirects]]
+[[redirects]]
     from = "/overlay"
     to = "https://github.com/TruncatedDinosour/dinolay"
     status = 301
