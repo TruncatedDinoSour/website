@@ -8,7 +8,7 @@
         color: $boot_header_colour;
         margin-left: 1.12em; /* makes it that it aligns with 'boot' messages */
     }
-    
+
     #bootver::before {
         content: 'WEBrc version ' $boot_ver;
     }
@@ -19,7 +19,7 @@
             float: right;
             color: $ok_colour;
         }
-    
+
         &::before {
             content: ' * ';
             color: $ok_colour;
@@ -33,7 +33,7 @@
             float: right;
             color: $warn_colour;
         }
-    
+
         &::before {
             content: ' * ';
             color: $warn_colour;
@@ -46,7 +46,7 @@
             float: right;
             color: $error_colour;
         }
-    
+
         &::before {
             content: ' * ';
             color: $error_colour;

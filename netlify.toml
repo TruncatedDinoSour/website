@@ -86,7 +86,7 @@
 [[redirects]]
     from = "/gh/:project"
     to = "https://github.com/TruncatedDinosour/:project"
-    status = 301
+    status = 302
     force = true
 
 [[redirects]]
