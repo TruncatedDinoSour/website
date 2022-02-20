@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /data/*
 Disallow: /content/*
 Allow: *
 Sitemap: https://ari-web.xyz/sitemap.xml
