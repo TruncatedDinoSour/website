@@ -41,7 +41,6 @@
     status = 301
     force = true
 
-# https://answers.netlify.com/t/how-do-i-do-cross-domain-redirects-to-github-repositories-from-netlify/52258/2?u=b00bleatea
 [[redirects]]
     from = "/git/*"
     to = "https://github.com/TruncatedDinosour/website/:splat"
@@ -49,8 +48,8 @@
     force = true
 
 [[redirects]]
-    from = "/dotfiles"
-    to = "https://github.com/TruncatedDinosour/dotfiles-cleaned"
+    from = "/dotfiles/*"
+    to = "https://github.com/TruncatedDinosour/dotfiles-cleaned/:splat"
     status = 301
     force = true
 
@@ -61,8 +60,8 @@
     force = true
 
 [[redirects]]
-    from = "/overlay"
-    to = "https://github.com/TruncatedDinosour/dinolay"
+    from = "/overlay/*"
+    to = "https://github.com/TruncatedDinosour/dinolay/:splat"
     status = 301
     force = true
 
