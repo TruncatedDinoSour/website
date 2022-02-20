@@ -41,9 +41,10 @@
     status = 301
     force = true
 
+# https://answers.netlify.com/t/how-do-i-do-cross-domain-redirects-to-github-repositories-from-netlify/52258/2?u=b00bleatea
 [[redirects]]
-    from = "/git"
-    to = "https://github.com/TruncatedDinosour/website"
+    from = "/git/*"
+    to = "https://github.com/TruncatedDinosour/:splat"
     status = 301
     force = true
 
@@ -83,9 +84,10 @@
     status = 302
     force = false
 
+# https://answers.netlify.com/t/how-do-i-do-cross-domain-redirects-to-github-repositories-from-netlify/52258/2?u=b00bleatea
 [[redirects]]
-    from = "/gh/:project"
-    to = "https://github.com/TruncatedDinosour/:project"
+    from = "/gh/*"
+    to = "https://github.com/TruncatedDinosour/:splat"
     status = 301
     force = true
 
