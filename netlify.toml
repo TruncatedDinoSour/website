@@ -78,6 +78,12 @@
     status = 301
     force = true
 
+[[redirects]]
+    from = "/page/blog"
+    to = "https://blog.ari-web.xyz/"
+    status = 301
+    force = true
+
 ####################
 
 [[redirects]]
