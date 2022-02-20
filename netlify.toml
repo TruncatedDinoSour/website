@@ -44,7 +44,7 @@
 # https://answers.netlify.com/t/how-do-i-do-cross-domain-redirects-to-github-repositories-from-netlify/52258/2?u=b00bleatea
 [[redirects]]
     from = "/git/*"
-    to = "https://github.com/TruncatedDinosour/:splat"
+    to = "https://github.com/TruncatedDinosour/website/:splat"
     status = 301
     force = true
 
