@@ -22,22 +22,8 @@
     force = true
 
 [[redirects]]
-    from = "/data/*"
-    to = "https://files.ari-web.xyz/files/:splat"
-    status = 301
-    force = true
-
-[[redirects]]
     from = "/mail"
     to = "mailto:truncateddinosour@gmail.com"
-    status = 301
-    force = true
-
-####################
-
-[[redirects]]
-    from = "/gentoo_stage3_nmorh"
-    to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-hardened-nomultilib-openrc/"
     status = 301
     force = true
 
@@ -71,6 +57,35 @@
     status = 301
     force = true
 
+# https://answers.netlify.com/t/how-do-i-do-cross-domain-redirects-to-github-repositories-from-netlify/52258/2?u=b00bleatea
+[[redirects]]
+    from = "/gh/*"
+    to = "https://github.com/TruncatedDinosour/:splat"
+    status = 301
+    force = true
+
+## BACKWARDS COMPATIBILITY ##
+
+[[redirects]]
+    from = "/data/*"
+    to = "https://files.ari-web.xyz/files/:splat"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/page/blog/blogs/*"
+    to = "https://blog.ari-web.xyz/blogs/:splat"
+    status = 301
+    force = true
+
+####################
+
+[[redirects]]
+    from = "/gentoo_stage3_nmorh"
+    to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-hardened-nomultilib-openrc/"
+    status = 301
+    force = true
+
 [[redirects]]
     from = "/mp"
     to = "https://www.youtube.com/playlist?list=PL7UuKajElTaChff3BkcJE6620lSuSUaDC"
@@ -82,13 +97,6 @@
     to = "/page/:page"
     status = 302
     force = false
-
-# https://answers.netlify.com/t/how-do-i-do-cross-domain-redirects-to-github-repositories-from-netlify/52258/2?u=b00bleatea
-[[redirects]]
-    from = "/gh/*"
-    to = "https://github.com/TruncatedDinosour/:splat"
-    status = 301
-    force = true
 
 [[redirects]]
     from = "/*"
