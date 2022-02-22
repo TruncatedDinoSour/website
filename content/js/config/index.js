@@ -46,15 +46,6 @@ const locations = {
     },
 
     4: {
-        "url": "/mail",
-        "desc": "Contact me",
-        "aliases": [
-            "contact", "mail",
-            "email", "gmail"
-        ]
-    },
-
-    5: {
         "url": "/page/blog",
         "desc": "Blog page",
         "aliases": [
@@ -63,7 +54,7 @@ const locations = {
         ]
     },
 
-    6: {
+    5: {
         "url": "/dotfiles",
         "desc": "My dotfiles-cleaned github repository",
         "aliases": [
@@ -73,7 +64,7 @@ const locations = {
     },
 
 
-    7: {
+    6: {
         "url": "/page/novpn",
         "desc": "A page about how you shouldn't use VPNs",
         "aliases": [
@@ -81,7 +72,7 @@ const locations = {
         ]
     },
 
-    8: {
+    7: {
         "url": "/mp",
         "desc": "My music playlist",
         "aliases": [
@@ -89,7 +80,7 @@ const locations = {
         ]
     },
 
-    9: {
+    8: {
         "url": "/tinycore",
         "desc": "My tinycore mirror",
         "aliases": [

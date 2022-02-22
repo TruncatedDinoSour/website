@@ -22,12 +22,6 @@
     force = true
 
 [[redirects]]
-    from = "/mail"
-    to = "mailto:truncateddinosour@gmail.com"
-    status = 301
-    force = true
-
-[[redirects]]
     from = "/git/*"
     to = "https://github.com/TruncatedDinosour/website/:splat"
     status = 301
