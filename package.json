@@ -1,0 +1,23 @@
+{
+    "name": "ari-web.xyz",
+    "version": "1.0.0",
+    "description": "My website's source code",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "https://ari-web.xyz/gh/website.git"
+    },
+    "keywords": [
+        "website", "terminal", "ari-web", "linux",
+        "shell", "javascript", "dark", "sass"
+    ],
+    "author": "Ari Archer <ari.web.xyz@gmail.com>",
+    "license": "SEE LICENSE IN LICENSE",
+    "bugs": {
+        "url": "https://ari-web.xyz/gh/issues"
+    },
+    "homepage": "https://ari-web.xyz/gh/website#readme",
+    "devDependencies": {
+        "eslint": "^8.10.0"
+    }
+}

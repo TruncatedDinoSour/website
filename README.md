@@ -12,3 +12,10 @@
 6. Go to http://0.0.0.0:5500/ in your browser
 7. Edit all stuff that is `ARI-WEB-SPECIFIC` in [netlify.toml](/netlify.toml)
 8. Publish
+
+# Subdomains
+
+- https://www.ari-web.xyz/ (source: https://ari-web.xyz/git)
+- https://files.ari-web.xyz/ (source: https://files.ari-web.xyz/git)
+- https://blog.ari-web.xyz/ (source: https://blog.ari-web.xyz/git)
+- https://tcl.ari-web.xyz/ (source: https://tcl.ari-web.xyz/filetree.html)
