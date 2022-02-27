@@ -1,7 +1,9 @@
-# Website
+<h1 align="center">Website</h1>
 
 <p align="center">
-    [![Netlify Status](https://api.netlify.com/api/v1/badges/4ac67547-6444-4c67-9a54-c7f8fb28427b/deploy-status)](https://app.netlify.com/sites/ari-web/deploys)
+    <a href="https://app.netlify.com/sites/ari-web/deploys">
+        <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/4ac67547-6444-4c67-9a54-c7f8fb28427b/deploy-status"/>
+    </a>
 </p>
 
 ### [My website's](https://www.ari-web.xyz/) source code.
