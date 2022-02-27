@@ -16,6 +16,12 @@
 # ARI-WEB-SPECIFIC #
 
 [[redirects]]
+    from = "/favicon.ico"
+    to  = "/favicons/ari-web-ukraine.png"
+    status = 200
+    force = true
+
+[[redirects]]
     from = "/tinycore"
     to = "https://tcl.ari-web.xyz/"
     status = 301

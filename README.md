@@ -1,5 +1,9 @@
 # Website
 
+<p align="center">
+    [![Netlify Status](https://api.netlify.com/api/v1/badges/4ac67547-6444-4c67-9a54-c7f8fb28427b/deploy-status)](https://app.netlify.com/sites/ari-web/deploys)
+</p>
+
 ### [My website's](https://www.ari-web.xyz/) source code.
 
 # Customising when self-hosting
@@ -15,7 +19,7 @@
 
 # Subdomains
 
-- https://www.ari-web.xyz/ (source: https://ari-web.xyz/git)
-- https://files.ari-web.xyz/ (source: https://files.ari-web.xyz/git)
-- https://blog.ari-web.xyz/ (source: https://blog.ari-web.xyz/git)
-- https://tcl.ari-web.xyz/ (source: https://tcl.ari-web.xyz/filetree.html)
+-   https://www.ari-web.xyz/ (source: https://ari-web.xyz/git)
+-   https://files.ari-web.xyz/ (source: https://files.ari-web.xyz/git)
+-   https://blog.ari-web.xyz/ (source: https://blog.ari-web.xyz/git)
+-   https://tcl.ari-web.xyz/ (source: https://tcl.ari-web.xyz/filetree.html)
