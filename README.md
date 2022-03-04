@@ -17,18 +17,17 @@
 
 # Customising when self-hosting
 
-1. Clone the repository: `git clone https://github.com/TruncatedDinosour/website`
-2. Enter the directory: `cd website`
-3. Install python dependencies: `python3 -m pip install -r requirements.txt`
-4. See the `/content/styles/config` and `/content/js/config` directories.
-5. Open it in live server: `python3 -m http.server 5500`
-6. Go to http://0.0.0.0:5500/ in your browser
-7. Edit all stuff that is `ARI-WEB-SPECIFIC` in [netlify.toml](/netlify.toml)
-8. Publish
+1. Clone the repository: `git clone https://ari-web.xyz/git ari-web`
+2. Enter the directory: `cd ari-web`
+3. See the `/content/styles/config` and `/content/js/config` directories.
+4. Open it in live server: `python3 -m http.server 5500`
+5. Go to http://0.0.0.0:5500/ in your browser
+6. Edit all stuff that is `ARI-WEB-SPECIFIC` in [netlify.toml](/netlify.toml)
+7. Publish on [netlify](https://netlify.com/)
 
 # Subdomains
 
 -   https://www.ari-web.xyz/ (source: https://ari-web.xyz/git)
 -   https://files.ari-web.xyz/ (source: https://files.ari-web.xyz/git)
 -   https://blog.ari-web.xyz/ (source: https://blog.ari-web.xyz/git)
--   https://tcl.ari-web.xyz/ (source: https://tcl.ari-web.xyz/filetree.html)
+-   https://tcl.ari-web.xyz/ (source: https://tcl.ari-web.xyz/filetree.html) (Due to size limitations of git services I cannot publish it on any git)
