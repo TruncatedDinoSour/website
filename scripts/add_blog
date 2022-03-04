@@ -9,6 +9,13 @@ import sys
 import markdown
 from bs4 import BeautifulSoup as bs
 
+try:
+    import readline
+except ImportError:
+    readline = 0  # type: ignore
+
+del readline
+
 CHARACTER_MAP = {"/": "_", " ": "-", "?": "_", "#": "_", "<": "_", ">": "_", "\\": "_"}
 
 BLOG_MARKDOWN_TEMPLATE = """# %s
