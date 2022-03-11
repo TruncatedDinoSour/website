@@ -1,0 +1,15 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "short_name": "Ari-web",
+    "name": "Ari::web -> Index",
+    "description": "My personal website",
+    "icons": [{
+        "src": "/favicon.ico",
+        "sizes": "128x128",
+        "type": "image/png"
+    }],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "background_color": "#000000"
+}

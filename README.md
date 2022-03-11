@@ -31,3 +31,4 @@
 -   https://files.ari-web.xyz/ (source: https://files.ari-web.xyz/git)
 -   https://blog.ari-web.xyz/ (source: https://blog.ari-web.xyz/git)
 -   https://tcl.ari-web.xyz/ (source: https://tcl.ari-web.xyz/filetree.html) (Due to size limitations of git services I cannot publish it on any git)
+-   https://legacy.blog.ari-web.xyz/ (source: https://legacy.blog.ari-web.xyz/git)
