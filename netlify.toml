@@ -93,6 +93,12 @@
     force = true
 
 [[redirects]]
+    from = "/gentoo-portage/:version"
+    to = "wget https://gitweb.gentoo.org/proj/portage.git/snapshot/portage-:version.tar.gz"
+    status = 301
+    force = true
+
+[[redirects]]
     from = "/mp"
     to = "https://www.youtube.com/playlist?list=PL7UuKajElTaChff3BkcJE6620lSuSUaDC"
     status = 301
