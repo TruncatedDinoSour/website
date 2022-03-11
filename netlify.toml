@@ -74,7 +74,7 @@
 
 [[redirects]]
     from = "/page/blog/*"
-    to = "https://blog.ari-web.xyz/:splat"
+    to = "https://blog.ari-web.xyz/blogs/:splat"
     status = 301
     force = true
 
