@@ -62,12 +62,6 @@ const locations = {
         desc: "My tinycore mirror",
         aliases: ["linux", "tinycore", "tcl", "tc"],
     },
-
-    9: {
-        url: "/noots",
-        desc: "Muh noots",
-        aliases: ["noot", "noots"],
-    },
 };
 const escape_HTML = (str) =>
     str.replace(
