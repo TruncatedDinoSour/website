@@ -118,5 +118,5 @@
         Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
         X-Frame-Options = "deny"
         X-Content-Type-Options = "nosniff"
-        Content-Security-Policy = "upgrade-insecure-requests; reflected-xss; sandbox"
+        Content-Security-Policy = "upgrade-insecure-requests"
 
