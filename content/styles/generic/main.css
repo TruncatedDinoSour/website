@@ -1,3 +1,6 @@
+:root {
+  color-scheme: dark; }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,21 +11,18 @@
   /* for Internet Explorer, Edge */
   scrollbar-width: none;
   /* for Firefox */
-  overflow-y: scroll;
-}
+  overflow-y: scroll; }
 
 ::-webkit-scrollbar {
   display: none;
-  /* for Chrome, Safari, and Opera */
-}
+  /* for Chrome, Safari, and Opera */ }
 
-html, body {
+html,
+body {
   background-color: #070707;
-  margin-bottom: 2em;
-}
+  margin-bottom: 2em; }
 
 .iframe {
   width: 50%;
   min-width: 300px;
-  max-width: 1000px;
-}
+  max-width: 1000px; }
