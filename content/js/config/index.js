@@ -1,102 +1,83 @@
-const boot = document.getElementById('boot');
-const site_name = 'ari-web';
+const boot = document.getElementById("boot");
+const site_name = "ari-web";
 const boot_message = {
     0: {
-        "type": 'ok',
-        "text": `Booting '${site_name}'...`,
-        "sleep_time": 0
-    }
-}
+        type: "ok",
+        text: `Booting '${site_name}'...`,
+        sleep_time: 0,
+    },
+};
 const do_sleep = true;
 const locations = {
     0: {
-        "url": "/git",
-        "desc": "The source code of this website",
-        "aliases": [
-            "src", "source",
-            "git", "github"
-        ]
+        url: "/git",
+        desc: "The source code of this website",
+        aliases: ["src", "source", "git", "github"],
     },
 
     1: {
-        "url": "/",
-        "desc": "The home page",
-        "aliases": [
-            "home", "root",
-            "index"
-        ]
+        url: "/",
+        desc: "The home page",
+        aliases: ["home", "root", "index"],
     },
 
     2: {
-        "url": "/page/reset",
-        "desc": "Reset your account",
-        "aliases": [
-            "reset", "erase",
-            "del", "delete"
-        ]
+        url: "/page/reset",
+        desc: "Reset your account",
+        aliases: ["reset", "erase", "del", "delete"],
     },
 
     3: {
-        "url": "/page/minimal.txt",
-        "desc": "The minimal page",
-        "aliases": [
-            "mini", "minimal",
-            "txt", "min"
-        ]
+        url: "/page/minimal.txt",
+        desc: "The minimal page",
+        aliases: ["mini", "minimal", "txt", "min"],
     },
 
     4: {
-        "url": "/page/blog",
-        "desc": "Blog page",
-        "aliases": [
-            "blog", "news",
-            "blogs", "articles"
-        ]
+        url: "/page/blog",
+        desc: "Blog page",
+        aliases: ["blog", "news", "blogs", "articles"],
     },
 
     5: {
-        "url": "/dotfiles",
-        "desc": "My dotfiles-cleaned github repository",
-        "aliases": [
-            "rice", "dotfiles",
-            "dots", "dwm"
-        ]
+        url: "/dotfiles",
+        desc: "My dotfiles-cleaned github repository",
+        aliases: ["rice", "dotfiles", "dots", "dwm"],
     },
 
-
     6: {
-        "url": "/page/novpn",
-        "desc": "A page about how you shouldn't use VPNs",
-        "aliases": [
-            "vpn", "novpn"
-        ]
+        url: "/page/novpn",
+        desc: "A page about how you shouldn't use VPNs",
+        aliases: ["vpn", "novpn"],
     },
 
     7: {
-        "url": "/mp",
-        "desc": "My music playlist",
-        "aliases": [
-            "music", "playlist"
-        ]
+        url: "/mp",
+        desc: "My music playlist",
+        aliases: ["music", "playlist"],
     },
 
     8: {
-        "url": "/tinycore",
-        "desc": "My tinycore mirror",
-        "aliases": [
-            "linux", "tinycore", "tcl", "tc"
-        ]
+        url: "/tinycore",
+        desc: "My tinycore mirror",
+        aliases: ["linux", "tinycore", "tcl", "tc"],
     },
-}
-const escape_HTML = str =>
+
+    9: {
+        url: "/noots",
+        desc: "Muh noots",
+        aliases: ["noot", "noots"],
+    },
+};
+const escape_HTML = (str) =>
     str.replace(
         /[&<>'"]/g,
-        tag =>
-        ({
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            "'": '&#39;',
-            '"': '&quot;'
-        }[tag] || tag)
+        (tag) =>
+            ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                "'": "&#39;",
+                '"': "&quot;",
+            }[tag] || tag)
     );

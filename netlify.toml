@@ -28,6 +28,12 @@
     force = true
 
 [[redirects]]
+    from = "/noots"
+    to = "https://noots.ari-web.xyz/"
+    status = 301
+    force = true
+
+[[redirects]]
     from = "/git/*"
     to = "https://github.com/TruncatedDinosour/website/:splat"
     status = 301
