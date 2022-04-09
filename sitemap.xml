@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://blog.ari-web.xyz/</loc>
+        <loc>https://www.ari-web.xyz/</loc>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://ari-web.xyz/page/minimal.txt</loc>
+        <loc>https://blog.ari-web.xyz/</loc>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://ari-web.xyz/page/reset</loc>
+        <loc>https://legacy.blog.ari-web.xyz/</loc>
         <priority>0.8</priority>
     </url>
     <url>
@@ -17,7 +17,7 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://legacy.blog.ari-web.xyz/</loc>
+        <loc>https://tcl.ari-web.xyz/</loc>
         <priority>0.6</priority>
     </url>
 </urlset>
