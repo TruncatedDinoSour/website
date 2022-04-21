@@ -62,6 +62,12 @@ const locations = {
         desc: "My tinycore mirror",
         aliases: ["linux", "tinycore", "tcl", "tc"],
     },
+
+    9: {
+        url: "/tdotfiles",
+        desc: "My dotfiles-termux github repository",
+        aliases: ["rice", "dotfiles", "dots", "termux"],
+    },
 };
 const escape_HTML = (str) =>
     str.replace(
