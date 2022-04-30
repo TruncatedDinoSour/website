@@ -1,5 +1,0 @@
-markdown
-bs4
-html
-lxml
-
