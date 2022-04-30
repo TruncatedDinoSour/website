@@ -1,9 +1,14 @@
 "use strict";
 
+function pprompt(message) {
+    let value = prompt(message);
+    return value ? value : pprompt(message);
+}
+
 async function user_account_create() {
-    let username = prompt(`Enter your username`);
-    let password = prompt(`Enter the password for '${username}'`);
-    let password_confirm = prompt(`Confirm the password for '${username}'`);
+    let username = pprompt(`Enter (make up) your username`);
+    let password = pprompt(`Enter the password for '${username}'`);
+    let password_confirm = pprompt(`Confirm the password for '${username}'`);
 
     let tmp_boot_entries = {
         0: {

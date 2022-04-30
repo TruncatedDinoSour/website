@@ -9,7 +9,7 @@ const boot_message = {
         sleep_time: 0,
     },
 };
-const do_sleep = false;
+const do_sleep = true;
 const locations = {
     0: {
         url: "/git",
