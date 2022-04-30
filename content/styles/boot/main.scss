@@ -10,7 +10,7 @@
     }
 
     #bootver::before {
-        content: 'WEBrc version ' $boot_ver;
+        content: 'webRC version ' $boot_ver;
     }
 
     .bmsg[bmsg_type=ok] {
