@@ -1,8 +1,18 @@
 "use strict";
 
+let user_canceled = false;
+
 function pprompt(message) {
+    if (user_canceled) return;
+
     let value = prompt(message);
-    return value ? value : pprompt(message);
+
+    if (value === null) {
+        user_canceled = true;
+        return;
+    }
+
+    return value.replaceAll(" ", "") ? value : pprompt(message);
 }
 
 async function user_account_create() {
@@ -27,6 +37,7 @@ async function user_account_create() {
 
     if (!valid) {
         if (
+            !user_canceled &&
             confirm(
                 "The credentials you entered are not valid (password/username too short or the password don't match), try again?"
             )
