@@ -68,7 +68,7 @@ const locations = {
     9: {
         url: "/tdotfiles",
         desc: "My dotfiles-termux github repository",
-        aliases: ["rice", "dotfiles", "dots", "termux"],
+        aliases: ["trice", "tdotfiles", "tdots", "termux"],
     },
 };
 const escape_HTML = (str) =>
