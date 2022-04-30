@@ -1,3 +1,5 @@
+"use strict";
+
 const boot = document.getElementById("boot");
 const site_name = "ari-web";
 const boot_message = {
@@ -7,7 +9,7 @@ const boot_message = {
         sleep_time: 0,
     },
 };
-const do_sleep = true;
+const do_sleep = false;
 const locations = {
     0: {
         url: "/git",
