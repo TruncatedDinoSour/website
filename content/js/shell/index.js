@@ -26,6 +26,8 @@ function main() {
                 if (!cmd_prompt.value) return;
 
                 let command_list = cmd_prompt.value.trimStart().split(" ");
+                if (command_list[0][0] == "#") return;
+
                 let command = command_list[0].toLocaleLowerCase();
                 let argv = command_list.slice(1);
 
