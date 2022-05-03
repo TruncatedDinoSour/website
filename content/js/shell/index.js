@@ -76,12 +76,10 @@ function main() {
 
                 window.scrollTo(0, document.body.scrollHeight);
 
-                if (root) {
-                    shell.setAttribute("prompt", "root");
-                } else {
-                    shell.setAttribute("prompt", "");
-                }
+                if (root) shell.setAttribute("prompt", "root");
+                else shell.setAttribute("prompt", "");
 
+                cmd_prompt.history = cmd_history.children.length - 1;
                 break;
             }
 
