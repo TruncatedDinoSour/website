@@ -47,7 +47,3 @@ function hash(string) {
         return a & a;
     }, 0);
 }
-
-String.prototype.repeat = function (num) {
-    return new Array(num + 1).join(this);
-};
