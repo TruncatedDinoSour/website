@@ -3,6 +3,8 @@
 set -e
 
 main() {
+    ./scripts/sass.sh
+
     find . -name '_*.css' -or \
         -name '*.sass.css' -type f -exec rm -rfv {} \;
 
