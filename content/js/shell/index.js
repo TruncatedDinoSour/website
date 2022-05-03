@@ -25,9 +25,8 @@ function main() {
             case "Enter": {
                 if (!cmd_prompt.value) return;
 
+                let is_comment = false;
                 let command_list = cmd_prompt.value.trimStart().split(" ");
-                if (command_list[0][0] == "#") return;
-
                 let command = command_list[0].toLocaleLowerCase();
                 let argv = command_list.slice(1);
 
@@ -40,10 +39,15 @@ function main() {
                         cmd_output.innerHTML = commands[command]["func"](argv);
                     }
                 } else {
-                    cmd_output.innerText = `${command}: command not found`;
+                    if (command[0] != "#")
+                        cmd_output.innerText = `${command}: command not found`;
+                    else is_comment = true;
                 }
 
-                if (cmd_output.innerHTML.toString().replace(/\s/g, "")) {
+                if (
+                    cmd_output.innerHTML.toString().replace(/\s/g, "") ||
+                    is_comment
+                ) {
                     let shell_old = document.createElement("pre");
                     shell_old.setAttribute("class", "shell");
                     shell_old.setAttribute(
