@@ -1,4 +1,4 @@
-@import '../config/main';
+@import "../config/_main.scss";
 
 .boot {
     margin: 1em 0em 1em 1em;
@@ -10,45 +10,44 @@
     }
 
     #bootver::before {
-        content: 'WebRC version ' $boot_ver;
+        content: "WebRC version " $boot_ver;
     }
 
-    .bmsg[bmsg_type=ok] {
+    .bmsg[bmsg_type="ok"] {
         &::after {
-            content: '[OK]';
+            content: "[OK]";
             float: right;
             color: $ok_colour;
         }
 
         &::before {
-            content: ' * ';
+            content: " * ";
             color: $ok_colour;
         }
     }
 
-
-    .bmsg[bmsg_type=warn] {
+    .bmsg[bmsg_type="warn"] {
         &::after {
-            content: '[WARNING]';
+            content: "[WARNING]";
             float: right;
             color: $warn_colour;
         }
 
         &::before {
-            content: ' * ';
+            content: " * ";
             color: $warn_colour;
         }
     }
 
-    .bmsg[bmsg_type=error] {
+    .bmsg[bmsg_type="error"] {
         &::after {
-            content: '[ERROR]';
+            content: "[ERROR]";
             float: right;
             color: $error_colour;
         }
 
         &::before {
-            content: ' * ';
+            content: " * ";
             color: $error_colour;
         }
     }

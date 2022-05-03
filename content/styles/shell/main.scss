@@ -1,5 +1,4 @@
-@import '../config/main';
-
+@import "../config/_main.scss";
 
 .shell {
     margin: 2em;
@@ -25,14 +24,13 @@
 }
 
 .shell::before {
-    content: '$ ';
+    content: "$ ";
     font-size: $shell_font_size;
     color: $default_content_colour;
 }
 
-.shell[prompt=root]::before {
-    content: '# ';
+.shell[prompt="root"]::before {
+    content: "# ";
     font-size: $shell_font_size;
     color: $default_content_colour;
 }
-
