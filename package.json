@@ -26,7 +26,8 @@
     },
     "homepage": "https://ari-web.xyz/gh/website#readme",
     "devDependencies": {
-        "eslint": "^8.10.0",
-        "live-server": "^1.2.1"
+        "eslint": "^8.14.0",
+        "live-server": "^1.2.2",
+        "node-sass": "^7.0.1"
     }
 }
