@@ -171,3 +171,18 @@ function whoami() {
 function echo(argv) {
     return escape_HTML(argv.join(" "));
 }
+
+function webfetch() {
+    let head_str = `${escape_HTML(window.localStorage.getItem("username"))}@${site_name}`;
+
+    return `\`8.\`888b                 ,8'      ${head_str}
+ \`8.\`888b               ,8'       ${"-".repeat(head_str.length)}
+  \`8.\`888b             ,8'        OS: WebOS
+   \`8.\`888b     .b    ,8'         Kernel: Wkernel ${kernel_version}
+    \`8.\`888b    88b  ,8'          Shell: Wsh
+     \`8.\`888b .\`888b,8'           Terminal: HTML
+      \`8.\`888b8.\`8888'            CPU: ${site_name} web cpu (1) @ 1GHz
+       \`8.\`888\`8.\`88'             Memory: 2B / 8B
+        \`8.\`8' \`8,\`'              Init: WebRC
+         \`8.\`   \`8'`
+}

@@ -42,7 +42,7 @@ function main() {
                 }
 
                 if (cmd_output.innerHTML.toString().replace(/\s/g, "")) {
-                    let shell_old = document.createElement("div");
+                    let shell_old = document.createElement("pre");
                     shell_old.setAttribute("class", "shell");
                     shell_old.setAttribute(
                         "prompt",

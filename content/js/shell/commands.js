@@ -100,4 +100,13 @@ var commands = {
             examples: ["echo hello world"],
         },
     },
+    webfetch: {
+        func: webfetch,
+        root_only: false,
+        help: {
+            desc: "Neofetch, but for the web",
+            short_desc: "neofetch",
+            examples: ["neofetch"],
+        },
+    },
 };

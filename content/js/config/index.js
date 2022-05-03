@@ -2,6 +2,7 @@
 
 const boot = document.getElementById("boot");
 const site_name = "ari-web";
+const kernel_version = "1.0.0";
 const boot_message = {
     0: {
         type: "ok",

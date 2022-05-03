@@ -6,7 +6,7 @@
     margin-left: 1.12em;
     /* makes it that it aligns with 'boot' messages */ }
   .boot #bootver::before {
-    content: "webRC version " "1.0"; }
+    content: "WebRC version " "1.0"; }
   .boot .bmsg[bmsg_type=ok]::after {
     content: '[OK]';
     float: right;
