@@ -3,7 +3,8 @@
 set -e
 
 main() {
-    rm -fv content/styles/config/_main.css
+    find . -name '_*.css' -or \
+        -name '*.sass.css' -type f -exec rm -rfv {} \;
 
     git add -A
     git commit -sam "${m:-update @ $(date)}"
