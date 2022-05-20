@@ -105,8 +105,8 @@ var commands = {
         root_only: false,
         help: {
             desc: "Neofetch, but for the web",
-            short_desc: "neofetch",
-            examples: ["neofetch"],
+            short_desc: "Neofetch for the web",
+            examples: ["webfetch"],
         },
     },
 };
