@@ -61,12 +61,6 @@ const locations = {
     },
 
     8: {
-        url: "/tinycore",
-        desc: "My tinycore mirror",
-        aliases: ["linux", "tinycore", "tcl", "tc"],
-    },
-
-    9: {
         url: "/tdotfiles",
         desc: "My dotfiles-termux github repository",
         aliases: ["trice", "tdotfiles", "tdots", "termux"],
