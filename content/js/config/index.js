@@ -65,6 +65,12 @@ const locations = {
         desc: "My dotfiles-termux github repository",
         aliases: ["trice", "tdotfiles", "tdots", "termux"],
     },
+
+    9: {
+        url: "/page/ttytheme",
+        desc: "TTY theme generator",
+        aliases: ["tty", "ttytheme", "ttheme", "tty-theme"],
+    },
 };
 const escape_HTML = (str) =>
     str.replace(
