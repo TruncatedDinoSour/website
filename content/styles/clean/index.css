@@ -1,0 +1,62 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+ol[role="list"],
+ul[role="list"] {
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::after,
+    ::before {
+        scroll-behavior: auto;
+
+        -webkit-animation-duration: 0s !important;
+        animation-duration: 0s !important;
+
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+
+        -webkit-transition-duration: 0s !important;
+        -o-transition-duration: 0s !important;
+        transition-duration: 0s !important;
+
+        scroll-behavior: auto !important;
+    }
+}

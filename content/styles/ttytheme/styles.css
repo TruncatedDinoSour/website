@@ -3,12 +3,6 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-
     font-family: sans-serif;
     color: inherit;
     scroll-behavior: smooth;
@@ -20,19 +14,9 @@ pre {
 }
 
 body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
     padding: 2em;
     max-width: 1600px;
     margin: auto;
-}
-
-input,
-button,
-textarea,
-select {
-    font: inherit;
 }
 
 .split {
@@ -113,25 +97,5 @@ button:focus {
         -ms-grid-columns: auto;
 
         grid-template-columns: auto;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto;
-
-        -webkit-animation-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-
-        -webkit-animation-iteration-count: 1 !important;
-        animation-iteration-count: 1 !important;
-
-        -webkit-transition-duration: 0.01ms !important;
-        -o-transition-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-
-        scroll-behavior: auto !important;
     }
 }
