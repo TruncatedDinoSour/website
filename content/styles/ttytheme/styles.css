@@ -1,0 +1,125 @@
+@import url("https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.min.css");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+    color: inherit;
+    scroll-behavior: smooth;
+}
+
+pre {
+    font-family: Hack, hack, monospace;
+    font-weight: bold;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    padding: 2em;
+    max-width: 1600px;
+    margin: auto;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+.split {
+    display: -ms-grid;
+    display: grid;
+
+    -ms-grid-columns: auto 4em auto;
+    grid-template-columns: auto auto;
+
+    grid-gap: 4em;
+}
+
+h1,
+h2 {
+    padding: 0.2em;
+    text-align: center;
+}
+
+h2 {
+    padding-bottom: 2em;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.buttons {
+    padding: 1em;
+    text-align: center;
+}
+
+.buttons button {
+    padding: 0.5em;
+    margin: 0.1em;
+    margin-bottom: 1em;
+    background-color: #404040;
+    border: none;
+
+    -webkit-transition: 0.3s -webkit-filter ease-in-out;
+    transition: 0.3s -webkit-filter ease-in-out;
+    -o-transition: 0.3s filter ease-in-out;
+    transition: 0.3s filter ease-in-out;
+    transition: 0.3s filter ease-in-out, 0.3s -webkit-filter ease-in-out;
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+
+    -webkit-filter: brightness(120%);
+    filter: brightness(120%);
+}
+
+#menu {
+    text-align: center;
+    margin: 4em 0 4em 0;
+}
+
+#menu div input {
+    margin: 0.1em;
+}
+
+@media only screen and (max-width: 1300px) {
+    .split {
+        display: block;
+        -ms-grid-columns: auto;
+
+        grid-template-columns: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto;
+
+        -webkit-animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+
+        -webkit-transition-duration: 0.01ms !important;
+        -o-transition-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}

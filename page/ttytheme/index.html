@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ari::web -&gt; TTY</title>
+
+        <meta name="description" content="TTY generator by ari-web" />
+        <meta
+            name="keywords"
+            content="tty theme linux cli terminal generator theme-generator foss unlicense"
+        />
+        <meta name="robots" content="follow" />
+
+        <meta property="og:type" content="website" />
+        <meta name="color-scheme" content="dark" />
+
+        <script
+            type="module"
+            src="/content/js/ttytheme/events.js"
+            defer
+        ></script>
+        <script type="module" src="/content/js/ttytheme/menu.js" defer></script>
+
+        <link rel="stylesheet" href="/content/styles/ttytheme/styles.css" />
+    </head>
+
+    <body>
+        <h1>Linux TTY theme generator by Ari::web</h1>
+
+        <noscript>
+            <style>
+                .nojs {
+                    background-color: darkred !important;
+                    padding: 1em !important;
+                }
+
+                .nojs * {
+                    color: whitesmoke !important;
+                    font-weight: bold !important;
+                    font-family: sans-serif !important;
+                }
+            </style>
+
+            <div class="nojs">
+                <h1>This generator won't work without JavaScript enabled :(</h1>
+                <h1>
+                    If you don't trust me, check the JavaScript yourself
+                    <a
+                        href="https://github.com/TruncatedDinosour/website/tree/terminal/content/js/ttytheme"
+                        target=""
+                        _blank
+                        >on GitHub</a
+                    >
+                </h1>
+            </div>
+        </noscript>
+
+        <h2>
+            All themes generated here are under
+            <a href="https://unlicense.org/" target="_blank">unlicense</a>, but
+            credit is appriciated :), source code:
+            <a href="/git" target="_blank">git</a>
+        </h2>
+
+        <div class="buttons">
+            <button id="clear-states">Clear saved slider states</button>
+            <button id="generate-theme">Generate (refresh) theme</button>
+            <button id="export-file">Export theme as file</button>
+            <button id="copy">Copy to clipboard</button>
+        </div>
+
+        <div class="split">
+            <div id="menu"></div>
+            <pre id="theme-output" class="output"></pre>
+        </div>
+    </body>
+</html>
