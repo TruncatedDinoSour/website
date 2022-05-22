@@ -33,6 +33,9 @@ function commit(fields) {
         let clr_name = item.getAttribute("data-clr-name");
         let clr = item.children[0].value;
 
+        if (clr_name && !clr && clr_name in localStorage)
+            localStorage.removeItem(clr_name);
+
         if (!clr || !clr.match(HEX_REGEX)) return;
 
         localStorage.setItem(
