@@ -59,6 +59,17 @@ a {
     text-decoration: underline;
 }
 
+.nojs {
+    background-color: darkred !important;
+    padding: 1em !important;
+}
+
+.nojs * {
+    color: whitesmoke !important;
+    font-weight: bold !important;
+    font-family: sans-serif !important;
+}
+
 .buttons {
     padding: 1em;
     text-align: center;

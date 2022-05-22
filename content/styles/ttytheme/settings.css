@@ -1,0 +1,41 @@
+li[data-clr-name]::before {
+    content: attr(data-clr-name) ": ";
+}
+
+li[data-clr-name] {
+    margin-bottom: 0.5em;
+}
+
+*,
+*::before,
+*::after {
+    background-color: #262220;
+}
+
+body {
+    max-width: 1000px;
+}
+
+h1 {
+    margin-bottom: 1em;
+}
+
+span {
+    padding-left: 1em;
+}
+
+li {
+    display: block;
+    list-style: none;
+}
+
+li span {
+    float: right;
+}
+
+#commit {
+    padding: 0.5em;
+    width: 30%;
+    margin: 0.3em;
+    float: right;
+}

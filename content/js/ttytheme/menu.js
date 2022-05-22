@@ -1,45 +1,10 @@
 "use strict";
 
-import { gp } from "../../js/utils/index.js";
+import { gp, rgb_to_hex } from "../../js/utils/index.js";
+import { tty_clrs } from "./clrs.js";
 
-var tty_clrs = {
-    black: [0, 0, 0],
-    red: [170, 0, 0],
-    green: [0, 170, 0],
-    orange: [170, 85, 0],
-    blue: [0, 0, 170],
-    magenta: [170, 0, 170],
-    cyan: [0, 170, 170],
-    gray: [170, 170, 170],
-    dark_gray: [85, 85, 85],
-    light_red: [255, 85, 85],
-    light_green: [85, 255, 85],
-    yellow: [255, 255, 85],
-    light_blue: [85, 85, 255],
-    light_magenta: [255, 85, 255],
-    light_cyan: [85, 255, 255],
-    white: [255, 255, 255],
-};
 const CLRS = ["r", "g", "b"];
 const BLACKLIST_LC = ["username", "password"];
-const TTY_MODS = {
-    black: "0",
-    red: "9",
-    green: "2",
-    orange: "1",
-    blue: "4",
-    magenta: "5",
-    cyan: "6",
-    gray: "7",
-    dark_gray: "5",
-    light_red: "5",
-    light_green: "A",
-    yellow: "B",
-    light_blue: "C",
-    light_magenta: "D",
-    light_cyan: "E",
-    white: "F",
-};
 
 function new_colourpicker(id, clr_map) {
     let div = document.createElement("div");
@@ -70,7 +35,7 @@ function update_colour(id) {
     picker.style.backgroundColor = `rgb(${rgb.join(",")})`;
     localStorage.setItem(id, JSON.stringify({ rgb: rgb }));
 
-    tty_clrs[id] = rgb;
+    tty_clrs[id].rgb = rgb;
     generate_theme();
 }
 
@@ -79,21 +44,10 @@ function load_from_localtorage() {
 
     Object.keys(localStorage).forEach((key) => {
         if (!BLACKLIST_LC.includes(key) && keys.includes(key))
-            tty_clrs[key] = JSON.parse(localStorage.getItem(key))["rgb"].map(
-                Number
-            );
+            tty_clrs[key].rgb = JSON.parse(localStorage.getItem(key))[
+                "rgb"
+            ].map(Number);
     });
-}
-
-function component_to_hex(c) {
-    var hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
-}
-
-function rgb_to_hex(rgb) {
-    let hex = "";
-    rgb.forEach((item) => (hex += component_to_hex(item)));
-    return hex;
 }
 
 function save(filename, data) {
@@ -114,8 +68,10 @@ function save(filename, data) {
 }
 
 export function generate_theme(query = "#theme-output") {
-    document.body.style.backgroundColor = `rgb(${tty_clrs["black"].join(",")})`;
-    document.body.style.color = `rgb(${tty_clrs["white"].join(",")})`;
+    document.body.style.backgroundColor = `rgb(${tty_clrs["black"].rgb.join(
+        ","
+    )})`;
+    document.body.style.color = `rgb(${tty_clrs["bold_white"].rgb.join(",")})`;
 
     let elem = document.querySelector(query);
     if (!elem) throw ReferenceError(`${query} did not match any results`);
@@ -129,11 +85,11 @@ __tty_theme() {
 `;
 
     for (const key in tty_clrs) {
-        let key_rgb = tty_clrs[key];
+        let key_rgb = tty_clrs[key].rgb;
         let key_hex = rgb_to_hex(key_rgb);
         let rgb_str = `rgb(${key_rgb.join(", ")})`;
 
-        text += `    printf "\\e]P${TTY_MODS[key]}${key_hex}" # ${key}${gp(
+        text += `    printf "\\e]P${tty_clrs[key].mod}${key_hex}" # ${key}${gp(
             key,
             15
         )}${rgb_str}${gp(rgb_str, 20)}#${key_hex}\n`;
@@ -195,7 +151,7 @@ function main() {
     let menu = document.getElementById("menu");
 
     for (const key in tty_clrs) {
-        let [r, g, b] = tty_clrs[key];
+        let [r, g, b] = tty_clrs[key].rgb;
         let picker = new_colourpicker(key, [r, g, b]);
 
         picker.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
