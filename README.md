@@ -32,3 +32,4 @@
 -   https://blog.ari-web.xyz/ (source: https://blog.ari-web.xyz/git)
 -   https://legacy.blog.ari-web.xyz/ (source: https://legacy.blog.ari-web.xyz/git)
 -   https://school.ari-web.xyz/ (source: proprietary (I don't want people snooping on my homework lol))
+-   https://user.ari-web.xyz/ (source: https://user.ari-web.xyz/git)
