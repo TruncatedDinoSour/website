@@ -22,8 +22,8 @@
     force = true
 
 [[redirects]]
-    from = "/tinycore"
-    to = "https://tcl.ari-web.xyz/"
+    from = "/user"
+    to = "https://user.ari-web.xyz/"
     status = 301
     force = true
 

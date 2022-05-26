@@ -71,6 +71,12 @@ const locations = {
         desc: "TTY theme generator",
         aliases: ["tty", "ttytheme", "ttheme", "tty-theme"],
     },
+
+    10: {
+        url: "/user",
+        desc: "Ari-web comments",
+        aliases: ["comment", "user", "usr", "chat"],
+    },
 };
 const escape_HTML = (str) =>
     str.replace(
