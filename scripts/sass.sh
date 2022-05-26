@@ -14,7 +14,9 @@ main() {
     done
 
     echo " >> Removing residuals"
-    find . -name '_*.css' -type f -exec rm -f {} \;
+    find . -name '_*.css' -or \
+        -name '*.sass.css' -type f -exec rm -rfv {} \;
+
 }
 
 main "$@"

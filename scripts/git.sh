@@ -1,12 +1,21 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -e
 
-main() {
-    ./scripts/sass.sh
+S='./scripts'
+SCRIPTS=(sass apis)
 
-    find . -name '_*.css' -or \
-        -name '*.sass.css' -type f -exec rm -rfv {} \;
+main() {
+    for script in "${SCRIPTS[@]}"; do
+        _s="$S/$script.sh"
+
+        echo
+        echo " ** Script: $_s **"
+        echo
+
+        chmod +x -- "$_s"
+        "$_s"
+    done
 
     git add -A
     git commit -sam "${m:-update @ $(date)}"

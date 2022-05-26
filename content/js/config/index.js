@@ -77,6 +77,12 @@ const locations = {
         desc: "Ari-web comments",
         aliases: ["comment", "user", "usr", "chat"],
     },
+
+    11: {
+        url: "/api",
+        desc: "Ari-web api(s)",
+        aliases: ["api", "API"],
+    },
 };
 const escape_HTML = (str) =>
     str.replace(
