@@ -40,7 +40,7 @@ function main() {
                     }
                 } else {
                     if (command[0] != "#")
-                        cmd_output.innerText = `${command}: command not found`;
+                        cmd_output.innerText = `-wsh: ${command}: command not found`;
                     else is_comment = true;
                 }
 
