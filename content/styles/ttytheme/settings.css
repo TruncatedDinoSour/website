@@ -10,7 +10,7 @@ li[data-clr-name] {
 *::before,
 *::after {
     background-color: #262220;
-    background-color: #f9f6e8;
+    color: #f9f6e8;
 }
 
 body {
