@@ -122,6 +122,25 @@
     status = 404
     force = false
 
+# Processing
+[build.processing]
+    skip_processing = false
+
+[build.processing.html]
+    pretty_urls = false
+
+[build.processing.css]
+    bundle = true
+    minify = true
+
+[build.processing.js]
+    bundle = false
+    minify = true
+
+[build.processing.images]
+    compress = true
+# --------------
+
 [[headers]]
     for = "/*"
 
