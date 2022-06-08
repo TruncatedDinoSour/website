@@ -44,7 +44,14 @@ async function main() {
             text: 'A fatal error has occured, report it <a href="/git">here</a>',
             sleep_time: 0,
         },
+        8: {
+            type: "warning",
+            text: '<a href="https://blog.ari-web.xyz/b/important--impersonation-of-me-on-the-internet/">Currently there has been a lot of impersonatin happening! Be careful!</a>',
+            sleep_time: 1000,
+        },
     };
+
+    await add_boot_entry({ 0: tmp_boot_entries[8] });
 
     if (!is_logged_in) {
         await add_boot_entry({
