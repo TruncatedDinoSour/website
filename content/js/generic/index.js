@@ -46,7 +46,7 @@ async function main() {
         },
         8: {
             type: "warning",
-            text: '<a href="https://blog.ari-web.xyz/b/important--impersonation-of-me-on-the-internet/">Currently there has been a lot of impersonatin happening! Be careful!</a>',
+            text: '<a href="https://blog.ari-web.xyz/b/important--impersonation-of-me-on-the-internet/">Currently there has been a lot of impersonating happening! Be careful!</a>',
             sleep_time: 1000,
         },
     };
