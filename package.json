@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "description": "My website's source code",
     "scripts": {
-        "s": "live-server"
+        "serve": "live-server",
+        "build": "./scripts/build.sh"
     },
     "repository": {
         "type": "git",
@@ -24,10 +25,11 @@
     "bugs": {
         "url": "https://ari-web.xyz/gh/issues"
     },
-    "homepage": "https://ari-web.xyz/gh/website#readme",
+    "homepage": "https://ari-web.xyz/git#readme",
     "devDependencies": {
         "eslint": "^8.14.0",
         "live-server": "^1.2.2",
-        "node-sass": "^7.0.1"
+        "node-sass": "^7.0.1",
+        "autoprefixer-cli": "^1.0.0"
     }
 }

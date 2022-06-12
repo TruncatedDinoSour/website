@@ -3,20 +3,24 @@
 set -e
 
 main() {
-    for file in $(find . -name node_modules -prune -o -name '*.scss' -type f); do
-        [ -d "$file" ] && continue
+    for file in $(find content/ -name '*.scss' -type f); do
+        bnam="${file##*/}"
+        out="${file%/*}/${bnam%.*}.min.css"
 
-        bnam="$(basename "$file")"
-        out="$(dirname "$file")/${bnam%.*}.css"
+        {
+            node-sass "$file" --output-style compressed >"$out"
+            autoprefixer-cli "$out" -o "$out.tmp"
+            mv "$out.tmp" "$out"
 
-        echo " >> Generating $out"
-        node-sass "$file" --output-style compressed >"$out"
+            echo " >> Generated $out"
+        } &
     done
 
-    echo " >> Removing residuals"
-    find . -name '_*.css' -or \
-        -name '*.sass.css' -type f -exec rm -rfv {} \;
+    wait
 
+    echo " >> Removing residuals"
+    find content/ -name '_*.min.css' -or \
+        -name '*.sass.css' -type f -exec rm -rfv {} \;
 }
 
 main "$@"

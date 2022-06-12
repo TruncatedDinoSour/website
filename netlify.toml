@@ -1,5 +1,5 @@
 [build]
-    command = "make clean"
+    command = "make netlify"
 
 [[redirects]]
     from = "/404.html"
