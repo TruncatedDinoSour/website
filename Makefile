@@ -1,7 +1,7 @@
-netlify: build clean
-
 build:
 	npm run build
+
+netlify: build clean
 
 clean:
 	[ -z "${CI}" ] || rm -rfv requirements.txt \
