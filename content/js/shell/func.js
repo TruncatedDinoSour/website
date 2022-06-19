@@ -117,7 +117,7 @@ function su(cmd) {
     }
 
     if (cmd[0]) {
-        if (cmd[0] == ".") {
+        if (cmd[0] === ".") {
             root = !root;
             return `Switched to the <b>${
                 root ? "root" : escape_HTML(localStorage.getItem("username"))
@@ -152,7 +152,7 @@ function passwd() {
     let password1 = prompt("New password");
     let password2 = prompt("Confirm new password");
 
-    if (current_password == localStorage.getItem("password")) {
+    if (current_password === parseInt(localStorage.getItem("password"))) {
         if (password1 === password2) {
             localStorage.setItem("password", hash(password1));
             alert(`password set`);

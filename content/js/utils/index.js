@@ -11,7 +11,7 @@ export function gp(str, pad) {
 
 export function component_to_hex(c) {
     let hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
+    return hex.length === 1 ? "0" + hex : hex;
 }
 
 export function rgb_to_hex(rgb) {
