@@ -32,4 +32,8 @@
         <loc>https://blog.ari-web.xyz/b/important--impersonation-of-me-on-the-internet/</loc>
         <priority>0.3</priority>
     </url>
+    <url>
+        <loc>https://www.ari-web.xyz/page/amiunique</loc>
+        <priority>0.2</priority>
+    </url>
 </urlset>
