@@ -45,9 +45,8 @@ function calculate_rarity() {
 function display_score() {
     let score = calculate_rarity();
     let score_percent =
-        (1 -
-            score.reduce((partial, answer) => partial + answer, 0) /
-                score.length) *
+        (score.reduce((partial, answer) => partial + answer, 0) /
+            score.length) *
         100;
 
     if (score.length === TEST_OPTIONS.length) {
