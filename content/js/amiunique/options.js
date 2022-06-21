@@ -179,6 +179,10 @@ const TEST_OPTIONS = [
         title: "Do you have cancer?",
         options: yes_no(make_percent(1.3)),
     },
+    {
+        title: "Do you have tatoos?",
+        options: yes_no(make_percent(38)),
+    },
 ];
 
 export default TEST_OPTIONS;
