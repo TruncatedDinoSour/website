@@ -16,7 +16,7 @@ body {
 }
 
 h1,
-h2:not(div[data-question] h2) {
+h2:not(div[data-question] > h2) {
     text-align: center;
 }
 
