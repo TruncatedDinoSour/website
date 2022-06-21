@@ -83,6 +83,12 @@ const locations = {
         desc: "Ari-web api(s)",
         aliases: ["api", "API"],
     },
+
+    12: {
+        url: "/page/amiunique",
+        desc: "'Am I unique?' test",
+        aliases: ["uniqueness", "unqtest", "unique", "unqquiz"],
+    },
 };
 const escape_HTML = (str) =>
     str.replace(

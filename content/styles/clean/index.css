@@ -11,6 +11,8 @@
 
     -ms-overflow-style: none;
     scrollbar-width: none;
+
+    color-scheme: dark;
 }
 
 ::-webkit-scrollbar {

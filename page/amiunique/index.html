@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ari::web -&gt; UniquenessTest</title>
+
+        <meta
+            name="description"
+            content="How unique are you -- test by Ari::web"
+        />
+        <meta
+            name="keywords"
+            content="personality unique rareness personal percent math test tests quiz"
+        />
+        <meta
+            name="robots"
+            content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta name="color-scheme" content="dark" />
+
+        <link rel="stylesheet" href="/content/styles/clean/index.css" />
+        <link rel="stylesheet" href="/content/styles/amiunique/index.css" />
+
+        <script
+            type="module"
+            src="/content/js/amiunique/index.js"
+            defer
+        ></script>
+    </head>
+
+    <body>
+        <article>
+            <header>
+                <h1>How unique are you statistically?</h1>
+                <h2>Test by Ari::web</h2>
+
+                <p>
+                    None of your information is going to be stored, sent or seen
+                    by anyone but you, this test is fully anonymous and
+                    client-side only, if you don't want to trust me,
+                    <a href="/git">the source code if open!</a>
+                    Also it would be nice if you contributed and added more
+                    questions :) see <code>options.js</code> file in
+                    /content/js/amiunique/options.js
+                </p>
+            </header>
+
+            <main>
+                <noscript>
+                    <h1>
+                        This test requires
+                        <a href="https://www.enable-javascript.com/"
+                            >JavaScript to be enabled</a
+                        >
+                    </h1>
+
+                    <style>
+                        #test {
+                            display: none;
+                        }
+                    </style>
+                </noscript>
+
+                <div id="test">
+                    <div id="unique-test"></div>
+                    <button id="unique-test-submit">
+                        Calculate my results
+                    </button>
+                </div>
+            </main>
+        </article>
+    </body>
+</html>
