@@ -5,7 +5,7 @@ function make_range(from, to) {
 }
 
 function make_percent(percent) {
-    return percent * 0.01;
+    return (100 - percent) * 0.01;
 }
 
 function yes_no(percent) {
@@ -18,11 +18,15 @@ function yes_no(percent) {
 /*
  * Rarity is between 0 and 1, to make it
  * more human readable use make_percent() function
- * for example make_percent(10) would return 0.1
+ * for example make_percent(10) would return 0.9
+ * as if a thing affects 10% of the population
+ * 90% would be untouched by average
  *
  * If an option is in a range, for example from
  * 55% to 79% use the make_range() function, for example:
  * make_percent(make_range(55, 79)) would be 0.67 (67%)
+ * The percent should be how common a thing is, not
+ * how rare
  *
  * For a yes/no question use yes_no() function passing
  * it in a percent value
@@ -56,7 +60,7 @@ const TEST_OPTIONS = [
     {
         title: "What is your race?",
         options: [
-            { title: "White", rarity: make_percent(61.6) },
+            { title: "White", rarity: make_percent(100 - 61.6) },
             { title: "Black", rarity: make_percent(16.72) },
             { title: "Hispanic", rarity: make_percent(8.42) },
             { title: "Asian", rarity: make_percent(59.76) },
@@ -84,7 +88,7 @@ const TEST_OPTIONS = [
         options: yes_no(make_percent(80)),
     },
     {
-        title: "Are you monolingual?",
+        title: "Do you know more than one language?",
         options: yes_no(make_percent(40)),
     },
     {
