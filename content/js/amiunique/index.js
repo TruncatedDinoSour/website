@@ -62,7 +62,7 @@ function display_score() {
         };
 
         let answer_h1 = document.createElement("h1");
-        answer_h1.innerText = `Your uniqueness% is: ${score_percent}%`;
+        answer_h1.innerText = `You're statistically similar to ${score_percent}% of the population`;
 
         answer_div.appendChild(answer_h1);
         document.body.appendChild(answer_div);
