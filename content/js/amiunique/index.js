@@ -85,14 +85,15 @@ function main() {
 
         question_title.innerText = `#${qindex}: ${qitem["title"]}`;
 
-        qitem["options"].forEach((option) => {
+        qitem["options"].forEach((option, oindex) => {
             let option_radio = document.createElement("input");
             let option_label = document.createElement("label");
+            let radio_id = `${qindex}-${oindex}`;
 
             let radio_options = {
                 type: "radio",
                 name: qindex,
-                id: qindex,
+                id: radio_id,
                 "data-rarity": option["rarity"],
             };
 
@@ -100,7 +101,7 @@ function main() {
                 option_radio.setAttribute(attr, radio_options[attr])
             );
 
-            option_label.setAttribute("for", qindex);
+            option_label.setAttribute("for", radio_id);
             option_label.innerText = option["title"];
 
             question_options.appendChild(option_radio);

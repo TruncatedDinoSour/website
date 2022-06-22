@@ -183,6 +183,22 @@ const TEST_OPTIONS = [
         title: "Do you have tatoos?",
         options: yes_no(make_percent(38)),
     },
+    {
+        title: "Can you wiggle your ears?",
+        options: yes_no(make_percent(make_range(10, 20))),
+    },
+    {
+        title: "Can you wiggle your nose?",
+        options: yes_no(make_percent(5)),
+    },
+    {
+        title: "Do you have morton's toe",
+        options: yes_no(make_percent(15)),
+    },
+    {
+        title: "Do you have hypermobile joints?",
+        options: yes_no(make_percent(make_range(10, 25))),
+    },
 ];
 
 export default TEST_OPTIONS;
