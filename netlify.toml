@@ -14,8 +14,8 @@
     force = true
 
 [[redirects]]
-    from = "/yt"
-    to = "https://invidious.esmailelbob.xyz/feed/popular"
+    from = "/yt/*"
+    to = "https://invidious.esmailelbob.xyz/:splat"
     status = 302
     force = true
 
