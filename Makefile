@@ -1,8 +1,6 @@
 build:
 	npm run build
 
-netlify: build clean
-
 clean:
 	[ -z "${CI}" ] || rm -rfv requirements.txt \
 		README.md \
@@ -11,3 +9,7 @@ clean:
 		scripts \
 		.vscode \
 		.github \
+
+netlify: build clean
+
+.PHONY: build clean netlify

@@ -15,11 +15,16 @@ html {
 }
 
 .c404img {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .c404img img {
+    -webkit-filter: opacity(25%) blur(10px);
     filter: opacity(25%) blur(10px);
     width: 30em;
 }

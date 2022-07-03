@@ -5,6 +5,7 @@
 }
 
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -12,7 +13,7 @@
     font-family: $font_default;
     color: $default_content_colour;
 
-    // scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll;
