@@ -1,6 +1,7 @@
 "use strict";
 
 const boot = document.getElementById("boot");
+const max_username_len = 100;
 const site_name = "ari-web";
 const kernel_version = "1.0.0";
 const boot_message = {

@@ -28,18 +28,23 @@ async function user_account_create() {
         },
     };
 
-    let valid =
-        username &&
-        password &&
-        password_confirm &&
-        password.length > 6 &&
-        password == password_confirm;
+    let msg = "unknown reason (please report this bug)";
+    let valid = false;
+
+    // Lord forgive me, but what else am I supposed to do
+    if (!password_confirm) msg = "no password confirmation supplied";
+    else if (password.length < 6) msg = "password is shorter than 6 characters";
+    else if (username.length > max_username_len || !username)
+        msg = `username is not between 1 and ${max_username_len} characters`;
+    else if (password !== password_confirm)
+        msg = "password and password confirmation did not match";
+    else valid = true;
 
     if (!valid) {
         if (
             !user_canceled &&
             confirm(
-                "The credentials you entered are not valid (password/username too short or the password don't match), try again?"
+                `The credentials you entered are not valid: ${msg}, try again?`
             )
         ) {
             user_account_create();

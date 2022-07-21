@@ -73,6 +73,17 @@ async function main() {
 
         if (!not_return) window.location.reload();
     } else {
+        if (
+            window.localStorage.username.length > max_username_len ||
+            !window.localStorage.username
+        ) {
+            window.localStorage.username = pprompt(
+                `Invalid username found, change it (must be between 1 and ${max_username_len} characters)`
+            );
+
+            window.location.reload();
+        }
+
         await add_boot_entry({
             0: tmp_boot_entries[3],
         });

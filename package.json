@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "My website's source code",
     "scripts": {
-        "serve": "live-server",
+        "serve": "live-server --no-browser",
         "build": "./scripts/build.sh"
     },
     "repository": {
