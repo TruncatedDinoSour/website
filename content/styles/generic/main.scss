@@ -34,3 +34,15 @@ body {
     min-width: 300px;
     max-width: 1000px;
 }
+
+.upload * {
+    font-weight: bold;
+}
+
+.upload button {
+    padding: 0.3em;
+}
+
+.upload button[disabled] {
+    color: darkgray;
+}

@@ -47,3 +47,52 @@ function hash(string) {
         return a & a;
     }, 0);
 }
+
+function to_filename(filename) {
+    return filename.replaceAll(" ", "_");
+}
+
+function to_storage(filename) {
+    return `file.${to_filename(filename)}`;
+}
+
+function file_exists(filename) {
+    return to_storage(filename) in window.localStorage;
+}
+
+function save_file(filename, content) {
+    try {
+        window.localStorage.setItem(to_storage(filename), btoa(content));
+    } catch (e) {
+        alert(`Failed to save ${to_filename(filename)}: ${e}`);
+    }
+}
+
+function get_file(filename) {
+    let file = window.localStorage.getItem(to_storage(filename));
+    return file ? atob(file) : "";
+}
+
+function remove_file(filename) {
+    window.localStorage.removeItem(to_storage(filename));
+}
+
+function list_files() {
+    let files = [];
+
+    Object.keys(localStorage).forEach((key) => {
+        if (key.startsWith("file.")) files.push(key.slice(5));
+    });
+
+    return files;
+}
+
+function disable(element) {
+    element.setAttribute("disabled", "disabled");
+    element.setAttribute("readonly", "true");
+}
+
+function enable(element) {
+    element.removeAttribute("disabled");
+    element.removeAttribute("readonly");
+}

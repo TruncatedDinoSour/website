@@ -36,7 +36,10 @@ function main() {
                             command
                         )}' can <i>only</i> be ran as <b>root</b>. see <b>help su</b>`;
                     } else {
-                        cmd_output.innerHTML = commands[command]["func"](argv);
+                        let out = commands[command]["func"](argv);
+
+                        if (out === null) is_comment = true;
+                        else cmd_output.innerHTML = out;
                     }
                 } else {
                     if (command[0] != "#")
@@ -58,8 +61,7 @@ function main() {
                     let cmd = document.createElement("input");
                     cmd.setAttribute("class", "prompt");
                     cmd.setAttribute("value", cmd_prompt.value);
-                    cmd.setAttribute("readonly", "");
-                    cmd.setAttribute("disabled", "disabled");
+                    disable(cmd);
 
                     let output = document.createElement("div");
                     output.setAttribute("class", "output");

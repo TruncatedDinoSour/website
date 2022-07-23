@@ -4,7 +4,6 @@ import { gp, rgb_to_hex } from "../../js/utils/index.js";
 import { tty_clrs } from "./clrs.js";
 
 const CLRS = ["r", "g", "b"];
-const BLACKLIST_LC = ["username", "password"];
 
 function new_colourpicker(id, clr_map) {
     let div = document.createElement("div");
@@ -43,7 +42,7 @@ function load_from_localtorage() {
     let keys = Object.keys(tty_clrs);
 
     Object.keys(localStorage).forEach((key) => {
-        if (!BLACKLIST_LC.includes(key) && keys.includes(key))
+        if (keys.includes(key))
             tty_clrs[key].rgb = JSON.parse(localStorage.getItem(key))[
                 "rgb"
             ].map(Number);
@@ -111,7 +110,7 @@ export function export_element_as_file(query = "#theme-output") {
 
 export function clear_states() {
     Object.keys(localStorage).forEach((key) => {
-        if (!BLACKLIST_LC.includes(key)) localStorage.removeItem(key);
+        if (Object.keys(tty_clrs).includes(key)) localStorage.removeItem(key);
     });
 }
 

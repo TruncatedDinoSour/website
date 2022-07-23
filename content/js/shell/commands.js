@@ -51,13 +51,13 @@ var commands = {
         },
     },
 
-    ls: {
+    list: {
         func: list,
         root_only: false,
         help: {
             desc: "A command to list available pages",
             short_desc: "List pages",
-            examples: ["ls"],
+            examples: ["list"],
         },
     },
 
@@ -100,6 +100,7 @@ var commands = {
             examples: ["echo hello world"],
         },
     },
+
     webfetch: {
         func: webfetch,
         root_only: false,
@@ -107,6 +108,66 @@ var commands = {
             desc: "Neofetch, but for the web",
             short_desc: "Neofetch for the web",
             examples: ["webfetch"],
+        },
+    },
+
+    wed: {
+        func: wed,
+        root_only: false,
+        help: {
+            desc: "Standard web editor",
+            short_desc: "Standart web editor",
+            examples: ["wed file"],
+        },
+    },
+
+    rm: {
+        func: rm,
+        root_only: false,
+        help: {
+            desc: "Remove a file",
+            short_desc: "Remove a file",
+            examples: ["rm file", "rm file1 file"],
+        },
+    },
+
+    ls: {
+        func: ls,
+        root_only: false,
+        help: {
+            desc: "List files",
+            short_desc: "List files",
+            examples: ["ls", "ls file"],
+        },
+    },
+
+    mv: {
+        func: mv,
+        root_only: false,
+        help: {
+            desc: "Move files",
+            short_desc: "Move files",
+            examples: ["mv file file1"],
+        },
+    },
+
+    cat: {
+        func: cat,
+        root_only: false,
+        help: {
+            desc: "Concat files",
+            short_desc: "Concat files",
+            examples: ["cat file", "cat file file1"],
+        },
+    },
+
+    upload: {
+        func: upload,
+        root_only: false,
+        help: {
+            desc: "Upload a file",
+            short_desc: "File upload",
+            examples: ["upload"],
         },
     },
 };

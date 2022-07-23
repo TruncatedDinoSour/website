@@ -32,7 +32,7 @@ function help(cmd) {
         for (const example in cmd_help["examples"]) {
             help_page += `<b>$</b> ${cmd_help["examples"][example]}<br/>`;
         }
-    } else {
+    } else
         for (const h in commands) {
             let cmd_help = commands[h]["help"];
 
@@ -42,7 +42,6 @@ function help(cmd) {
             help_page += `<b>EXAMPLE</b>: ${cmd_help["examples"][0]}<br/>`;
             help_page += `<br/>`;
         }
-    }
 
     return help_page;
 }
@@ -52,22 +51,17 @@ function show(dest) {
     let iframe = document.createElement("iframe");
     iframe.setAttribute("class", "iframe");
 
-    if (!dst) {
-        return help(["show"]);
-    } else {
+    if (!dst) return help(["show"]);
+    else
         for (const l in locations) {
             if (locations[l]["aliases"].includes(dst)) {
                 iframe.setAttribute("src", locations[l]["url"]);
                 break;
             }
         }
-    }
 
-    if (iframe.src) {
-        return iframe.outerHTML;
-    } else {
-        return `Page '${dst}' not found`;
-    }
+    if (iframe.src) return iframe.outerHTML;
+    else return `Page '${dst}' not found`;
 }
 
 function cd(dest) {
@@ -173,16 +167,194 @@ function echo(argv) {
 }
 
 function webfetch() {
-    let head_str = `${whoami()}@${site_name}`;
+    let head_str = `${window.localStorage.username}@${site_name}`;
 
-    return `\`8.\`888b                 ,8'      ${head_str}
+    return escape_HTML(`\`8.\`888b                 ,8'      ${head_str}
  \`8.\`888b               ,8'       ${"-".repeat(head_str.length)}
   \`8.\`888b             ,8'        OS: WebOS
    \`8.\`888b     .b    ,8'         Kernel: Wkernel ${kernel_version}
     \`8.\`888b    88b  ,8'          Shell: Wsh
      \`8.\`888b .\`888b,8'           Terminal: HTML
-      \`8.\`888b8.\`8888'            CPU: ${site_name[0].toUpperCase()}${site_name.slice(1)} web cpu (1) @ 1GHz
+      \`8.\`888b8.\`8888'            CPU: ${site_name[0].toUpperCase()}${site_name.slice(
+        1
+    )} web cpu (1) @ 1GHz
        \`8.\`888\`8.\`88'             Memory: 2B / 8B
         \`8.\`8' \`8,\`'              Init: WebRC
-         \`8.\`   \`8'`;
+         \`8.\`   \`8'`);
+}
+
+function wed(argv) {
+    if (!argv[0]) return "Wed: Error: No file specified";
+
+    let shell_prompt = document.getElementById("prompt");
+
+    disable(shell_prompt);
+
+    for (let elem of document.getElementsByClassName("editor")) elem.remove();
+
+    let editor = document.createElement("div");
+    let editor_box = document.createElement("textarea");
+    let editor_name = document.createElement("h1");
+
+    let editor_buttons = document.createElement("div");
+    let editor_save = document.createElement("button");
+    let editor_quit = document.createElement("button");
+
+    editor_box.value = get_file(argv[0]);
+    editor_box.spellcheck = false;
+    editor_box.placeholder = "Enter content here...";
+
+    editor_save.innerText = "Save";
+    editor_quit.innerText = "Quit";
+
+    editor_name.innerText = argv[0];
+
+    editor_buttons.appendChild(editor_save);
+    editor_buttons.appendChild(editor_quit);
+
+    editor_quit.onclick = () => {
+        editor.remove();
+        shell_prompt.focus();
+
+        enable(shell_prompt);
+        shell_prompt.focus();
+    };
+
+    editor_save.onclick = () => {
+        save_file(argv[0], editor_box.value);
+        editor_quit.onclick();
+    };
+
+    editor.appendChild(editor_name);
+    editor.appendChild(editor_box);
+    editor.appendChild(editor_buttons);
+
+    editor.classList.add("editor");
+    editor_buttons.classList.add("editor-buttons");
+
+    document.body.appendChild(editor);
+
+    editor_box.focus();
+
+    return `Editing: ${escape_HTML(argv[0])}`;
+}
+
+function rm(argv) {
+    if (!argv[0]) return "Rm: no files specified";
+
+    for (let file of argv) {
+        if (!file_exists(file))
+            return `Rm: ${escape_HTML(file)}: Nothing appropriate`;
+        remove_file(file);
+    }
+
+    return "Removed file(s)";
+}
+
+function ls(argv) {
+    if (argv[0]) {
+        if (file_exists(argv[0])) return escape_HTML(argv[0]);
+        return null;
+    }
+
+    let out = "";
+
+    for (let file of list_files()) out += `${escape_HTML(file)}\n`;
+    return out ? out : null;
+}
+
+function mv(argv) {
+    if (!argv[0] || !file_exists(argv[0]))
+        return "No valid input file specified";
+    if (!argv[1]) return "No output file specified";
+    if (argv[0] === argv[1]) return "Input must not be the same as output";
+
+    let old_file = get_file(argv[0]);
+
+    remove_file(argv[0]);
+    save_file(argv[1], old_file);
+
+    return `${escape_HTML(argv[0])} -> ${escape_HTML(argv[1])}`;
+}
+
+function cat(argv) {
+    if (!argv[0]) return "No input file specified";
+
+    let out = "";
+
+    for (let file of argv) {
+        if (file_exists(file)) out += `${escape_HTML(get_file(file))}\n`;
+        else out += `Cat: ${escape_HTML(file)}: No such file\n`;
+    }
+
+    return out;
+}
+
+function upload() {
+    let input_id = `upload_${document.getElementsByTagName("input").length}`;
+
+    let upload_container = document.createElement("div");
+    upload_container.classList.add("upload");
+
+    let upload_input = document.createElement("input");
+    upload_input.setAttribute("type", "file");
+    upload_input.setAttribute("id", input_id);
+
+    let commit_upload = document.createElement("button");
+    commit_upload.innerText = "Commit";
+    commit_upload.setAttribute("id", `commit_upload_${input_id}`);
+    commit_upload.setAttribute(
+        "onclick",
+        `
+function uploader_${input_id}() {
+    if (typeof FileReader !== 'function') {
+        alert("The FileReader API isn't supported on this browser");
+        return;
+    }
+
+    let upload = document.getElementById("${input_id}");
+    let upload_button = document.getElementById("${commit_upload.id}");
+
+    let files = upload.files;
+
+    if (!files[0]) {
+        alert("Pick a file to upload");
+        return;
+    }
+
+    let file = files[0];
+    let filename = to_filename(file.name);
+
+    if (file_exists(filename)) {
+        alert(\`File \${filename} alredy exists, please rm it\`)
+        return;
+    }
+
+    let reader = new FileReader();
+    reader.readAsText(file, "UTF-8");
+
+    reader.onload = (evt) => {
+        save_file(filename, evt.target.result);
+
+        upload_button.innerText = "Uploaded";
+
+        disable(upload);
+        disable(upload_button)
+    };
+
+    reader.onerror = (err) => {
+        alert(\`error reading the file: \${err}\`);
+        return;
+    };
+}
+
+uploader_${input_id}();
+document.getElementById("prompt").focus();
+    `
+    );
+
+    upload_container.appendChild(upload_input);
+    upload_container.appendChild(commit_upload);
+
+    return upload_container.outerHTML;
 }

@@ -1,0 +1,82 @@
+@import "../config/_main.scss";
+
+$bg1: lighten($bg_colour, 10%);
+$bg2: lighten($bg1, 10%);
+$bg3: lighten($bg2, 10%);
+
+.editor {
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 5em;
+
+    z-index: 999999;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 2em;
+
+    background-color: $bg1;
+}
+
+.editor textarea {
+    width: 50%;
+    height: 100%;
+    padding: 1em;
+
+    word-wrap: break-word;
+
+    resize: none;
+
+    outline: none;
+    border: none;
+
+    background-color: $bg2;
+
+    margin-right: 4em;
+    margin-left: 4em;
+
+    font-size: 1.3em;
+}
+
+.editor .editor-buttons {
+    width: 8%;
+}
+
+.editor .editor-buttons button {
+    display: block;
+
+    padding: 1em;
+    margin-bottom: 0.5em;
+
+    width: 100%;
+
+    border: none;
+    font-weight: bold;
+
+    background-color: $bg2;
+}
+
+.editor .editor-buttons button:hover,
+.editor .editor-buttons button:focus {
+    background-color: $bg3;
+    cursor: pointer;
+}
+
+.editor h1 {
+    margin-bottom: 1em;
+    text-align: center;
+
+    width: 1ch;
+
+    word-wrap: break-word;
+    word-break: break-all;
+}
