@@ -1,6 +1,6 @@
 "use strict";
 
-import { gp, rgb_to_hex } from "../../js/utils/index.js";
+import { gp, rgb_to_hex } from "../utils/index.js";
 import { tty_clrs } from "./clrs.js";
 
 const CLRS = ["r", "g", "b"];
@@ -49,23 +49,6 @@ function load_from_localtorage() {
     });
 }
 
-function save(filename, data) {
-    const blob = new Blob([data], { type: "text/plain" });
-
-    if (window.navigator.msSaveOrOpenBlob)
-        window.navigator.msSaveBlob(blob, filename);
-    else {
-        const elem = window.document.createElement("a");
-
-        elem.href = window.URL.createObjectURL(blob);
-        elem.download = filename;
-
-        document.body.appendChild(elem);
-        elem.click();
-        document.body.removeChild(elem);
-    }
-}
-
 export function generate_theme(query = "#theme-output") {
     document.body.style.backgroundColor = `rgb(${tty_clrs["black"].rgb.join(
         ","
@@ -105,7 +88,23 @@ __tty_theme
 
 export function export_element_as_file(query = "#theme-output") {
     generate_theme(query);
-    save("ari_web_theme.bash", document.querySelector(query).innerText);
+
+    let blob = new Blob([document.querySelector(query).innerText], {
+        type: "text/plain",
+    });
+
+    if (window.navigator.msSaveOrOpenBlob)
+        window.navigator.msSaveBlob(blob, "ari_web_theme.bash");
+    else {
+        let elem = window.document.createElement("a");
+
+        elem.href = window.URL.createObjectURL(blob);
+        elem.download = "ari_web_theme.bash";
+
+        document.body.appendChild(elem);
+        elem.click();
+        document.body.removeChild(elem);
+    }
 }
 
 export function clear_states() {

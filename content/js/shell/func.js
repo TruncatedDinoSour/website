@@ -184,7 +184,7 @@ function webfetch() {
 }
 
 function wed(argv) {
-    if (!argv[0]) return "Wed: Error: No file specified";
+    if (!argv.length) return "Wed: Error: No file specified";
 
     let shell_prompt = document.getElementById("prompt");
 
@@ -240,7 +240,7 @@ function wed(argv) {
 }
 
 function rm(argv) {
-    if (!argv[0]) return "Rm: no files specified";
+    if (!argv.length) return "Rm: no files specified";
 
     for (let file of argv) {
         if (!file_exists(file))
@@ -252,9 +252,13 @@ function rm(argv) {
 }
 
 function ls(argv) {
-    if (argv[0]) {
-        if (file_exists(argv[0])) return escape_HTML(argv[0]);
-        return null;
+    if (argv.length) {
+        let out = "";
+
+        for (let file of argv)
+            if (file_exists(file)) out += `${escape_HTML(file)}\n`;
+
+        return out ? out : null;
     }
 
     let out = "";
@@ -264,7 +268,7 @@ function ls(argv) {
 }
 
 function mv(argv) {
-    if (!argv[0] || !file_exists(argv[0]))
+    if (!argv.length || !file_exists(argv[0]))
         return "No valid input file specified";
     if (!argv[1]) return "No output file specified";
     if (argv[0] === argv[1]) return "Input must not be the same as output";
@@ -278,7 +282,7 @@ function mv(argv) {
 }
 
 function cat(argv) {
-    if (!argv[0]) return "No input file specified";
+    if (!argv.length) return "No input file specified";
 
     let out = "";
 
@@ -298,6 +302,7 @@ function upload() {
 
     let upload_input = document.createElement("input");
     upload_input.setAttribute("type", "file");
+    upload_input.setAttribute("multiple", "true");
     upload_input.setAttribute("id", input_id);
 
     let commit_upload = document.createElement("button");
@@ -317,35 +322,40 @@ function uploader_${input_id}() {
 
     let files = upload.files;
 
-    if (!files[0]) {
-        alert("Pick a file to upload");
+    if (!files.length) {
+        alert("Pick at least 1 file to upload");
         return;
     }
 
-    let file = files[0];
-    let filename = to_filename(file.name);
+    for (let file of files) {
+        let filename = to_filename(file.name);
 
-    if (file_exists(filename)) {
-        alert(\`File \${filename} alredy exists, please rm it\`)
-        return;
+        if (file_exists(filename)) {
+            alert(\`File \${filename} alredy exists, please rm it\`)
+            return;
+        }
     }
 
-    let reader = new FileReader();
-    reader.readAsText(file, "UTF-8");
+    for (let file of files) {
+        let filename = to_filename(file.name);
 
-    reader.onload = (evt) => {
-        save_file(filename, evt.target.result);
+        let reader = new FileReader();
+        reader.readAsText(file, "UTF-8");
 
-        upload_button.innerText = "Uploaded";
+        reader.onload = (evt) => {
+            save_file(filename, evt.target.result);
+        };
 
-        disable(upload);
-        disable(upload_button)
-    };
+        reader.onerror = (err) => {
+            alert(\`error reading the file: \${err}\`);
+            return;
+        };
+    }
 
-    reader.onerror = (err) => {
-        alert(\`error reading the file: \${err}\`);
-        return;
-    };
+    upload_button.innerText = "Uploaded";
+
+    disable(upload);
+    disable(upload_button)
 }
 
 uploader_${input_id}();
@@ -357,4 +367,19 @@ document.getElementById("prompt").focus();
     upload_container.appendChild(commit_upload);
 
     return upload_container.outerHTML;
+}
+
+function download(argv) {
+    if (!argv.length) return "No specified files to download";
+
+    argv = [...new Set(argv)];
+
+    for (let file of argv) {
+        if (!file_exists(file))
+            return `File ${escape_HTML(file)} does not exist`;
+    }
+
+    for (let file of argv) invoke_download(file, get_file(file));
+
+    return "File(s) downloaded";
 }

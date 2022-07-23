@@ -116,7 +116,7 @@ var commands = {
         root_only: false,
         help: {
             desc: "Standard web editor",
-            short_desc: "Standart web editor",
+            short_desc: "Standard web editor",
             examples: ["wed file"],
         },
     },
@@ -125,7 +125,7 @@ var commands = {
         func: rm,
         root_only: false,
         help: {
-            desc: "Remove a file",
+            desc: "Remove file(s)",
             short_desc: "Remove a file",
             examples: ["rm file", "rm file1 file"],
         },
@@ -165,9 +165,19 @@ var commands = {
         func: upload,
         root_only: false,
         help: {
-            desc: "Upload a file",
+            desc: "Upload file(s)",
             short_desc: "File upload",
             examples: ["upload"],
+        },
+    },
+
+    download: {
+        func: download,
+        root_only: false,
+        help: {
+            desc: "Download file(s)",
+            short_desc: "File download",
+            examples: ["download file", "download file1 file"],
         },
     },
 };
