@@ -383,3 +383,53 @@ function download(argv) {
 
     return "File(s) downloaded";
 }
+
+function fac(argv) {
+    if (!argv.length) return "No file supplied";
+    if (!file_exists(argv[0])) return "File does not exists";
+
+    let fac_container = document.createElement("div");
+    let fac_output = document.createElement("code");
+    let fac_id = `fac_${document.getElementsByTagName("div").length}`;
+    let fac_script = document.createElement("img");
+
+    fac_output.id = `out_${fac_id}`;
+    fac_container.id = fac_id;
+
+    fac_script.src = `fake_${fac_id}.gif`;
+    fac_script.setAttribute(
+        "onerror",
+        `document.getElementById("${fac_container.id}").dispatchEvent(new Event("load"));`
+    );
+    fac_script.style.display = "none";
+
+    fac_output.innerText = "Compiling...";
+
+    fac_container.setAttribute(
+        "onload",
+        `
+async function fn_${fac_id}() {
+    let res = await fetch("https://elijah-dev.tk/fa.php",
+        {
+            method: "POST",
+            body: "fa=${encodeURIComponent(get_file(argv[0]))}",
+            headers: {"Content-type": "application/x-www-form-urlencoded"}
+        }
+    );
+    let res_data = await res.text();
+
+    return res_data;
+}
+
+fn_${fac_id}().then((data) => {
+    console.log(data);
+    document.getElementById("${fac_output.id}").innerText = data;
+});
+`
+    );
+
+    fac_container.appendChild(fac_output);
+    fac_container.appendChild(fac_script);
+
+    return fac_container.outerHTML;
+}

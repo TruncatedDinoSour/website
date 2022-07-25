@@ -180,4 +180,14 @@ var commands = {
             examples: ["download file", "download file1 file"],
         },
     },
+
+    fac: {
+        func: fac,
+        root_only: false,
+        help: {
+            desc: 'Compile <a href="/gh/fa">fa</a> code',
+            short_desc: "Fa compiler",
+            examples: ["fac file"],
+        },
+    },
 };
