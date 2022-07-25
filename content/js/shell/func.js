@@ -413,7 +413,8 @@ async function fn_${fac_id}() {
         {
             method: "POST",
             body: "fa=${encodeURIComponent(get_file(argv[0]))}",
-            headers: {"Content-type": "application/x-www-form-urlencoded"}
+            headers: {"Content-type": "application/x-www-form-urlencoded"},
+            mode: "no-cors"
         }
     );
     let res_data = await res.text();
