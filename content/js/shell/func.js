@@ -422,7 +422,6 @@ async function fn_${fac_id}() {
 }
 
 fn_${fac_id}().then((data) => {
-    console.log(data);
     document.getElementById("${fac_output.id}").innerText = data;
 });
 `
