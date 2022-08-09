@@ -13,9 +13,10 @@
     status = 301
     force = true
 
+# https://github.com/poketube-org/poketube
 [[redirects]]
     from = "/yt/*"
-    to = "https://invidious.esmailelbob.xyz/:splat"
+    to = "https://poketube.fun/:splat"
     status = 302
     force = true
 
