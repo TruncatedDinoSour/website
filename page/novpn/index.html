@@ -1,181 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="linux website vpn privacy novpn security money trust programming ari terminal dark opensource"
+        />
+        <meta name="description" content="NoVPN - Why you shouldn't use VPNs" />
+        <meta
+            name="robots"
+            content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="linux website vpn privacy novpn security money trust programming ari terminal dark opensource">
-    <meta name="description" content="NoVPN - Why you shouldn't use VPNs">
-    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+        <meta property="og:type" content="website" />
+        <meta name="color-scheme" content="dark" />
 
-    <meta property="og:type" content="website" />
-    <meta name="color-scheme" content="dark" />
+        <title>Ari::web -&gt; NoVPN</title>
 
-    <title>Ari::web -&gt; NoVPN</title>
+        <link rel="stylesheet" href="/content/styles/clean/index.min.css" />
+        <link rel="stylesheet" href="/content/styles/novpn/index.min.css" />
 
-    <link rel="stylesheet" href="/content/styles/clean/index.min.css" />
-    <link rel="stylesheet" href="/content/styles/novpn/index.min.css" />
+        <script src="/content/js/novpn/matrix.js" defer></script>
+        <script src="/content/js/novpn/index.js" defer></script>
 
-    <script src="/content/js/novpn/matrix.js" defer></script>
-    <script src="/content/js/novpn/index.js" defer></script>
-</head>
+        <script type="text/javascript">
+            <!--//--><![CDATA[//><!--
+            /**
+             * @licstart The following is the entire license notice for the JavaScript
+             * code in this page.
+             *
+             * Copyright (C) 2022 Ari Archer
+             *
+             * The JavaScript code in this page is free software: you can redistribute
+             * it and/or modify it under the terms of the GNU General Public License
+             * (GNU GPL) as published by the Free Software Foundation, either version 3
+             * of the License, or (at your option) any later version.  The code is
+             * distributed WITHOUT ANY WARRANTY; without even the implied warranty of
+             * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU GPL
+             * for more details.
+             *
+             * As additional permission under GNU GPL version 3 section 7, you may
+             * distribute non-source (e.g., minimized or compacted) forms of that code
+             * without the copy of the GNU GPL normally required by section 4, provided
+             * you include this license notice and a URL through which recipients can
+             * access the Corresponding Source.
+             *
+             * @licend The above is the entire license notice for the JavaScript code
+             * in this page.
+             */
 
-<body>
-    <canvas id="matrix"></canvas>
+            //--><!]]>
+        </script>
+    </head>
 
-    <div class="content">
-        <div class="page-intro">
-            <h1>NoVPN - fast, private, secure and free</h1>
-            <br>
-            <p>
-                Tired of companies spying on you? NoVPN might be the "VPN" for you.
+    <body>
+        <canvas id="matrix"></canvas>
+
+        <div class="content">
+            <div class="page-intro">
+                <h1>NoVPN - fast, private, secure and free</h1>
+                <br />
+                <p>
+                    Tired of companies spying on you? NoVPN might be the "VPN"
+                    for you.
+                    <a href="#!" onclick="scrollDown();">Read more.</a>
+                </p>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="content">
+            <div class="page-intro">
+                <h1>What is NoVPN?</h1>
+                <br />
+                <p>
+                    NoVPN is a
+                    <a href="/" target="_blank">page on my website</a> to
+                    encourage people to not use VPNs if they don't have a use
+                    for them.
+                    <a href="#!" onclick="scrollDown();">Read more.</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="page-intro">
+                <h1>I use ExpressVPN, NordVPN, etc. are these good options?</h1>
+                <br />
+                <p>
+                    No. These VPNs collect enourmous ammount of your data and
+                    sell it. ExpressVPN
+                    <a
+                        href="//english.almayadeen.net/articles/analysis/exclusive:-expressvpn-insider-tells-all-on-companys-israelua"
+                        target="_blank"
+                        >hires literal spies</a
+                    >
+                    and NordVPN had
+                    <a
+                        href="//blog.malwarebytes.com/cybercrime/privacy/2021/03/21-million-free-vpn-users-data-exposed"
+                        target="_blank"
+                        >a huge data breach</a
+                    >. These are just two examples, most proprietary VPNs are or
+                    have faced this sort of issue.
+                    <a href="#!" onclick="scrollDown();">Read more.</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="page-intro">
+                <h1>
+                    But people, my friends and my favourite creators are telling
+                    me that my data will be exposed otherwise
+                </h1>
+                <br />
+                <p>
+                    That can technically happen, BUT, most sites use
+                    <a href="//en.wikipedia.org/wiki/HTTPS" target="_blank"
+                        >the HTTPS protocol</a
+                    >
+                    which is very secure and it's very unlikely your data will
+                    be exposed while visiting HTTPS sites. But if you use
+                    <a
+                        href="//en.wikipedia.org/wiki/Hypertext_Transfer_Protocol"
+                        target="_blank"
+                        >only HTTP</a
+                    >
+                    which is not secure and someone is targeting you, yes they
+                    will get your data, but most HTTP sites are very simple and
+                    don't even give you the option to put in any details. And
+                    please remember that your favourite creators are paid to lie
+                    to you and they probably themselves don't know what they're
+                    saying so before you believe someone think to yourself "was
+                    there money involved" and "is there a chance that they
+                    actually know what they're talking about". Don't trust
+                    anyone.
+                    <a href="#!" onclick="scrollDown();">Read more.</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="page-intro">
+                <h1>
+                    Hm okay, but what about open source VPNs like riseup or
+                    proton VPN
+                </h1>
+                <br />
+                <p>
+                    VPNs without a use... well are just useless... Don't use a
+                    VPN if you don't have a use. Because:
+
+                    <br />
+                </p>
+
+                <ul>
+                    <li>It slows down your connection</li>
+                    <li>You're trusting someone else with your data</li>
+                    <li>
+                        If you're using only a free trial - you're also wasting
+                        money
+                    </li>
+                    <li>
+                        It gives you a
+                        <a
+                            href="//www.merriam-webster.com/dictionary/false%20sense%20of%20security"
+                            target="_blank"
+                            >false sense of security</a
+                        >
+                    </li>
+                    <li>
+                        It
+                        <a href="//tech.co/vpn/are-vpns-legal" target="_blank"
+                            >could be illegal in your country</a
+                        >
+                    </li>
+                </ul>
+
+                <br />
+
+                Please think about if you <b>REALLY</b> need a VPN or are you
+                just getting it just to waste money, bandwidth and your
+                privacy...
                 <a href="#!" onclick="scrollDown();">Read more.</a>
-            </p>
+            </div>
         </div>
-    </div>
 
-    <br>
-
-    <div class="content">
-        <div class="page-intro">
-            <h1>What is NoVPN?</h1>
-            <br>
-            <p>
-                NoVPN is a <a href="/" target="_blank">page on my website</a> to encourage people to not use VPNs if they don't have a use for them.
+        <div class="content">
+            <div class="page-intro">
+                <h1>What are good use cases of VPNs</h1>
+                <br />
+                <p></p>
+                <ul>
+                    <li>Bypassing your countie's restrictions</li>
+                    <li>Pirating content off the internet</li>
+                    <li>
+                        A site that is connected through a VPN to access
+                        restricted content (e.g
+                        <a href="//www.hackthebox.com/" target="_blank"
+                            >Hack The Box</a
+                        >)
+                    </li>
+                    <li>Bypassing IP range bans</li>
+                    <li>
+                        Bypassing sites restricting certain features if you're
+                        in a certain regeon
+                    </li>
+                </ul>
                 <a href="#!" onclick="scrollDown();">Read more.</a>
-            </p>
+            </div>
         </div>
-    </div>
 
-    <div class="content">
-        <div class="page-intro">
-            <h1>I use ExpressVPN, NordVPN, etc. are these good options?</h1>
-            <br>
-            <p>
-                No. These VPNs collect enourmous ammount of your data and sell it.
-                ExpressVPN <a href="//english.almayadeen.net/articles/analysis/exclusive:-expressvpn-insider-tells-all-on-companys-israelua" target="_blank">hires literal spies</a>
-                and NordVPN had <a href="//blog.malwarebytes.com/cybercrime/privacy/2021/03/21-million-free-vpn-users-data-exposed" target="_blank">a huge data breach</a>.
-                These are just two examples, most proprietary VPNs are or have faced this sort of issue.
-                <a href="#!" onclick="scrollDown();">Read more.</a>
-            </p>
+        <div class="content">
+            <div class="page-intro">
+                <h1>
+                    You're telling us "not to trust anyone", does that include
+                    you?
+                </h1>
+                <br />
+                <p>
+                    Yes. You should not trust me or anyone, you should do your
+                    own research on unbias sources.
+                    <a href="#!" onclick="scrollDown();">Read more.</a>
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="content">
-        <div class="page-intro">
-            <h1>But people, my friends and my favourite creators are telling me that my data will be exposed otherwise</h1>
-            <br>
-            <p>
-                That can technically happen, BUT, most sites use <a href="//en.wikipedia.org/wiki/HTTPS" target="_blank">the HTTPS protocol</a> which
-                is very secure and it's very unlikely your data will be exposed while visiting HTTPS sites.
-                But if you use <a href="//en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank">only HTTP</a> which is not secure
-                and someone is targeting you, yes they will get your data, but most HTTP sites are very simple and don't even give you
-                the option to put in any details. And please remember that your favourite
-                creators are paid to lie to you and they probably themselves don't know what they're saying so before you
-                believe someone think to yourself "was there money involved" and "is there a chance that they actually know what they're talking about".
-                Don't trust anyone.
-                <a href="#!" onclick="scrollDown();">Read more.</a>
-            </p>
+        <div class="content">
+            <div class="page-intro">
+                <h1>
+                    Why do people use VPNs so much without knowing what it is,
+                    does or is running
+                </h1>
+                <br />
+                <p>
+                    They are being influenced by their favourite content
+                    creators on social media and then they influence their
+                    friend and they their friends and so on. But one friend
+                    eventually realised it's bullshit and doesn't spread it,
+                    which is when it stops, be the person who stops the
+                    spreading of this bs and stop giving companies data to sell.
+                    <a href="#!" onclick="scrollDown();">Read more.</a>
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="content">
-        <div class="page-intro">
-            <h1>Hm okay, but what about open source VPNs like riseup or proton VPN</h1>
-            <br>
-            <p>
-                VPNs without a use... well are just useless... Don't use a VPN if you don't have a use.
-                Because:
-
-                <br>
-
-            <ul>
-                <li>It slows down your connection</li>
-                <li>You're trusting someone else with your data</li>
-                <li>If you're using only a free trial - you're also wasting money</li>
-                <li>It gives you a <a href="//www.merriam-webster.com/dictionary/false%20sense%20of%20security" target="_blank">false sense of security</a></li>
-                <li>It <a href="//tech.co/vpn/are-vpns-legal" target="_blank">could be illegal in your country</a></li>
-            </ul>
-
-            <br>
-
-            Please think about if you <b>REALLY</b> need a VPN or are you just getting it
-            just to waste money, bandwidth and your privacy...
-            <a href="#!" onclick="scrollDown();">Read more.</a>
-            </p>
+        <div class="content">
+            <div class="page-intro">
+                <h1>Why did you even call it a "VPN" in the beginning</h1>
+                <br />
+                <p>
+                    To get your or anyone who acrosses this attention.
+                    <a href="#!" onclick="scrollDown();">Read more.</a>
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="content">
-        <div class="page-intro">
-            <h1>What are good use cases of VPNs</h1>
-            <br>
-            <p>
-            <ul>
-                <li>Bypassing your countie's restrictions</li>
-                <li>Pirating content off the internet</li>
-                <li>A site that is connected through a VPN to access restricted content (e.g <a href="//www.hackthebox.com/" target="_blank">Hack The Box</a>)</li>
-                <li>Bypassing IP range bans</li>
-                <li>Bypassing sites restricting certain features if you're in a certain regeon</li>
-            </ul>
-            <a href="#!" onclick="scrollDown();">Read more.</a>
-            </p>
+        <div class="content">
+            <div class="page-intro">
+                <h1>Finalizing</h1>
+                <br />
+                <p></p>
+                <ul>
+                    <li>Don't use proprietary VPNs</li>
+                    <li>Don't use VPNs without a proper use</li>
+                    <li>Don't fall for bias people's sugartalk</li>
+                    <li>Don't trust anyone</li>
+                </ul>
+                <a href="#!" onclick="scrollUp();">Back to top.</a>
+            </div>
         </div>
-    </div>
-
-    <div class="content">
-        <div class="page-intro">
-            <h1>You're telling us "not to trust anyone", does that include you?</h1>
-            <br>
-            <p>
-                Yes. You should not trust me or anyone, you should do your own research on unbias sources.
-                <a href="#!" onclick="scrollDown();">Read more.</a>
-            </p>
-        </div>
-    </div>
-
-    <div class="content">
-        <div class="page-intro">
-            <h1>Why do people use VPNs so much without knowing what it is, does or is running</h1>
-            <br>
-            <p>
-                They are being influenced by their favourite content creators on social media
-                and then they influence their friend and they their friends and so on.
-                But one friend eventually realised it's bullshit and doesn't spread it, which is
-                when it stops, be the person who stops the spreading of this bs and stop giving
-                companies data to sell.
-                <a href="#!" onclick="scrollDown();">Read more.</a>
-            </p>
-        </div>
-    </div>
-
-    <div class="content">
-        <div class="page-intro">
-            <h1>Why did you even call it a "VPN" in the beginning</h1>
-            <br>
-            <p>
-                To get your or anyone who acrosses this attention.
-                <a href="#!" onclick="scrollDown();">Read more.</a>
-            </p>
-        </div>
-    </div>
-
-    <div class="content">
-        <div class="page-intro">
-            <h1>Finalizing</h1>
-            <br>
-            <p>
-            <ul>
-                <li>Don't use proprietary VPNs</li>
-                <li>Don't use VPNs without a proper use</li>
-                <li>Don't fall for bias people's sugartalk</li>
-                <li>Don't trust anyone</li>
-            </ul>
-            <a href="#!" onclick="scrollUp();">Back to top.</a>
-            </p>
-        </div>
-    </div>
-</body>
-
+    </body>
 </html>
