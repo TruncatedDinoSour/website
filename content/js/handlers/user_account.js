@@ -16,6 +16,11 @@ function pprompt(message) {
 }
 
 async function user_account_create() {
+    alert(
+        "This account is not a *real* account, this is just a toy to refer \
+to you by your username and for more realistic 'root' access"
+    );
+
     let username = pprompt(`Enter (make up) your username`);
     let password = pprompt(`Enter the password for '${username}'`);
     let password_confirm = pprompt(`Confirm the password for '${username}'`);
