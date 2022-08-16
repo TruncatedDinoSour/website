@@ -62,11 +62,11 @@ export function generate_theme(query = "#theme-output") {
 # Installation: Just add these lines to your ~/.bashrc
 
 __tty_theme() {
-    [ "$TERM" != 'linux' ] && return # Only run in a TTY
+    [ "$TERM" = 'linux' ] || return # Only run in a TTY
 
 `;
 
-    for (const key in tty_clrs) {
+    for (let key in tty_clrs) {
         let key_rgb = tty_clrs[key].rgb;
         let key_hex = rgb_to_hex(key_rgb);
         let rgb_str = `rgb(${key_rgb.join(", ")})`;
@@ -148,7 +148,7 @@ function main() {
     load_from_localtorage();
     let menu = document.getElementById("menu");
 
-    for (const key in tty_clrs) {
+    for (let key in tty_clrs) {
         let [r, g, b] = tty_clrs[key].rgb;
         let picker = new_colourpicker(key, [r, g, b]);
 
