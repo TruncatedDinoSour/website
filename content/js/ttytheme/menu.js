@@ -53,7 +53,10 @@ export function generate_theme(query = "#theme-output") {
     document.body.style.backgroundColor = `rgb(${tty_clrs["black"].rgb.join(
         ","
     )})`;
-    document.body.style.color = `rgb(${tty_clrs["bold_white"].rgb.join(",")})`;
+    document.body.style.color = `rgb(${tty_clrs["light_gray"].rgb.join(",")})`;
+
+    for (let header of document.querySelectorAll("h1, h2:first-of-type"))
+        header.style.color = `rgb(${tty_clrs["bold_white"].rgb.join(",")})`;
 
     let elem = document.querySelector(query);
     if (!elem) throw ReferenceError(`${query} did not match any results`);
