@@ -73,7 +73,7 @@ __tty_theme() {
 
         text += `    printf "\\e]P${tty_clrs[key].mod}${key_hex}" # ${key}${gp(
             key,
-            15
+            14
         )}${rgb_str}${gp(rgb_str, 20)}#${key_hex}\n`;
     }
 
