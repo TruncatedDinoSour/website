@@ -16,7 +16,7 @@ main() {
     {
         printf '%s' '['
         find api -type f -exec basename {} \; | mkdata
-        echo "\"$(basename "$apis")\"]"
+        echo ']'
     } >"$apis"
 
     echo 'done'

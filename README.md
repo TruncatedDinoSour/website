@@ -25,6 +25,43 @@
 6. Edit all stuff that is `ARI-WEB-SPECIFIC` in [netlify.toml](/netlify.toml)
 7. Publish on [netlify](https://netlify.com/)
 
+# Usage API
+
+The [usage api](https://www.ari-web.xyz/api/usage.json)
+has all the statistics I get from netlify, it serves as
+an archive and growth monitor
+
+Schema:
+
+```json
+{
+    "<YYYY-MM-DD>": {
+        "total": <total bandwidth used in MB>,
+        "top": {
+            "<top usage site 1>": <total bandwidth used in MB>,
+            "<top usage site 2>": <total bandwidth used in MB>,
+            "<top usage site 3>": <total bandwidth used in MB>
+        }
+    }
+}
+```
+
+The date is the day I added those stats, total is total
+bandwidth used up to that point, top is the top 3 site's
+usage and its keys are the (sub)domain names and the values
+of those keys are the used bandwidth out of the total
+
+The bandwidth keys are all floats for easy parsing, they
+represent the bandwidth used in MB
+
+The top sites will most likely not have the total bandwidth
+fully used, so as a measure you can use this formula to calculate
+how much per avg sites are using:
+
+```py
+(data["<YYYY-MM-DD>"]["total"] - sum(data["<YYYY-MM-DD>"]["top"].values())) / (len(ari_web_sites) - 3)
+```
+
 # Subdomains
 
 -   https://www.ari-web.xyz/ (source: https://ari-web.xyz/git)
