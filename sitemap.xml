@@ -40,4 +40,8 @@
         <loc>https://blog.ari-web.xyz/b/restricting-contributions-on-ari-web/</loc>
         <priority>0.1</priority>
     </url>
+    <url>
+        <loc>https://3.ari-web.xyz/</loc>
+        <priority>0.099</priority>
+    </url>
 </urlset>
