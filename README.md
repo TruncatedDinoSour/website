@@ -70,3 +70,4 @@ how much per avg sites are using:
 -   https://legacy.blog.ari-web.xyz/ (source: https://legacy.blog.ari-web.xyz/git)
 -   https://school.ari-web.xyz/ (source: proprietary (I don't want people snooping on my homework lol))
 -   https://user.ari-web.xyz/ (source: https://user.ari-web.xyz/git)
+-   https://3.ari-web.xyz/ (source: https://3.ari-web.xyz/git)
