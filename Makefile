@@ -1,6 +1,9 @@
 build:
 	npm run build
 
+netlifymin:
+	npm run netlify-min
+
 clean:
 	[ -z "${CI}" ] || rm -rfv requirements.txt \
 		README.md \
@@ -9,7 +12,6 @@ clean:
 		.vscode \
 		.github \
 
-netlify: build clean
-	npm run netlify-min
+netlify: build netlifymin clean
 
 .PHONY: build clean netlify
