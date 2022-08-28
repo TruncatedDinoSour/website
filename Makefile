@@ -10,5 +10,6 @@ clean:
 		.github \
 
 netlify: build clean
+	npm run netlify-min
 
 .PHONY: build clean netlify
