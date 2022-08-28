@@ -4,8 +4,7 @@
     "description": "My website's source code",
     "scripts": {
         "serve": "live-server --no-browser",
-        "build": "./scripts/build.sh",
-        "netlify-min": "./scripts/netlify_prod.sh"
+        "build": "./scripts/build.sh"
     },
     "repository": {
         "type": "git",
@@ -31,7 +30,6 @@
         "autoprefixer-cli": "^1.0.0",
         "eslint": "^8.14.0",
         "live-server": "^1.2.2",
-        "minify-all-cli": "^1.0.13",
         "node-sass": "^7.0.1"
     }
 }
