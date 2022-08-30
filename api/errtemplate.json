@@ -40,6 +40,11 @@
         "Error Log URL": {
             "placeholder": "Please only use hastebin.com, katb.in, nekob.in, or gist.github.com. Pastebin links will not be accepted.",
             "id": "err-url"
+        },
+        "Additional notes": {
+            "placeholder": "Additional things you have tried to do",
+            "id": "additional",
+            "optional": true
         }
     }
 }
