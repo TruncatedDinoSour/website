@@ -1,0 +1,44 @@
+{
+    "%android": {
+        "disallowed-android-versions": ["p", "pie", "9", "t", "13"]
+    },
+    "android": {
+        "Your GitHub userame": {
+            "placeholder": "Your GitHub username",
+            "id": "gh-username"
+        },
+        "Android version": {
+            "placeholder": "The version of Android you are building",
+            "id": "and-version"
+        },
+        "Stock Android Version": {
+            "placeholder": "The latest version of Android your OEM has released. You may disregard this your issue isn't a bringup issue",
+            "id": "stock-and-version",
+            "optional": true
+        },
+        "ROM": {
+            "placeholder": "Provide the name of the ROM you are building AND a link to their GitHub organization",
+            "id": "rom-url"
+        },
+        "Device": {
+            "placeholder": "This must be YOUR tree that has been pushed to YOUR GitHub with all of your current changes",
+            "id": "dev-url"
+        },
+        "Kernel": {
+            "placeholder": "This must be YOUR tree that has been pushed to YOUR GitHub with all of your current changes.",
+            "id": "kern-url"
+        },
+        "Vendor": {
+            "placeholder": "This must be YOUR tree that has been pushed to YOUR GitHub with all of your current changes.",
+            "id": "ven-url"
+        },
+        "Common Tree(s)": {
+            "placeholder": "This must be YOUR tree that has been pushed to YOUR GitHub with all of your current changes. Disregard this if your device does not use any common trees",
+            "id": "ctree-url"
+        },
+        "Error Log URL": {
+            "placeholder": "Please only use hastebin.com, katb.in, nekob.in, or gist.github.com. Pastebin links will not be accepted.",
+            "id": "err-url"
+        }
+    }
+}
