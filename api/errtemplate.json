@@ -34,7 +34,8 @@
         },
         "Common Tree(s)": {
             "placeholder": "This must be YOUR tree that has been pushed to YOUR GitHub with all of your current changes. Disregard this if your device does not use any common trees",
-            "id": "ctree-url"
+            "id": "ctree-url",
+            "optional": true
         },
         "Error Log URL": {
             "placeholder": "Please only use hastebin.com, katb.in, nekob.in, or gist.github.com. Pastebin links will not be accepted.",
