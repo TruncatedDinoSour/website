@@ -4,9 +4,6 @@ const FORM_CHECKERS = {
     android: (e, edata) => {
         let data = Object.fromEntries(new FormData(e.target).entries());
 
-        console.log(data);
-        console.log(edata);
-
         function no_has_gh(str) {
             return str.indexOf(data["gh-username"]) === -1;
         }
