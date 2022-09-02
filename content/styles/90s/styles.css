@@ -13,7 +13,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
     word-break: break-all;
 
     scroll-behavior: smooth;
