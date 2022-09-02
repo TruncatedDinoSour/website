@@ -8,7 +8,7 @@ const FORM_CHECKERS = {
         console.log(edata);
 
         function no_has_gh(str) {
-            return str.indexOf(data["gh-username"]) !== -1;
+            return str.indexOf(data["gh-username"]) === -1;
         }
 
         if (!/^[0-9a-zA-Z]+$/.test(data["gh-username"]))
