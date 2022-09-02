@@ -90,6 +90,12 @@ const locations = {
         desc: "'Am I unique?' test",
         aliases: ["uniqueness", "unqtest", "unique", "unqquiz"],
     },
+
+    13: {
+        url: "/90s",
+        desc: "90s page",
+        aliases: ["90s", "90", "vintage", "old"],
+    },
 };
 const escape_HTML = (str) =>
     str.replace(

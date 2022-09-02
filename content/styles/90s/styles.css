@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+    background-color: blue;
+    color: yellow;
+    text-shadow: 0px 0px 16px black;
+
+    font-weight: bold;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    word-wrap: break-word;
+    word-break: break-all;
+
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+code,
+code *,
+pre,
+pre * {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+}
+
+body {
+    margin: auto;
+    padding: 2rem;
+    min-height: 100vh;
+    max-width: 1500px;
+    text-rendering: optimizeSpeed;
+}
+
+h1 {
+    text-align: center;
+    margin: 1em;
+    font-size: 2em;
+    background-color: green;
+}
+
+marquee {
+    background-color: green;
+}
+
+li {
+    margin: 0.5em;
+}
+
+code {
+    white-space: pre-wrap !important;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+.center {
+    text-align: center;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: auto 40%;
+}
+
+.split div:first-child {
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+a {
+    color: pink;
+    font-size: 1.3em;
+}
+
+li {
+    list-style-type: square;
+}
+
+h2,
+h2 * {
+    text-align: center;
+    background-color: crimson;
+}
+
+footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        -webkit-animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+
+        -webkit-transition-duration: 0.01ms !important;
+        -o-transition-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (prefers-contrast: more) {
+    *,
+    *::before,
+    *::after {
+        background-color: black !important;
+        color: white !important;
+    }
+}
