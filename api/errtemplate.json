@@ -44,7 +44,8 @@
         "Additional notes": {
             "placeholder": "Additional things you have tried to do",
             "id": "additional",
-            "optional": true
+            "optional": true,
+            "textbox": true
         }
     }
 }

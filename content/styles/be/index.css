@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+    background-color: #181818;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+    padding: 4em;
+}
+
+h1,
+h2 {
+    margin-bottom: 0.7em;
+    text-align: center;
+}
+
+#types {
+    margin-left: 1em;
+}
+
+#types,
+label[for="types"] {
+    font-weight: bold;
+    margin-top: 2em;
+}
+
+#submit-button {
+    display: block;
+    margin: 1em;
+    width: 20%;
+    border: none;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.4s ease-in-out;
+}
+
+#submit-button:focus,
+#submit-button:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.4s ease-in-out;
+}
+
+label {
+    margin-left: 1em;
+}
+
+form * {
+    margin-bottom: 0.5em;
+}
+
+textarea {
+    resize: none;
+    height: 10em;
+}
+
+textarea,
+input {
+    padding: 0.3em;
+    width: 60%;
+}
+
+@media screen and (max-width: 800px) {
+    form * {
+        display: block;
+        width: 100%;
+    }
+
+    label::after {
+        content: "^";
+    }
+
+    body {
+        padding: 2em;
+    }
+
+    #submit-button {
+        width: 100%;
+        margin: 0;
+    }
+}

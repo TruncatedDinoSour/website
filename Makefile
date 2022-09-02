@@ -10,5 +10,6 @@ clean:
 		.github \
 
 netlify: build clean
+	./scripts/netlifyapis.sh
 
 .PHONY: build clean netlify
