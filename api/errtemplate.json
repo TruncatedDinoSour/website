@@ -3,7 +3,7 @@
         "disallowed-android-versions": ["p", "pie", "9", "t", "13"]
     },
     "android": {
-        "Your GitHub userame": {
+        "Your GitHub username": {
             "placeholder": "Your GitHub username",
             "id": "gh-username"
         },
