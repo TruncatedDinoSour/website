@@ -110,6 +110,12 @@
     status = 301
     force = true
 
+[[redirects]]
+    from = "/90s.html"
+    to = "/page/90s/index.html"
+    status = 301
+    force = true
+
 ####################
 
 [[redirects]]
