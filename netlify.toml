@@ -131,6 +131,12 @@
     force = true
 
 [[redirects]]
+    from = "/mr"
+    to = "https://blog.ari-web.xyz/b/my-music-artist-recommendations/"
+    status = 301
+    force = true
+
+[[redirects]]
     from = "/:page"
     to = "/page/:page"
     status = 302
