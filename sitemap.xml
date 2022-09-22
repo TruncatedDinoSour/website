@@ -33,6 +33,10 @@
         <priority>0.4</priority>
     </url>
     <url>
+        <loc>https://www.ari-web.xyz/page/export</loc>
+        <priority>0.39</priority>
+    </url>
+    <url>
         <loc>https://blog.ari-web.xyz/b/important--impersonation-of-me-on-the-internet/</loc>
         <priority>0.3</priority>
     </url>
