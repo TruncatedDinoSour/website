@@ -37,9 +37,7 @@ function main() {
             )
                 window.localStorage.clear();
 
-            Object.keys(data).forEach((k) =>
-                localStorage.setItem(k, JSON.stringify(data[k]))
-            );
+            Object.keys(data).forEach((k) => localStorage.setItem(k, data[k]));
 
             alert("Data imported");
         } catch (e) {
