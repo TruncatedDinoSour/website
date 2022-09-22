@@ -1,5 +1,5 @@
 -   [x] Fac command: POST to https://elijah-dev.tk/fa.php with the fa parameter being some code
 -   [ ] Chat subdomain using WebRTC
 -   [ ] Store files in IndexedDB
--   [ ] Export/Import
+-   [x] Export/Import
 -   [ ] Python code runner
