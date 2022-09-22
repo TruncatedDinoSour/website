@@ -168,6 +168,13 @@
 # --------------
 
 [[headers]]
+    for = "/api/*"
+
+    [headers.values]
+        Access-Control-Allow-Origin = "*"
+        Access-Control-Allow-Methods = "*"
+
+[[headers]]
     for = "/*"
 
     [headers.values]
