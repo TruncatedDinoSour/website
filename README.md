@@ -30,8 +30,8 @@ slow, so there's hashes for them, they are sha256 hashes of
 those JSON files in the api
 
 So what you do, replace all `.` in the API name with \_,
-then make the request to `/api_hash/....txt` and you will
-get the hash, for example: <https://www.ari-web.xyz/api_hash/apis_json.txt>
+then make the request to `/api_hash/..._hash.txt` and you will
+get the hash, for example: <https://www.ari-web.xyz/api_hash/apis_json_hash.txt>
 
 # Usage API
 

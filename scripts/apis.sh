@@ -30,7 +30,7 @@ main() {
 
     for api in api/*; do
         api_base="${api##*/}"
-        sha256sum "$api" | awk '{ print $1 }' >"api_hash/${api_base//./_}.txt"
+        sha256sum "$api" | awk '{ print $1 }' | tr -d '\n' >"api_hash/${api_base//./_}_hash.txt"
     done
 
     echo 'done'
