@@ -175,6 +175,13 @@
         Access-Control-Allow-Methods = "GET"
 
 [[headers]]
+    for = "/api_hash/*"
+
+    [headers.values]
+        Access-Control-Allow-Origin = "*"
+        Access-Control-Allow-Methods = "GET"
+
+[[headers]]
     for = "/*"
 
     [headers.values]

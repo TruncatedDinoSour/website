@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -e
 
@@ -20,6 +20,18 @@ main() {
         find api -type f -exec basename {} \; | mkdata | sed 's/,$//'
         echo ']'
     } >"$apis"
+
+    echo 'done'
+
+    printf ' * %s... ' 'Generating api hashes'
+
+    mkdir -p -- api_hash
+    rm -rf -- api_hash/*
+
+    for api in api/*; do
+        api_base="${api##*/}"
+        sha256sum "$api" | awk '{ print $1 }' >"api_hash/${api_base//./_}.txt"
+    done
 
     echo 'done'
 }

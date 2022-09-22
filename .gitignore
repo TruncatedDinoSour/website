@@ -2,4 +2,4 @@ _*.css
 node_modules/
 *.min.css
 /api/apis.json
-
+/api_hash

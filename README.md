@@ -9,9 +9,7 @@
 
 <p align="center">
     <a href="https://app.netlify.com/sites/ari-web/deploys">
-        <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/4ac67547-6444-4c67-9a54-c7f8fb28427b/deploy-status"/>
-    </a>
-</p>
+        <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/4ac67547-6444-4c67-9a54-c7f8fb28427b/deploy-status"/> </a> </p>
 
 ### [My website's](https://www.ari-web.xyz/) source code.
 
@@ -24,6 +22,16 @@
 5. Go to http://0.0.0.0:5500/ in your browser
 6. Edit all stuff that is `ARI-WEB-SPECIFIC` in [netlify.toml](/netlify.toml)
 7. Publish on [netlify](https://netlify.com/)
+
+# API hashes
+
+If you want to call to a very expensive API it might become
+slow, so there's hashes for them, they are sha256 hashes of
+those JSON files in the api
+
+So what you do, replace all `.` in the API name with \_,
+then make the request to `/api_hash/....txt` and you will
+get the hash, for example: <https://www.ari-web.xyz/api_hash/apis_json.txt>
 
 # Usage API
 
