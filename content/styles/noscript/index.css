@@ -1,0 +1,25 @@
+:root {
+    --ns-bg: #af5f5f;
+    --ns-fg: #262220;
+}
+
+*[ns],
+*[nsb],
+*[nsb] *,
+*[ns] * {
+    background-color: var(--ns-bg);
+    color: var(--ns-fg);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+*[ns] {
+    padding: 0.2em;
+    display: inline;
+}
+
+*[nsb] {
+    display: block;
+    text-align: center;
+    padding: 2em;
+}

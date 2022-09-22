@@ -1,0 +1,72 @@
+/* :root {
+    --switch-fg: #f9f6e8;
+    --switch-bg-inactive: #666c7f;
+    --switch-bg-active: #87afaf;
+} */
+
+*,
+*::before,
+*::after {
+    background-color: #2b2e36;
+    color: #f9f6e8;
+    font-family: sans-serif;
+}
+
+label:not(label[for]) {
+    float: right;
+    padding: 1em;
+}
+
+body {
+    padding: 1em;
+    margin: auto;
+    max-width: 1000px;
+    height: 100vh;
+}
+
+/* .switch {
+    padding: 1em;
+} */
+
+.content *,
+.content {
+    display: block;
+}
+
+#pages {
+    display: grid;
+    height: 100%;
+
+    grid-template-rows: auto auto;
+    grid-gap: 1em;
+    align-items: center;
+}
+
+#pages > div {
+    height: 100%;
+    padding: 4em;
+}
+
+#pages * h2 {
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 50%;
+    margin: 1em;
+    padding: 1em;
+    resize: none;
+}
+
+button {
+    padding: 0.5em;
+    background-color: #666c7f;
+    border-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover, button:focus {
+    background-color: #87afaf;
+}

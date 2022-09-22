@@ -43,6 +43,10 @@ textarea {
     font: inherit;
 }
 
+label {
+    cursor: pointer;
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     ::after,

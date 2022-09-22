@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ari::web -&gt; Export</title>
+
+        <meta name="description" content="Export or import your ari-web data" />
+        <meta name="keywords" content="export, import, ari-web, ari, Ari Archer, dark, data, javascript" />
+        <meta
+            name="robots"
+            content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        />
+        <meta property="og:type" content="website" />
+
+        <meta name="color-scheme" content="dark" />
+
+        <link rel="manifest" href="/manifest.json" />
+
+        <link rel="stylesheet" href="/content/styles/clean/index.css" />
+        <!-- <link rel="stylesheet" href="/content/styles/toggle/index.css" /> -->
+        <link rel="stylesheet" href="/content/styles/export/index.css" />
+        <link rel="stylesheet" href="/content/styles/noscript/index.css" />
+
+        <script src="/content/js/export/index.js" defer></script>
+    </head>
+
+    <body>
+        <div class="content">
+            <!-- <label id="x" class="switch">
+                <input type="checkbox" id="page-selector" />
+                <span class="slider"></span>
+            </label> -->
+
+            <h1>
+                Import/export
+                <noscript>
+                    <span ns
+                        >(No JS enabled, will not work, although
+                        <a href="/git">you can take a peet at the source code</a
+                        >)</span
+                    >
+                </noscript>
+            </h1>
+
+            <hr />
+        </div>
+
+        <div id="pages">
+            <div>
+                <h2>Export ari-web data</h2>
+
+                <textarea readonly aria-readonly="true" id="export"></textarea>
+                <button id="export-button">Export my data</button>
+            </div>
+
+            <div>
+                <h2>Import ari-web data</h2>
+
+                <textarea id="import"></textarea>
+                <button id="import-button">Import my data</button>
+            </div>
+        </div>
+    </body>
+</html>

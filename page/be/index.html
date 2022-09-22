@@ -24,6 +24,7 @@
 
         <link rel="stylesheet" href="/content/styles/clean/index.css" />
         <link rel="stylesheet" href="/content/styles/be/index.css" />
+        <link rel="stylesheet" href="/content/styles/noscript/index.css" />
 
         <script type="text/javascript">
             <!--//--><![CDATA[//><!--
@@ -58,7 +59,17 @@
     </head>
 
     <body>
-        <h1>Please stand by while I'm fetching the required data...</h1>
+        <h1>
+            Please stand by while I'm fetching the required data...
+            <noscript>
+                <span ns>Failed, no JavaScript enabled</span>
+            </noscript>
+        </h1>
+
+        <noscript>
+            <div nsb ns>Don't trust me? <a href="/git">The code is FOSS</a></div>
+        </noscript>
+
         <h2>
             If this takes too long please check the dev tools using CTRL + SHIFT
             + I and opening the console

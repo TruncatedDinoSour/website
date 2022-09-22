@@ -14,5 +14,13 @@
             "www.ari-web.xyz": 8.6,
             "blog.ari-web.xyz": 7.3
         }
+    },
+    "2022-09-23": {
+        "total": 11.0,
+        "top": {
+            "www.ari-web.xyz": 3.4,
+            "blog.ari-web.xyz": 2.4,
+            "legacy.blog.ari-web.xyz": 2.2
+        }
     }
 }

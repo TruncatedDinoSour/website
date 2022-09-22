@@ -96,6 +96,12 @@ const locations = {
         desc: "90s page",
         aliases: ["90s", "90", "vintage", "old"],
     },
+
+    14: {
+        url: "/page/export",
+        desc: "Export and/or import your ari-web data",
+        aliases: ["export", "import", "data"],
+    },
 };
 const escape_HTML = (str) =>
     str.replace(
