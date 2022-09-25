@@ -23,7 +23,7 @@
     "author": "Ari Archer <ari.web.xyz@gmail.com>",
     "license": "SEE LICENSE IN LICENSE",
     "bugs": {
-        "url": "https://ari-web.xyz/gh/issues"
+        "url": "https://ari-web.xyz/git/issues"
     },
     "homepage": "https://ari-web.xyz/git#readme",
     "devDependencies": {
