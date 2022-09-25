@@ -8,7 +8,7 @@ main() {
 
         find content/js/ -type f \
             -name "*.js" ! -name "*.min.*" ! -name "vfs_fonts*" \
-            -exec uglifyjs -o {}.min {} \; \
+            -exec uglifyjs --compress sequences=true,conditionals=true,booleans=true -o {}.min {} \; \
             -exec rm {} \; \
             -exec mv {}.min {} \;
     else
