@@ -3,3 +3,5 @@
 -   [ ] Store files in IndexedDB
 -   [x] Export/Import
 -   [ ] Python code runner
+-   [ ] Minimal UI framework
+    -   [ ] Convert some of the pages to use that framework

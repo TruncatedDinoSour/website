@@ -3,7 +3,7 @@
 set -e
 
 S='./scripts'
-SCRIPTS=(sass apis)
+SCRIPTS=(sass minjs apis)
 
 main() {
     for script in "${SCRIPTS[@]}"; do
