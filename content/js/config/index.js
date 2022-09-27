@@ -115,3 +115,12 @@ const escape_HTML = (str) =>
                 '"': "&quot;",
             }[tag] || tag)
     );
+
+const BIRTHDAY = new Date(2020, 9, 17, 0, 0, 0, 0); // Ari-web start: 2020/10/17
+
+/*
+let dt = new Date();
+const BIRTHDAY = new Date(dt.getFullYear() - 2, dt.getMonth(), dt.getDate(), 0, 0, 0, 0);
+*/
+
+const NUMERICS = ["st", "nd", "rd", "th"];
