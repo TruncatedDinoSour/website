@@ -4,23 +4,31 @@
         "top": {
             "files.ari-web.xyz": 45.1,
             "legacy.blog.ari-web.xyz": 31.8,
-            "www.ari-web.xyz": 29.9
+            "ari-web.xyz": 29.9
         }
     },
     "2022-08-28": {
         "total": 30.0,
         "top": {
             "legacy.blog.ari-web.xyz": 9.2,
-            "www.ari-web.xyz": 8.6,
+            "ari-web.xyz": 8.6,
             "blog.ari-web.xyz": 7.3
         }
     },
     "2022-09-23": {
         "total": 11.0,
         "top": {
-            "www.ari-web.xyz": 3.4,
+            "ari-web.xyz": 3.4,
             "blog.ari-web.xyz": 2.4,
             "legacy.blog.ari-web.xyz": 2.2
+        }
+    },
+    "2022-09-28": {
+        "total": 40.0,
+        "top": {
+            "files.ari-web.xyz": 19.8,
+            "blog.ari-web.xyz": 5.6,
+            "ari-web.xyz": 5.6
         }
     }
 }
