@@ -30,12 +30,7 @@ body {
     padding: 2em;
 }
 
-a:not(a[na])::before {
-    content: attr(href);
-}
-
-a,
-a::before {
+a {
     color: #b1b4c0;
     text-decoration: none;
 }
