@@ -10,7 +10,7 @@ main() {
             -exec html-minifier --collapse-whitespace --collapse-inline-tag-whitespace --remove-tag-whitespace -o {}.min {} \; \
             -exec rm {} \; \
             -exec mv {}.min {} \; \
-            -exec sh -c "printf '%s' '\n<!-- source code @ /git -->\n' >>\"\$1\"" -- {} \;
+            -exec sh -c "printf '\n\n%s\n' '<!-- source code @ /git -->' >>\"\$1\"" -- {} \;
     else
         echo 'Not minifying HTML in non-CI mode'
     fi
