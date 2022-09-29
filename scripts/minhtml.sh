@@ -7,10 +7,10 @@ main() {
         echo 'Minifying all HTML'
 
         find . -type f -name "*.html" \
-            -exec html-minifier --collapse-whitespace -o {}.min {} \; \
+            -exec html-minifier --collapse-whitespace --collapse-inline-tag-whitespace --remove-tag-whitespace -o {}.min {} \; \
             -exec rm {} \; \
             -exec mv {}.min {} \; \
-            -exec sh -c "echo '<!-- source code @ /git -->' >>\"\$1\"" -- {} \;
+            -exec sh -c "printf '%s' '\n<!-- source code @ /git -->\n' >>\"\$1\"" -- {} \;
     else
         echo 'Not minifying HTML in non-CI mode'
     fi
