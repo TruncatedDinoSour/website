@@ -1,21 +1,21 @@
 "use strict";
 
-// Conffeti.js source: https://www.cssscript.com/confetti-falling-animation/
+// Confetti.js source: https://www.cssscript.com/confetti-falling-animation/
 
-var maxParticleCount = 150; // set max confetti count
-var particleSpeed = 2; // set the particle animation speed
+let max_partics = 150;  // set max confetti count
+let partic_spd = 2;     // set the particle animation speed
 
-var startConfetti; // call to start confetti animation
-var stopConfetti; // call to stop adding confetti
-var removeConfetti; // call to stop the confetti animation and remove all confetti immediately
+let confetti;           // call to start confetti animation
+let stop_confetti;      // call to stop adding confetti
+let rm_confetti;        // call to stop the confetti animation and remove all confetti immediately
 
 (function () {
-    startConfetti = startConfettiInner;
-    stopConfetti = stopConfettiInner;
-    removeConfetti = removeConfettiInner;
-    var context, canvas;
+    confetti = start_confetti_inner;
+    stop_confetti = stop_confetti_inner;
+    rm_confetti = remove_confetti_inner;
 
-    var colors = [
+    let ctx, canvas;
+    let clrs = [
         "DodgerBlue",
         "OliveDrab",
         "Gold",
@@ -29,26 +29,38 @@ var removeConfetti; // call to stop the confetti animation and remove all confet
         "Chocolate",
         "Crimson",
     ];
-    var streamingConfetti = false;
-    var animationTimer = null;
-    var particles = [];
-    var waveAngle = 0;
+    let confetti_on = false;
+    let anim_t = null;
+    let particles = [];
+    let wav_angle = 0;
 
-    function resetParticle(particle, width, height) {
-        particle.color = colors[(Math.random() * colors.length) | 0];
-        particle.x = Math.random() * width;
-        particle.y = Math.random() * height - height;
-        particle.diameter = Math.random() * 10 + 5;
-        particle.tilt = Math.random() * 10 - 10;
-        particle.tiltAngleIncrement = Math.random() * 0.07 + 0.05;
-        particle.tiltAngle = 0;
-        return particle;
+    function reset_particle(part, width, height) {
+        part.color = clrs[(Math.random() * clrs.length) | 0];
+        part.x = Math.random() * width;
+        part.y = Math.random() * height - height;
+        part.diameter = Math.random() * 10 + 5;
+        part.tilt = Math.random() * 10 - 10;
+        part.tiltAngleIncrement = Math.random() * 0.07 + 0.05;
+        part.tiltAngle = 0;
+
+        return part;
     }
 
-    function startConfettiInner(text, textclr) {
-        var width = window.innerWidth;
-        var height = window.innerHeight;
-        window.requestAnimFrame = (function () {
+    function stop_confetti_inner() {
+        confetti_on = false;
+    }
+
+    function remove_confetti_inner() {
+        stop_confetti();
+        rm_confetti();
+        particles = [];
+    }
+
+    function start_confetti_inner(text, textclr) {
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+
+        window.req_animf = (function () {
             return (
                 window.requestAnimationFrame ||
                 window.webkitRequestAnimationFrame ||
@@ -61,21 +73,24 @@ var removeConfetti; // call to stop the confetti animation and remove all confet
             );
         })();
 
-        canvas = document.getElementById("confetti-canvas");
+        canvas = document.getElementById("c");
 
         if (canvas === null) {
             canvas = document.createElement("canvas");
-            canvas.setAttribute("id", "confetti-canvas");
+            canvas.setAttribute("id", "c");
             canvas.setAttribute(
                 "style",
-                "display: block;z-index:999999;pointer-events:none;overflow-y:hidden;min-width:100%;min-height:100%;position:fixed;top:0;left:0;"
+                "display:block;z-index:999999;pointer-events:none;overflow-y:hidden;min-width:100%;min-height:100%;position:fixed;top:0;left:0"
             );
+
             document.body.appendChild(canvas);
+
             canvas.width = width;
             canvas.height = height;
+
             window.addEventListener(
                 "resize",
-                function () {
+                () => {
                     canvas.width = window.innerWidth;
                     canvas.height = window.innerHeight;
                 },
@@ -83,89 +98,102 @@ var removeConfetti; // call to stop the confetti animation and remove all confet
             );
         }
 
-        context = canvas.getContext("2d");
+        ctx = canvas.getContext("2d");
 
-        while (particles.length < maxParticleCount)
-            particles.push(resetParticle({}, width, height));
-        streamingConfetti = true;
-        if (animationTimer === null) {
-            (function runAnimation() {
-                context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        while (particles.length < max_partics)
+            particles.push(reset_particle({}, width, height));
+
+        confetti_on = true;
+
+        if (anim_t === null) {
+            (function anim() {
+                ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
                 if (particles.length === 0) {
-                    animationTimer = null;
-                    context.clearRect(
+                    anim_t = null;
+                    ctx.clearRect(
                         0,
                         0,
                         window.innerWidth,
                         window.innerHeight
                     );
                 } else {
-                    updateParticles();
-                    drawParticles(context);
-                    animationTimer = requestAnimFrame(runAnimation);
+                    try {
+                        upd_partics();
+                        drw_partics();
 
-                    context.textAlign = "center";
-                    context.fillStyle = textclr;
-                    context.font = "2em sans";
+                        anim_t = req_animf(anim);
 
-                    context.fillText(text, canvas.width / 2, canvas.height / 2);
+                        ctx.textAlign = "center";
+                        ctx.fillStyle = textclr;
+                        ctx.font = "2em sans-serif";
+
+                        ctx.fillText(
+                            text,
+                            canvas.width / 2,
+                            canvas.height / 2
+                        );
+                    } catch (e) {
+                        console.error(e);
+
+                        alert(`\u{0001f389} ${text} \u{0001f389}`);
+                        particles = [];
+
+                        return stop_confetti();
+                    }
                 }
             })();
         }
     }
 
-    function stopConfettiInner() {
-        streamingConfetti = false;
-    }
+    function drw_partics() {
+        let part, x;
 
-    function removeConfettiInner() {
-        stopConfetti();
-        particles = [];
-    }
+        for (let i = 0; i < particles.length; i++) {
+            part = particles[i];
+            ctx.beginPath();
+            ctx.lineWidth = part.diameter;
+            ctx.strokeStyle = part.color;
 
-    function drawParticles(context) {
-        var particle;
-        var x;
-        for (var i = 0; i < particles.length; i++) {
-            particle = particles[i];
-            context.beginPath();
-            context.lineWidth = particle.diameter;
-            context.strokeStyle = particle.color;
-            x = particle.x + particle.tilt;
-            context.moveTo(x + particle.diameter / 2, particle.y);
-            context.lineTo(
+            x = part.x + part.tilt;
+
+            ctx.moveTo(x + part.diameter / 2, part.y);
+            ctx.lineTo(
                 x,
-                particle.y + particle.tilt + particle.diameter / 2
+                part.y + part.tilt + part.diameter / 2
             );
-            context.stroke();
+            ctx.stroke();
         }
     }
 
-    function updateParticles() {
-        var width = window.innerWidth;
-        var height = window.innerHeight;
-        var particle;
-        waveAngle += 0.01;
-        for (var i = 0; i < particles.length; i++) {
-            particle = particles[i];
-            if (!streamingConfetti && particle.y < -15)
-                particle.y = height + 100;
+    function upd_partics() {
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        let part;
+
+        wav_angle += 0.01;
+
+        for (let i = 0; i < particles.length; i++) {
+            part = particles[i];
+
+            if (!confetti_on && part.y < -15)
+                part.y = height + 100;
             else {
-                particle.tiltAngle += particle.tiltAngleIncrement;
-                particle.x += Math.sin(waveAngle);
-                particle.y +=
-                    (Math.cos(waveAngle) + particle.diameter + particleSpeed) *
+                part.tiltAngle += part.tiltAngleIncrement;
+                part.x += Math.sin(wav_angle);
+                part.y +=
+                    (Math.cos(wav_angle) + part.diameter + partic_spd) *
                     0.5;
-                particle.tilt = Math.sin(particle.tiltAngle) * 15;
+                part.tilt = Math.sin(part.tiltAngle) * 15;
             }
+
             if (
-                particle.x > width + 20 ||
-                particle.x < -20 ||
-                particle.y > height
+                part.x > width + 20 ||
+                part.x < -20 ||
+                part.y > height
             ) {
-                if (streamingConfetti && particles.length <= maxParticleCount)
-                    resetParticle(particle, width, height);
+                if (confetti_on && particles.length <= max_partics)
+                    reset_particle(part, width, height);
                 else {
                     particles.splice(i, 1);
                     i--;
@@ -192,15 +220,12 @@ function main() {
     ) {
         let bday = ctime.getFullYear() - BIRTHDAY.getFullYear();
 
-        startConfetti(
+        confetti(
             `Happy ${human_num(bday)} birthday, ${site_name}!`,
             "#f0f7ff"
         );
 
-        setTimeout(() => {
-            stopConfetti();
-            removeConfetti();
-        }, 5000);
+        setTimeout(() => stop_confetti(), 5000);
 
         window.localStorage.setItem("bday", ctime.getFullYear());
     }

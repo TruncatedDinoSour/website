@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    color: whitesmoke;
+    background-color: black;
+    line-height: 1.5;
+}
+
+li {
+    padding: 0.2em;
+}
+
+*:not(h1) {
+    font-size: 1.08em;
+}
+
+ul {
+    margin: 1em;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2em;
+}
+
+a:not(a[na])::before {
+    content: attr(href);
+}
+
+a,
+a::before {
+    color: #b1b4c0;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    text-decoration: underline;
+}
+
+blockquote,
+blockquote * {
+    line-height: 1;
+    text-align: center;
+}

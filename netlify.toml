@@ -20,6 +20,12 @@
     status = 302
     force = true
 
+[[redirects]]
+    from = "/m"
+    to = "/yt/watch?v=8MMa35B3HT8"
+    status = 302
+    force = true
+
 # https://codeberg.org/teddit/teddit
 [[redirects]]
     from = "/r/*"

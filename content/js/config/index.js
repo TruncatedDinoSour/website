@@ -92,7 +92,7 @@ const locations = {
     },
 
     13: {
-        url: "/90s",
+        url: "/page/90s",
         desc: "90s page",
         aliases: ["90s", "90", "vintage", "old"],
     },
@@ -101,6 +101,18 @@ const locations = {
         url: "/page/export",
         desc: "Export and/or import your ari-web data",
         aliases: ["export", "import", "data"],
+    },
+
+    15: {
+        url: "/m",
+        desc: "Favourite song",
+        aliases: ["song", "favsong"],
+    },
+
+    16: {
+        url: "/page/info",
+        desc: "Important ari-web info",
+        aliases: ["info", "important"],
     },
 };
 const escape_HTML = (str) =>
