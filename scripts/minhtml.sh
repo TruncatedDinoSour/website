@@ -6,7 +6,7 @@ main() {
     if [ "$CI" ]; then
         echo 'Minifying all HTML'
 
-        find . -type f -name "*.html" \
+        find . -not -ipath "./node_modules/*" -type f -name "*.html" \
             -exec html-minifier --collapse-whitespace --collapse-inline-tag-whitespace --remove-tag-whitespace -o {}.min {} \; \
             -exec rm {} \; \
             -exec mv {}.min {} \; \

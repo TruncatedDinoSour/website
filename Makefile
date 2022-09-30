@@ -6,11 +6,12 @@ netlifyapis:
 
 clean:
 	[ -z "${CI}" ] || rm -rfv requirements.txt \
+		runtime.txt \
 		README.md \
 		git.sh \
 		scripts \
 		.vscode \
-		.github \
+		.github
 
 netlify: build netlifyapis clean
 

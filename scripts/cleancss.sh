@@ -4,7 +4,7 @@ set -e
 
 main() {
     echo '>> Removing all .min.css files'
-    find content/ -name '*.min.css' -type f -exec rm -rfv {} \;
+    find content/ -not -ipath "./node_modules/*" -name '*.min.css' -type f -exec rm -rfv {} \;
 }
 
 main "$@"

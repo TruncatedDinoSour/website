@@ -3,7 +3,7 @@
 set -e
 
 main() {
-    for file in $(find content/ -name '*.scss' -type f); do
+    for file in $(find content/ -not -ipath "./node_modules/*" -name '*.scss' -type f); do
         bnam="${file##*/}"
         out="${file%/*}/${bnam%.*}.min.css"
 
@@ -19,7 +19,7 @@ main() {
     wait
 
     echo " >> Removing residuals"
-    find content/ -name '_*.min.css' -or \
+    find content/ -not -ipath "./node_modules/*" -name '_*.min.css' -or \
         -name '*.sass.css' -type f -exec rm -rfv {} \;
 }
 
