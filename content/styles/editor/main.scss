@@ -32,9 +32,11 @@ $bg3: lighten($bg2, 10%);
     height: 100%;
     padding: 1em;
 
-    word-wrap: break-word;
-
     resize: none;
+
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow: scroll;
 
     outline: none;
     border: none;

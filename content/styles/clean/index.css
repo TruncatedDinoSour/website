@@ -8,14 +8,18 @@
     box-sizing: border-box;
 
     scroll-behavior: smooth;
-
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
     color-scheme: dark;
 }
 
-::-webkit-scrollbar {
+*:not(textarea),
+*:not(textarea)::after,
+*:not(textarea)::before {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+*:not(textarea)::-webkit-scrollbar,
+*:not(textarea)::after::-webkit-scrollbar,
+*:not(textarea)::before::-webkit-scrollbar {
     display: none;
 }
 

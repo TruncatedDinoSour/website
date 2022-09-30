@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    scroll-behavior: smooth !important;
+}
+
 body,
 html {
     padding: 2.5em;
