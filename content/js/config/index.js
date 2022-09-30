@@ -114,6 +114,12 @@ const locations = {
         desc: "Important ari-web info",
         aliases: ["info", "important"],
     },
+
+    17: {
+        url: "/etc",
+        desc: "Random ari-web pages, projects, etc.",
+        aliases: ["etc", "projects", "urandom"],
+    },
 };
 const escape_HTML = (str) =>
     str.replace(
