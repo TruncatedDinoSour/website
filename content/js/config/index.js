@@ -134,7 +134,7 @@ const escape_HTML = (str) =>
             }[tag] || tag)
     );
 
-const BIRTHDAY = new Date(2020, 9, 16, 0, 0, 0, 0); // Ari-web start: 2020/10/17
+const BIRTHDAY = new Date(2020, 9, 17, 0, 0, 0, 0); // Ari-web start: 2020/10/17
 
 /*
 let dt = new Date();
