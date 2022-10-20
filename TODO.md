@@ -1,4 +1,5 @@
 -   [x] Fac command: POST to https://elijah-dev.tk/fa.php with the fa parameter being some code
+-   -   Used to have it, removed it on 2022/10/20
 -   [ ] Chat subdomain using WebRTC
 -   [ ] Store files in IndexedDB
 -   [x] Export/Import
