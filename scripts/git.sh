@@ -4,7 +4,7 @@ set -e
 
 main() {
     printf '%s' 'Make sure you added an entry to api/usage.json'
-    read -r
+    read -r _
 
     git diff >/tmp/ari-web.diff
 
