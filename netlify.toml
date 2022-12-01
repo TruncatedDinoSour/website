@@ -43,7 +43,7 @@
 
 [[redirects]]
     from = "/favicon.ico"
-    to = "/favicons/ari-web-ukraine.png"
+    to = "/favicons/ari-web-christmas.png"
     status = 200
     force = true
 
