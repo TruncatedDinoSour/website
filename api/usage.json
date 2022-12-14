@@ -38,5 +38,13 @@
             "blog.ari-web.xyz": 24.3,
             "ari-web.xyz": 20.3
         }
+    },
+    "2022-12-15": {
+        "total": 69.0,
+        "top": {
+            "blog.ari-web.xyz": 27.5,
+            "ari-web.xyz": 20.1,
+            "files.ari-web.xyz": 12.9
+        }
     }
 }

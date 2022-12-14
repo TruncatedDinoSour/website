@@ -1,9 +1,22 @@
 -   [x] Fac command: POST to https://elijah-dev.tk/fa.php with the fa parameter being some code
--   -   Used to have it, removed it on 2022/10/20
--   [ ] Chat subdomain using WebRTC
--   [ ] Store files in IndexedDB
+    -   Used to have it, removed it on 2022/10/20
+-   [x] Chat subdomain using WebRTC
+    -   We have [CaO](https://user.ari-web.xyz/), not going to implement
+-   [x] Store files in IndexedDB
+    -   [Overly complex API, i dont want to deliver this much JS, i already deliver quite a package](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 -   [x] Export/Import
 -   [ ] Python code runner
--   [ ] Minimal UI framework
-    -   [ ] Convert some of the pages to use that framework
--   [ ] WASM
+-   [x] Minimal UI framework
+    -   [x] Convert some of the pages to use that framework
+    -   Stupid idea ngl
+-   [x] WASM
+    -   Fun challenge, but will ruin browser support, although keeping this idea for some commands :)
+        -   [ ] Custom ari-web assembler ?
+            -   Ari-web ASM -> (WAT ?) -> WASM -> run
+-   [ ] More theme generators
+    -   [ ] ViM themes
+    -   [ ] Suckless themes
+        -   [ ] Dmenu
+        -   [ ] St
+        -   [ ] DWM
+    -   [ ] Emacs themes
