@@ -53,9 +53,9 @@ function show(dest) {
 
     if (!dst) return help(["show"]);
     else
-        for (const l in locations) {
-            if (locations[l]["aliases"].includes(dst)) {
-                iframe.setAttribute("src", locations[l]["url"]);
+        for (const l of locations) {
+            if (l["aliases"].includes(dst)) {
+                iframe.setAttribute("src", l["url"]);
                 break;
             }
         }
@@ -71,10 +71,10 @@ function cd(dest) {
         window.location = "/";
         return "Returning to the home page";
     } else {
-        for (const l in locations) {
-            if (locations[l]["aliases"].includes(dst)) {
-                window.location = locations[l]["url"];
-                return `Going to ${locations[l]["url"]}`;
+        for (const l of locations) {
+            if (l["aliases"].includes(dst)) {
+                window.location = l["url"];
+                return `Going to ${l["url"]}`;
             }
         }
     }
@@ -85,11 +85,10 @@ function cd(dest) {
 function list() {
     let locs = "";
 
-    for (const l in locations) {
-        let loc = locations[l];
-        locs += `<b>URL</b>: ${loc["url"]}<br/>`;
-        locs += `<b>DESCRIPTION</b>: ${loc["desc"]}<br/>`;
-        locs += `<b>ALIASES</b>: ${loc["aliases"].join(", ")}<br/>`;
+    for (const l of locations) {
+        locs += `<b>URL</b>: ${l["url"]}<br/>`;
+        locs += `<b>DESCRIPTION</b>: ${l["desc"]}<br/>`;
+        locs += `<b>ALIASES</b>: ${l["aliases"].join(", ")}<br/>`;
         locs += `<br/>`;
     }
 
