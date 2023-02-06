@@ -6,6 +6,11 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 
+    & * {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
     #bootver {
         color: $boot_header_colour;
         margin-left: 1.12em; /* makes it that it aligns with 'boot' messages */
@@ -64,6 +69,7 @@
     }
 }
 
-.boot::-webkit-scrollbar {
+.boot::-webkit-scrollbar,
+.boot *::-webkit-scrollbar {
     display: none;
 }
