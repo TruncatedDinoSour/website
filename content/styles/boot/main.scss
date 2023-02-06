@@ -3,6 +3,8 @@
 .boot {
     margin: 1em 0em 1em 1em;
     font-size: 1.5em;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     #bootver {
         color: $boot_header_colour;
@@ -60,4 +62,8 @@
         word-wrap: break-word;
         word-break: break-all;
     }
+}
+
+.boot::-webkit-scrollbar {
+    display: none;
 }

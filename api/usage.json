@@ -54,5 +54,13 @@
             "legacy.blog.ari-web.xyz": 9.1,
             "ari-web.xyz": 6.1
         }
+    },
+    "2023-02-06": {
+        "total": 82.0,
+        "top": {
+            "blog.ari-web.xyz": 49.1,
+            "legacy.blog.ari-web.xyz": 15.4,
+            "ari-web.xyz": 7.3
+        }
     }
 }
