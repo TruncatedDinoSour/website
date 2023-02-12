@@ -13,10 +13,10 @@
     status = 301
     force = true
 
-# https://codeberg.org/Ashley/poketube
+# used to be https://codeberg.org/Ashley/poketube
 [[redirects]]
     from = "/yt/*"
-    to = "https://poketube.fun/:splat"
+    to = "https://invidious.tiekoetter.com/:splat"
     status = 302
     force = true
 
