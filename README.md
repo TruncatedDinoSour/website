@@ -33,6 +33,11 @@ So what you do, replace all `.` in the API name with \_,
 then make the request to `/api_hash/..._hash.txt` and you will
 get the hash, for example: <https://www.ari-web.xyz/api_hash/apis_json_hash.txt>
 
+# Standard
+
+See [the standard](/STANDARD.md) to see how ari-web is structured and
+how to properly modify ari-web
+
 # Usage API
 
 The [usage api](https://www.ari-web.xyz/api/usage.json)
