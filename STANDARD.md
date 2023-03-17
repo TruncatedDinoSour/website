@@ -9,7 +9,7 @@ it follows and what standard it practices
             -   e.g. <https://blog.ari-web.xyz/blog.json>, you can make the request to
                 that route and thats all, hashing of it works basically the same,
                 but wtihout `/api/` -- <https://blog.ari-web.xyz/blog_json_hash.txt>
-        -   > 1 API route
+        -   \>1 API route
             -   use `/api` directory for APIs based on JSON if you have multiple ones
             -   `/api/*.json` is any API route
             -   `/api` purely should return a redirect to a JSON file in `/api` containing
@@ -80,3 +80,7 @@ it follows and what standard it practices
     -   `color-scheme` and `theme-color` should also preferably be defined
 -   textual content
     -   dates : `yyyy/mm/dd` for dates `yyyy-mm-dd` for timestamps
+
+# changelog
+
+-   `2023-03-18` -- init
