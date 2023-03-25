@@ -37,6 +37,10 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://server.ari-web.xyz/</loc>
+        <priority>0.59</priority>
+    </url>
+    <url>
         <loc>https://www.ari-web.xyz/api</loc>
         <priority>0.5</priority>
     </url>
