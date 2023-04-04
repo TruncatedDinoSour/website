@@ -9,10 +9,18 @@ mkdata() {
 }
 
 main() {
+    printf ' * %s... ' 'Generating pages api'
+
+    {
+        printf '%s' '['
+        for page in page/*; do
+            echo "$page" | mkdata | sed 's/,$//'
+        done
+        echo ']'
+    } >api/pages.json
+
     printf ' * %s... ' 'Generating api list'
     apis='api/apis.json'
-
-    : >"$apis"
 
     # shellcheck disable=SC2094
     {
