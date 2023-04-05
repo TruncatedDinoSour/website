@@ -89,7 +89,7 @@ async function main() {
     FETCH_PAGES().then((j) => {
         more.innerText = "";
 
-        for (let page of j)
+        for (let page of j.concat(EXTRA_PAGES))
             mkelem("li", mkelem("a", page, null, { href: page }), more);
     });
 }

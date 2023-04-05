@@ -28,3 +28,20 @@ const FETCH_PAGES = () => fetch("/api/pages.json").then((r) => r.json());
 const BIRTHDAY = new Date(2020, 9, 17, 0, 0, 0, 0); // ari-web start : 2020/10/17
 const NUMERICS = ["st", "nd", "rd", "th"];
 const SITE_NAME = "ari-web";
+
+const EXTRA_PAGES = [
+    "/mr",
+    "/mp",
+    "/etc",
+    "/page/blog",
+    "/data",
+    "/gh",
+    "/overlay",
+    "/dotfiles",
+    "/tdotfiles",
+    "/r",
+    "/m",
+    "/yt",
+    "/git",
+    "/user",
+];
