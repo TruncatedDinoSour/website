@@ -12,7 +12,7 @@ const FETCH_COMMENTS = () => {
         .then((t) => {
             let total = parseInt(t);
 
-            let fetch_from = total - 12;
+            let fetch_from = total - 14;
             if (fetch_from < 0) fetch_from = total;
 
             return fetch(
