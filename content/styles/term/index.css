@@ -1,0 +1,41 @@
+#term-wrap {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 1em;
+    padding: 1em;
+    max-height: 50%;
+    min-height: 30%;
+    overflow-y: scroll;
+    box-shadow: 0 0 100px 40px var(--bg1);
+}
+
+#term-wrap,
+#term-wrap > div,
+#term-hist,
+#term-hist > div,
+#term-hist > div > div {
+    background-color: var(--bg3);
+}
+
+#term-hist {
+    flex: 1;
+}
+
+#term-wrap:nth-child(2) {
+    flex: 1;
+}
+
+#term-hist li {
+    list-style-position: inside;
+}
+
+.cmd {
+    width: 80%;
+    border: none;
+    outline: none;
+    margin-left: 0.5ch;
+    margin-top: 0.5em;
+    background-color: transparent;
+    padding: 0.1em;
+}

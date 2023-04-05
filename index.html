@@ -22,6 +22,8 @@
 
         <link rel="stylesheet" href="/content/styles/generic/main.min.css" />
         <link rel="stylesheet" href="/content/styles/clean/index.css" />
+        <link rel="stylesheet" href="/content/styles/index/index.css" />
+        <link rel="stylesheet" href="/content/styles/term/index.css" />
 
         <link rel="manifest" href="/manifest.json" />
 
@@ -53,9 +55,69 @@
 
             //--><!]]>
         </script>
+
+        <script src="/content/js/config/index.js"></script>
+        <script src="/content/js/ui/index.js"></script>
+
+        <script src="/content/js/bday/index.js" defer></script>
+        <script src="/content/js/term/cmd.js" defer></script>
+        <script src="/content/js/term/index.js" defer></script>
+        <script src="/content/js/index/index.js" defer></script>
     </head>
 
     <body>
-        <h1>this branch is WIP</h1>
+        <article>
+            <header>
+                <h1>welcome to <span id="site">...</span> !</h1>
+
+                <nav class="mobile-only">
+                    <ul>
+                        <li><a href="#blog">latest blog posts</a></li>
+                        <li><a href="#comments">latest comments</a></li>
+                        <li><a href="#discover">more pages</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div id="blog">
+                    <h2>latest <a id="blog-link">blog posts</a></h2>
+                    <ul id="blog-posts">
+                        loading blog posts ...
+                    </ul>
+                </div>
+
+                <div>
+                    <div id="comments">
+                        <h2>latest <a id="comments-link">comments</a></h2>
+                        <ul id="latest-comments">
+                            loading comments ...
+                        </ul>
+                    </div>
+
+                    <div id="more">
+                        <h2>discover more</h2>
+                        <ul id="discover">
+                            loading available pages ...
+                        </ul>
+                    </div>
+                </div>
+            </main>
+
+            <footer id="term-wrap" style="display: none">
+                <div id="term-hist"></div>
+
+                <div id="input-wrap">
+                    $
+                    <input
+                        type="text"
+                        placeholder="type `help` for help"
+                        spellcheck="false"
+                        id="term-input"
+                        class="cmd"
+                    />
+                </div>
+            </footer>
+        </article>
     </body>
 </html>

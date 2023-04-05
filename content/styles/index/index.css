@@ -1,0 +1,115 @@
+:root {
+    --bg: #121212;
+    --bg1: #101010;
+    --bg2: #424242;
+    --bg3: #151515;
+
+    --fg: #ffd700;
+    --fg1: #f9a602;
+}
+
+*,
+*::before,
+*::after {
+    font-family: sans-serif;
+    background-color: var(--bg);
+}
+
+pre {
+    padding: 0.5em;
+    margin: 0.2em;
+}
+
+pre,
+pre * {
+    background-color: var(--bg1);
+}
+
+main li,
+main li *,
+pre {
+    white-space: pre-wrap;
+}
+
+main li,
+header li {
+    margin-bottom: 0.5em;
+}
+
+.mobile-only {
+    display: none;
+}
+
+main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 2.5em 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2.5em;
+}
+
+body {
+    margin: auto;
+    max-width: 1450px;
+    padding: 3em;
+}
+
+h2 {
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+}
+
+h1 > span {
+    color: var(--fg1);
+    cursor: pointer;
+    position: relative;
+}
+
+h1 > span::before {
+    content: "click me";
+    position: absolute;
+    top: -1.5ch;
+    background-color: transparent;
+    color: var(--bg2);
+    font-size: 0.5em;
+    letter-spacing: 0.5ch;
+}
+
+h1::-moz-selection,
+h1 *::-moz-selection {
+    display: none;
+}
+
+h1::selection,
+h1 *::selection {
+    display: none;
+}
+
+a {
+    color: var(--fg);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 830px) {
+    .mobile-only {
+        display: block;
+    }
+
+    nav > ul {
+        margin-top: 0.6em;
+    }
+
+    nav > ul > li {
+        margin: 0;
+        list-style: none;
+    }
+
+    main {
+        display: block;
+    }
+}

@@ -1,0 +1,9 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: auto;
+    max-width: 1200px;
+    padding: 4em;
+}

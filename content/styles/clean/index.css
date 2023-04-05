@@ -11,15 +11,12 @@
     color-scheme: dark;
 }
 
-*:not(textarea),
-*:not(textarea)::after,
-*:not(textarea)::before {
+body {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-*:not(textarea)::-webkit-scrollbar,
-*:not(textarea)::after::-webkit-scrollbar,
-*:not(textarea)::before::-webkit-scrollbar {
+
+body::-webkit-scrollbar {
     display: none;
 }
 

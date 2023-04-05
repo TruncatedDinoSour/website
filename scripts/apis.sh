@@ -14,20 +14,19 @@ main() {
     {
         printf '%s' '['
         for page in page/*; do
-            echo "$page" | mkdata | sed 's/,$//'
-        done
+            echo "/$page"
+        done | mkdata | sed 's/,$//'
         echo ']'
     } >api/pages.json
 
     printf ' * %s... ' 'Generating api list'
-    apis='api/apis.json'
 
     # shellcheck disable=SC2094
     {
         printf '%s' '['
         find api -type f -exec basename {} \; | mkdata | sed 's/,$//'
         echo ']'
-    } >"$apis"
+    } >api/apis.json
 
     echo 'done'
 
