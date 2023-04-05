@@ -31,7 +31,6 @@ const SITE_NAME = "ari-web";
 
 const EXTRA_PAGES = [
     "/mr",
-    "/mp",
     "/etc",
     "/page/blog",
     "/data",
@@ -39,9 +38,6 @@ const EXTRA_PAGES = [
     "/overlay",
     "/dotfiles",
     "/tdotfiles",
-    "/r",
-    "/m",
-    "/yt",
     "/git",
     "/user",
 ];
