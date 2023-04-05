@@ -13,7 +13,9 @@ function sleep(ms) {
 }
 
 async function evaluate_command(command, output, hist, term_wrap) {
-    let cmd = await command.split(" ");
+    let cmd = await command.split(/ (.+)/);
+    if (cmd.lnegth >= 3) await cmd.pop();
+
     let cmd_fn = window[`cmd_${cmd[0]}`];
 
     if (!cmd_fn) {
@@ -21,7 +23,11 @@ async function evaluate_command(command, output, hist, term_wrap) {
         return;
     }
 
-    for (let elem of await cmd_fn(cmd.slice(1), hist, term_wrap)) {
+    for (let elem of await cmd_fn(
+        cmd.length > 1 ? cmd[1] : "",
+        hist,
+        term_wrap
+    )) {
         switch (elem.constructor) {
             case String:
                 for (let c of elem) {

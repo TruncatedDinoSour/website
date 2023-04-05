@@ -35,6 +35,8 @@ async function main() {
     document.getElementById("blog-link").href = BLOG_SITE;
     document.getElementById("comments-link").href = COMMENT_SITE;
 
+    if (!DO_FETCH) return;
+
     FETCH_BLOG_POSTS().then((j) => {
         blog.innerText = "";
 

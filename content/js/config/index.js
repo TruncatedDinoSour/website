@@ -41,3 +41,5 @@ const EXTRA_PAGES = [
     "/git",
     "/user",
 ];
+
+const DO_FETCH = true;
