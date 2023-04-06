@@ -80,6 +80,11 @@ h1 *::-moz-selection {
     display: none;
 }
 
+h1::-moz-selection,
+h1 *::-moz-selection {
+    display: none;
+}
+
 h1::selection,
 h1 *::selection {
     display: none;
@@ -101,15 +106,27 @@ a:focus {
     }
 
     nav > ul {
-        margin-top: 0.6em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        margin-top: 1em;
     }
 
     nav > ul > li {
-        margin: 0;
         list-style: none;
     }
 
     main {
         display: block;
+    }
+
+    h1 {
+        text-align: center;
     }
 }
