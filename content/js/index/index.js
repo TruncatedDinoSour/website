@@ -81,7 +81,7 @@ async function main() {
                         mkelem("a", `#${id} by ${post[0]}`, null, {
                             href: `${COMMENT_SITE}/#${id}`,
                         }),
-                        mkelem("pre", post[1]),
+                        mkelem("pre", linkify(post[1], COMMENT_SITE)),
                     ],
                     comment
                 );
