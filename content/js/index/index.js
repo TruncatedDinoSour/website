@@ -59,7 +59,10 @@ async function main() {
                             null,
                             { href: `${BLOG_SITE}/b/${id}` }
                         ),
-                        mkelem("pre", `${post["content"]} ...`),
+                        mkelem(
+                            "pre",
+                            linkify(post["content"]).concat([" ..."])
+                        ),
                     ],
                     blog
                 );
