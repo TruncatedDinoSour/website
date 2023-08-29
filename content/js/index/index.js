@@ -52,7 +52,7 @@ async function main() {
                         [
                             post["title"],
                             " -- ",
-                            new Date(post["time"] * 1000).toUTCString(),
+                            new Date(post["created"] * 1000).toUTCString(),
                         ],
                         null,
                         { href: `${BLOG_SITE}/b/${id}` },
