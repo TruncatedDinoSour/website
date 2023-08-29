@@ -40,33 +40,28 @@ async function main() {
     FETCH_BLOG_POSTS().then((j) => {
         blog.innerText = "";
 
-        Object.entries(j)
-            .reverse()
-            .forEach((post) => {
-                let id = post[0];
-                post = post[1];
+        Object.entries(j).forEach((post) => {
+            let id = post[0];
+            post = post[1];
 
-                mkelem(
-                    "li",
-                    [
-                        mkelem(
-                            "a",
-                            [
-                                post["title"],
-                                " -- ",
-                                new Date(post["time"] * 1000).toUTCString(),
-                            ],
-                            null,
-                            { href: `${BLOG_SITE}/b/${id}` }
-                        ),
-                        mkelem(
-                            "pre",
-                            linkify(post["content"]).concat([" ..."])
-                        ),
-                    ],
-                    blog
-                );
-            });
+            mkelem(
+                "li",
+                [
+                    mkelem(
+                        "a",
+                        [
+                            post["title"],
+                            " -- ",
+                            new Date(post["time"] * 1000).toUTCString(),
+                        ],
+                        null,
+                        { href: `${BLOG_SITE}/b/${id}` },
+                    ),
+                    mkelem("pre", linkify(post["content"]).concat([" ..."])),
+                ],
+                blog,
+            );
+        });
     });
 
     FETCH_COMMENTS().then((j) => {
@@ -86,7 +81,7 @@ async function main() {
                         }),
                         mkelem("pre", linkify(post[1], COMMENT_SITE)),
                     ],
-                    comment
+                    comment,
                 );
             });
     });
