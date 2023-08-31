@@ -149,6 +149,12 @@
     force = true
 
 [[redirects]]
+    from = "/btc"
+    to = "https://www.blockchain.com/explorer/addresses/btc/bc1qn3k75kmyvpw9sc58t63hk4ej4pc0d0w52tvj7w"
+    status = 301
+    force = true
+
+[[redirects]]
     from = "/:page"
     to = "/page/:page"
     status = 302

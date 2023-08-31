@@ -40,6 +40,7 @@ const EXTRA_PAGES = [
     "/tdotfiles",
     "/git",
     "/user",
+    "/btc",
 ];
 
 const DO_FETCH = true;
