@@ -78,5 +78,13 @@
             "user.ari-web.xyz": 29.8,
             "ari-web.xyz": 21.4
         }
+    },
+    "2023-10-29": {
+        "total": 141,
+        "top": {
+            "blog.ari-web.xyz": 117.8,
+            "ari-web.xyz": 11.5,
+            "files.ari-web.xyz": 6.6
+        }
     }
 }
