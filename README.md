@@ -84,4 +84,4 @@ how much per avg sites are using:
 -   https://school.ari-web.xyz/ (source: proprietary (I don't want people snooping on my homework lol))
 -   https://user.ari-web.xyz/ (source: https://user.ari-web.xyz/git)
 -   https://etc.ari-web.xyz/ (source: https://etc.ari-web.xyz/git)
--   https://server.ari-web.xyz/ (source: https://server.ari-web.xyz/git)
+-   https://a.ari-web.xyz/ (source: https://a.ari-web.xyz/git)
