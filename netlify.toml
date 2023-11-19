@@ -155,6 +155,12 @@
     force = true
 
 [[redirects]]
+    from = "/paypal"
+    to = "https://www.paypal.com/donate/?hosted_button_id=5ULJ3LCQHK4KY"
+    status = 301
+    force = true
+
+[[redirects]]
     from = "/:page"
     to = "/page/:page"
     status = 302
