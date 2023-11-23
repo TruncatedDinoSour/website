@@ -192,7 +192,7 @@ const TEST_OPTIONS = [
         options: yes_no(make_percent(5)),
     },
     {
-        title: "Do you have morton's toe",
+        title: "Do you have morton's toe?",
         options: yes_no(make_percent(15)),
     },
     {
