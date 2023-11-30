@@ -1,0 +1,217 @@
+[build]
+    command = "make netlify"
+
+[[redirects]]
+    from = "/404.html"
+    to = "/page/404/index.html"
+    status = 302
+    force = true
+
+[[redirects]]
+    from = "/gentoo_stage3_nmor"
+    to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-nomultilib-openrc/"
+    status = 301
+    force = true
+
+# used to be https://codeberg.org/Ashley/poketube
+[[redirects]]
+    from = "/yt/*"
+    to = "https://invidious.tiekoetter.com/:splat"
+    status = 302
+    force = true
+
+[[redirects]]
+    from = "/m"
+    to = "/yt/watch?v=8MMa35B3HT8"
+    status = 302
+    force = true
+
+# https://codeberg.org/teddit/teddit
+[[redirects]]
+    from = "/r/*"
+    to = "https://teddit.net/r/:splat"
+    status = 302
+    force = true
+
+[[redirects]]
+    from = "/api"
+    to = "/api/apis.json"
+    status = 302
+    force = true
+
+# ARI-WEB-SPECIFIC #
+
+[[redirects]]
+    from = "/favicon.ico"
+    to = "/favicons/ari-web-ukraine.ico"
+    status = 200
+    force = true
+
+[[redirects]]
+    from = "/user"
+    to = "https://user.ari-web.xyz/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/git/*"
+    to = "https://github.com/TruncatedDinosour/website/:splat"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/dotfiles/*"
+    to = "https://github.com/TruncatedDinosour/dotfiles-cleaned/:splat"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/tdotfiles/*"
+    to = "https://github.com/TruncatedDinosour/dotfiles-termux/:splat"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/dotfile/:distro/*"
+    to = "https://github.com/TruncatedDinosour/dotfiles-cleaned/tree/:distro/:splat"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/overlay/*"
+    to = "https://github.com/TruncatedDinosour/dinolay/:splat"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/gentooatom/*"
+    to = "https://github.com/TruncatedDinosour/dinolay/tree/main/:splat"
+    status = 301
+    force = true
+
+# https://answers.netlify.com/t/how-do-i-do-cross-domain-redirects-to-github-repositories-from-netlify/52258/2?u=b00bleatea
+[[redirects]]
+    from = "/gh/*"
+    to = "https://github.com/TruncatedDinosour/:splat"
+    status = 301
+    force = true
+
+## BACKWARDS COMPATIBILITY ##
+
+[[redirects]]
+    from = "/data/*"
+    to = "https://files.ari-web.xyz/files/:splat"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/page/blog/*"
+    to = "https://blog.ari-web.xyz/:splat"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/page/blog"
+    to = "https://blog.ari-web.xyz/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/90s.html"
+    to = "/page/90s/index.html"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/etc"
+    to = "https://etc.ari-web.xyz/"
+    status = 301
+    force = true
+
+####################
+
+[[redirects]]
+    from = "/gentoo_stage3_nmorh"
+    to = "https://mirror.eu.oneandone.net/linux/distributions/gentoo/gentoo/releases/amd64/autobuilds/current-stage3-amd64-hardened-nomultilib-openrc/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/mp"
+    to = "https://www.youtube.com/playlist?list=PL7UuKajElTaChff3BkcJE6620lSuSUaDC"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/mr"
+    to = "https://blog.ari-web.xyz/b/my-music-artist-recommendations/"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/btc"
+    to = "https://www.blockchain.com/explorer/addresses/btc/bc1qn3k75kmyvpw9sc58t63hk4ej4pc0d0w52tvj7w"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/paypal"
+    to = "https://www.paypal.com/donate/?hosted_button_id=5ULJ3LCQHK4KY"
+    status = 301
+    force = true
+
+[[redirects]]
+    from = "/:page"
+    to = "/page/:page"
+    status = 302
+    force = false
+
+[[redirects]]
+    from = "/*"
+    to = "/page/404/index.html"
+    status = 404
+    force = false
+
+# Processing
+[build.processing]
+    skip_processing = false
+
+[build.processing.html]
+    pretty_urls = false
+
+[build.processing.css]
+    bundle = true
+    minify = true
+
+[build.processing.js]
+    bundle = false
+    minify = true
+
+[build.processing.images]
+    compress = true
+# --------------
+
+[[headers]]
+    for = "/api/*"
+
+    [headers.values]
+        Access-Control-Allow-Origin = "*"
+        Access-Control-Allow-Methods = "GET"
+
+[[headers]]
+    for = "/api_hash/*"
+
+    [headers.values]
+        Access-Control-Allow-Origin = "*"
+        Access-Control-Allow-Methods = "GET"
+
+[[headers]]
+    for = "/*"
+
+    [headers.values]
+        Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+        X-Frame-Options = "deny"
+        X-Content-Type-Options = "nosniff"
+        Content-Security-Policy = "upgrade-insecure-requests"
+        X-Permitted-Cross-Domain-Policies = "none"
+        Referrer-Policy = "no-referrer"

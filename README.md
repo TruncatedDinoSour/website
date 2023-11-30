@@ -1,3 +1,5 @@
+# deprecated : use <https://ari.lt/git> instead
+
 <h1 align="center">Website</h1>
 
 <p align="center">
