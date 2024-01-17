@@ -24,7 +24,7 @@
     for = "/*"
 
     [headers.values]
-        Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+        Strict-Transport-Security = "max-age=0"
         X-Frame-Options = "deny"
         X-Content-Type-Options = "nosniff"
         Content-Security-Policy = "upgrade-insecure-requests"
